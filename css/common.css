@@ -48,6 +48,14 @@ input[type="radio"],input[type="checkbox"] {accent-color: var(--maincolor);}
 button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; border-radius: 5px; cursor: pointer; display: block; width: 100%; height:40px; box-sizing: border-box; font-size: var(--font16);}
 
 .in{width: 95%; max-width:1590px; margin: 0 auto; position: relative;}
+.table-layout{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.table-layout table{
+    min-width: max-content;
+}
 
 .aside-header{
     position: fixed;
@@ -90,7 +98,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .aside-header>ul>li>ul{
     width: 100%;
     display: none;
-    padding-left: 30px;
 }
 .aside-header>ul>li:hover>ul{
     display: block;
@@ -98,11 +105,20 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .aside-header>ul>li>ul>li>a{
     display: flex;
     width: 100%;
-    padding: 15px 10px;
+    padding: 15px 40px;
+}
+.aside-header>ul>li>ul>li.on>a{
+    background: var(--maincolor);
+    color: #fff;
+    font-weight: 700;
 }
 .aside-header>ul>li>ul>li>a>img{
     margin-right: 10px;
 }
+.aside-header>ul>li.mobile{
+    display: none;
+}
+
 
 .main{
     width: 100%;
@@ -120,6 +136,9 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+.main-header .in .mobile-header{
+    display: none;
 }
 .main-header .in .my a,.main-header .in .logout a{
     display: flex;
@@ -391,19 +410,19 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border-radius: 5px;
     border: 1px solid var(--borderd9);
 }
-#user .main>.in>.table-area>table{
+#user .main>.in>.table-area table{
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
-#user .main>.in>.table-area>table thead td{
+#user .main>.in>.table-area table thead td{
     border-bottom: 2px solid var(--maincolor);
 }
-#user .main>.in>.table-area>table td{
+#user .main>.in>.table-area table td{
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
-#user .main>.in>.table-area>table td>span{
+#user .main>.in>.table-area table td>span{
     font-size: var(--font14);
     font-weight: 700;
     display: inline-block;
@@ -413,12 +432,12 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     margin-left: 10px;
     border: 1px solid var(--bordera9);
 }
-#user .main>.in>.table-area>table td>span.student{
+#user .main>.in>.table-area table td>span.student{
     background: var(--secondcolor);
     border:none;
     color: #fff;
 }
-#user .main>.in>.table-area>table td>span.black{
+#user .main>.in>.table-area table td>span.black{
     background: #F24E4E;
     border: none;
     color: #fff;
@@ -567,19 +586,19 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     color: #fff;
     margin-top: 10px;
 }
-.pop-up.detail .tab2-area2 .area2-box>table{
+.pop-up.detail .tab2-area2 .area2-box table{
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
-.pop-up.detail .tab2-area2 .area2-box>table thead td{
+.pop-up.detail .tab2-area2 .area2-box table thead td{
     border-bottom: 2px solid var(--maincolor);
 }
-.pop-up.detail .tab2-area2 .area2-box>table td{
+.pop-up.detail .tab2-area2 .area2-box table td{
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
-.pop-up.detail .tab2-area2 .area2-box>table td>span{
+.pop-up.detail .tab2-area2 .area2-box table td>span{
     font-size: var(--font14);
     font-weight: 700;
     display: inline-block;
@@ -596,15 +615,15 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     font-size: var(--font20);
     margin-bottom: 20px;
 }
-.pop-up.detail .tab3-area .area-box>table{
+.pop-up.detail .tab3-area .area-box table{
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
-.pop-up.detail .tab3-area .area-box>table thead td{
+.pop-up.detail .tab3-area .area-box table thead td{
     border-bottom: 2px solid var(--maincolor);
 }
-.pop-up.detail .tab3-area .area-box>table td{
+.pop-up.detail .tab3-area .area-box table td{
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
@@ -634,15 +653,15 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     margin-bottom: 20px;
     margin-top: 10px;
 }
-.pop-up.ticket .pop-area2>table{
+.pop-up.ticket .pop-area2 table{
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
-.pop-up.ticket .pop-area2>table thead td{
+.pop-up.ticket .pop-area2 table thead td{
     border-bottom: 2px solid var(--maincolor);
 }
-.pop-up.ticket .pop-area2>table td{
+.pop-up.ticket .pop-area2 table td{
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
@@ -664,6 +683,56 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 .pop-up.fin .pop-area img{
     margin-bottom: 20px;
+}
+.pop-up.refund{
+    padding-bottom: 120px;
+}
+.pop-up.refund .pop-top h2{
+    margin-bottom: 20px;
+}
+.pop-up.refund .pop-bottombtn{
+    bottom: 50px;
+}
+.pop-up.refund .pop-bottombtn span{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    margin-left: 30px;
+    font-size: var(--font14);
+    color: var(--txt777);
+}
+.pop-up.refund .pop-bottombtn>.refund{
+    background: #F24E4E;
+}
+.pop-up.refund .refund-area{
+    border-bottom: 1px solid var(--borderd9);
+}
+.pop-up.refund .refund-box{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.pop-up.refund .refund-box span{
+    width: calc((100% - 10px) / 2);
+    padding: 10px 0;
+}
+.pop-up.refund .refund-price .refund-box span{
+    font-weight: 700;
+}
+.pop-up.refund .refund-price .refund-box span.red{
+    color: #F24E4E;
+}
+.pop-up.refund .refund-info{
+    color: #F24E4E;
+    border: 1px solid #F24E4E;
+    background: #f24e4e38;
+    padding: 10px;
+}
+.pop-up.refund .refund-info span{
+    font-size: var(--font14);
 }
 
 /* 입퇴실관리화면 */
@@ -780,19 +849,19 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border-radius: 5px;
     border: 1px solid var(--borderd9);
 }
-#enter .main>.in>.table-area>table{
+#enter .main>.in>.table-area table{
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
-#enter .main>.in>.table-area>table thead td{
+#enter .main>.in>.table-area table thead td{
     border-bottom: 2px solid var(--maincolor);
 }
-#enter .main>.in>.table-area>table td{
+#enter .main>.in>.table-area table td{
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
-#enter .main>.in>.table-area>table td>span{
+#enter .main>.in>.table-area table td>span{
     font-size: var(--font14);
     font-weight: 700;
     display: inline-block;
@@ -802,12 +871,12 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     margin-left: 10px;
     border: 1px solid var(--bordera9);
 }
-#enter .main>.in>.table-area>table td>span.student{
+#enter .main>.in>.table-area table td>span.student{
     background: var(--secondcolor);
     border:none;
     color: #fff;
 }
-#enter .main>.in>.table-area>table td>span.black{
+#enter .main>.in>.table-area table td>span.black{
     background: #F24E4E;
     border: none;
     color: #fff;
@@ -831,8 +900,230 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     padding: 0 10px;
 }
 
-
-
+/* 매출관리 화면 */
+#sales .main>.in>h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#sales .main>.in>h2>span{
+    font-size: var(--font24);
+}
+#sales .main>.in>h2>img{
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+#sales .main>.in>.box-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#sales .main>.in>.box-area>.box{
+    width: calc((100% - 20px) / 2);
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--borderd9);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#sales .main>.in>.box-area>.box.current{
+    border: 1px solid var(--maincolor);
+    color: var(--maincolor);
+}
+#sales .main>.in>.box-area>.box .box-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#sales .main>.in>.box-area>.box .box-bottom span{
+    color: var(--txt777);
+    font-size: var(--font14);
+    margin-bottom: 10px;
+    display: block;
+}
+#sales .main>.in>.box-area>.box .box-bottom .bottom-flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#sales .main>.in>.box-area>.box .box-bottom .bottom-flex span{
+    display: block;
+    width: calc((100% - 20px) / 2);
+    margin-bottom: 5px;
+}
+#sales .main>.in>.box-area>.box .box-bottom .bottom-flex span.red{
+    color: #F24E4E;
+}
+#sales .main>.in>.table-area{
+    width: 100%;
+}
+#sales .main>.in>.table-area>.tab-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#sales .main>.in>.table-area>.tab-area>h3{
+    font-size: var(--font20);
+}
+#sales .main>.in>.table-area>.tab-area>.tab-box ul{
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid var(--borderd9);
+}
+#sales .main>.in>.table-area>.tab-area>.tab-box ul li{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background: #fff;
+}
+#sales .main>.in>.table-area>.tab-area>.tab-box ul li.on{
+    background: var(--maincolor);
+    color: #fff;
+    font-weight: 700;
+}
+#sales .main>.in>.table-area table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    display: none;
+}
+#sales .main>.in>.table-area table.on{
+    display: table;
+}
+#sales .main>.in>.table-area table thead td{
+    border-bottom: 2px solid var(--maincolor);
+}
+#sales .main>.in>.table-area table td{
+    padding: 10px;
+    border-bottom: 1px solid var(--borderd9);
+}
+#sales .main>.in>.table-area table td>span{
+    font-size: var(--font14);
+    font-weight: 700;
+    display: inline-block;
+    padding: 2px 10px;
+    text-align: center;
+    border-radius: 90px;
+    margin-left: 10px;
+    border: 1px solid var(--bordera9);
+}
+#sales .main>.in>.table-area table td>span.student{
+    background: var(--secondcolor);
+    border:none;
+    color: #fff;
+}
+#sales .main>.in>.table-area table td>span.refund{
+    background: #F24E4E;
+    border: none;
+    color: #fff;
+}
+#sales .main>.in>.table-area>.page-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sales .main>.in>.table-area>.page-area button{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--bordera9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sales .main>.in>.table-area>.page-area span{
+    padding: 0 10px;
+}
+#sales .main>.in>.table-area .search-area{
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--borderd9);
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#sales .main>.in>.table-area .search-area.on{
+    display: flex;
+}
+#sales .main>.in>.table-area .search-area .start-date,#sales .main>.in>.table-area .search-area .finish-date,#sales .main>.in>.table-area .search-area .select-area{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+#sales .main>.in>.table-area .search-area.tab2 .start-date,#sales .main>.in>.table-area .search-area.tab2 .finish-date,#sales .main>.in>.table-area .search-area.tab2 .select-area{
+    margin-bottom: 10px;
+}
+#sales .main>.in>.table-area .search-area .start-date input,#sales .main>.in>.table-area .search-area .finish-date input{
+    width: 200px;
+    margin-right: 5px;
+}
+#sales .main>.in>.table-area .search-area .search-box{
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+    display: flex;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+#sales .main>.in>.table-area .search-area .search-box input{
+    width: 100%;
+    border:none;
+}
+#sales .main>.in>.table-area .search-area .blacklist-toggle{
+    display: flex;
+    align-items: center;
+}
+#sales .main>.in>.table-area .search-area .blacklist-toggle span{
+    white-space: nowrap;
+    margin-left: 5px;
+}
+#sales .main>.in>.table-area .btn-area{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+#sales .main>.in>.table-area .btn-area .excel-btn{
+    display: inline-block;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+}
+#sales .main>.in>.table-area .table-tab{
+    margin-bottom: 10px;
+}
+#sales .main>.in>.table-area .table-tab ul{
+    display: none;
+}
+#sales .main>.in>.table-area .table-tab.on ul{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+#sales .main>.in>.table-area .table-tab.on ul li{
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 10px;
+    border: 1px solid var(--borderd9);
+}
+#sales .main>.in>.table-area .table-tab.on ul li.on{
+    background: var(--maincolor);
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid var(--maincolor);
+}
 
 @media screen and (max-width:1200px){
     #login .txt-area{
@@ -888,6 +1179,36 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         margin-right: 0px;
     }
 
+    #sales .main>.in>.box-area{
+        height: auto;
+        flex-direction: column;
+    }
+    #sales .main>.in>.box-area>.box{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #sales .main>.in>.table-area .search-area{
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    #sales .main>.in>.table-area .search-area .start-date,#sales .main>.in>.table-area .search-area .finish-date{
+        width: calc((100% - 20px) / 2);
+        margin-bottom: 10px;
+    }
+    #sales .main>.in>.table-area .search-area .select-area select{
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    #sales .main>.in>.table-area .search-area .finish-date{
+        margin-right: 0;
+    }
+    #sales .main>.in>.table-area .search-area .start-date input,#sales .main>.in>.table-area .search-area .finish-date input{
+        width: 100%;
+    }
+    #sales .main>.in>.table-area .search-area .search-box{
+        margin-right: 0px;
+    }
+
 
 }
 
@@ -908,11 +1229,39 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 
     .in{width: 95%; min-width:350px; margin: 0 auto; position: relative;}
     .aside-header{
+        position: fixed;
+        z-index: 99999999;
+        left: auto;
+        right: 0;
+        border-right: none;
+        padding-top: 56px;
+    }
+    .aside-header h1{
         display: none;
     }
+    .aside-header>ul>li.mobile{
+        display: block;
+    }
+
+
     .main{
         padding-left: 0;
     }
+    .main-header .in>span,.main-header .in .my,.main-header .in .logout{
+        display: none;
+    }
+    .main-header .in .mobile-header{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .main-header .in .mobile-header h1 img{
+        height: 26px;
+        object-fit: contain;
+    }
+
+
     .pop-up{
         position: absolute;
         left: 50%;
@@ -921,6 +1270,9 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         width: 95%;
         min-width:350px;
         padding: 20px 10px 100px;
+    }
+    .pop-up .pop-bottombtn{
+        right: 10px;
     }
     .pop-up .pop-top h2{
         font-size: var(--font24);
@@ -958,7 +1310,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     .pop-up.detail .tab2-area .area1-box>div{
         width: 100%;
     }
-    .pop-up.detail .tab2-area2 .area2-box>table td>span{
+    .pop-up.detail .tab2-area2 .area2-box table td>span{
         font-size: var(--font12);
     }
     .pop-up.detail .tab3-area h3{
@@ -975,13 +1327,20 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         width: 100%;
         margin-bottom: 10px;
     }
-
-
+    .pop-up.refund .pop-bottombtn span{
+        margin-left: 10px;
+        font-size: var(--font12);
+    }
 
     #login .txt-area{
         margin-right: 0px;
         display: none;
     }
+
+    #sales .main>.in>.box-area>.box .bottom-flex span{
+        font-size: var(--font12);
+    }
+
 
 }
 

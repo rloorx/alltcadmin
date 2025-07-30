@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>매출관리화면</title>
+</head>
+<body>
+    <div id="sales">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard.png"><span>대시보드</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store.png"><span>매장 관리</span></a>
+                    </li>
+                    <li class="on">
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat.png"><span>좌석 및 시설 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2><img src="./img/icon-chart-30px.png"><span>매출 관리</span></h2>
+                    <div class="box-area">
+                        <div class="box">
+                            <div class="box-top">
+                                <span>전체 매출 현황</span>
+                                <img src="./img/icon-sell.png">
+                            </div>
+                            <div class="box-num">
+                                <h3>4,564,000원</h3>
+                            </div>
+                            <div class="box-bottom">
+                                <span>2025.01.02 ~ 2025.07.31</span>
+                                <div class="bottom-flex">
+                                    <span>일일권 : 75,000원</span>
+                                    <span>시간권 :479,000원</span>
+                                    <span>기간권 : 3,750,000원</span>
+                                    <span>스터디룸/사물함 : 260,000원</span>
+                                    <span class="red">환불금액 : 560,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box current">
+                            <div class="box-top">
+                                <span>이번 달 매출</span>
+                                <img src="./img/icon-sell-current.png">
+                            </div>
+                            <div class="box-num">
+                                <h3>1,964,000원</h3>
+                            </div>
+                            <div class="box-bottom">
+                                <span>2025.07.01 ~ 2025.07.31</span>
+                                <div class="bottom-flex">
+                                    <span>일일권 : 75,000원</span>
+                                    <span>시간권 :479,000원</span>
+                                    <span>기간권 : 3,750,000원</span>
+                                    <span>스터디룸/사물함 : 260,000원</span>
+                                    <span class="red">환불금액 : 560,000원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-area">
+                        <div class="tab-area">
+                            <h3>매출 내역</h3>
+                            <div class="tab-box">
+                                <ul>
+                                    <li class="on">금액별</li>
+                                    <li>건별</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-area tab1 on">
+                            <div class="start-date">
+                                <input type="date"><span>부터</span>
+                            </div>
+                            <div class="finish-date">
+                                <input type="date"><span>까지</span>
+                            </div>
+                        </div>
+                        <div class="search-area tab2">
+                            <div class="start-date">
+                                <input type="date"><span>부터</span>
+                            </div>
+                            <div class="finish-date">
+                                <input type="date"><span>까지</span>
+                            </div>
+                            <div class="select-area">
+                                <select name="enter">
+                                    <option value="default">결제수단</option>
+                                    <option value="opt2">카드</option>
+                                    <option value="opt3">현금</option>
+                                    <option value="opt3">기타</option>
+                                </select>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" placeholder="검색어를 입력해 주세요.">
+                                <img src="./img/icon-search.png">
+                            </div>
+                            <div class="blacklist-toggle">
+                                <div class="toggle-bg">
+                                    <div class="toggle"></div>
+                                </div>
+                                <span>환불만 보기</span>
+                            </div>
+                        </div>
+                        <div class="btn-area">
+                            <button class="excel-btn">
+                                <img src="./img/excel-img.png">
+                            </button>
+                        </div>
+                        <div class="table-tab tab1 on">
+                            <ul>
+                                <li class="on">일별</li>
+                                <li>월별</li>
+                                <li>년별</li>
+                            </ul>
+                        </div>
+                        <div class="table-layout">
+                            <table class="tab1">
+                                <thead>
+                                    <tr>
+                                        <td>날짜</td>
+                                        <td>일일권</td>
+                                        <td>시간권</td>
+                                        <td>기간권</td>
+                                        <td>스터디룸</td>
+                                        <td>사물함</td>
+                                        <td>환불금액</td>
+                                        <td>총 매출</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="color">
+                                        <td>총계</td>
+                                        <td>83,000원</td>
+                                        <td>393,000원</td>
+                                        <td>3,750,000원</td>
+                                        <td>165,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>4,393,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>0원</td>
+                                        <td>7,000원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-layout">
+                            <table class="tab2 on">
+                                <thead>
+                                    <tr>
+                                        <td>거래일시</td>
+                                        <td>상품</td>
+                                        <td>이름</td>
+                                        <td>연락처</td>
+                                        <td>결제금액</td>
+                                        <td>결제수단</td>
+                                        <td>환불</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn refund">환불완료</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.01 20:00:00</td>
+                                        <td>[사물함]사물함 1개월</td>
+                                        <td>손예진</td>
+                                        <td>010-1234-1234</td>
+                                        <td>25,000원</td>
+                                        <td>카드</td>
+                                        <td><span class="detail-btn">환불하기</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-area">
+                            <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                            <span>1/2</span>
+                            <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal"></div>
+
+        <!-- 환불 처리 확인 팝업 -->
+        <div class="pop-up refund" style="display: none;">
+            <div class="pop-top">
+                <h2>환불 처리 확인</h2>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="refund">키오스크로 환불 실행</button>
+                <span>이 작업은 되돌릴 수 없습니다. 계속 진행하시겠습니까?</span>
+            </div>
+            
+            <div class="refund-area">
+                <div class="refund-box">
+                    <span>이름</span>
+                    <span>강예슬</span>
+                </div>
+                <div class="refund-box">
+                    <span>상품</span>
+                    <span>[자유]일일권 8시간</span>
+                </div>
+                <div class="refund-box">
+                    <span>결제금액</span>
+                    <span class="big">5,000원</span>
+                </div>
+                <div class="refund-box">
+                    <span>결제수단</span>
+                    <span>카드</span>
+                </div>
+                <div class="refund-box">
+                    <span>결제일시</span>
+                    <span>2025.07.29 10:01</span>
+                </div>
+                <div class="refund-box">
+                    <span>승인번호</span>
+                    <span>20250729100101</span>
+                </div>
+            </div>
+            <div class="refund-price">
+                <div class="refund-box">
+                    <span>최종 환불 금액</span>
+                    <span class="red">5,000원</span>
+                </div>
+            </div>
+            <div class="refund-info">
+                <span>환불 처리 시 해당 매출은 취소되며, 관련 이용권/상품의 상태가 변경됩니다.</span>
+            </div>
+        </div>
+
+
+        <!-- 환불 완료 팝업 -->
+        <div class="pop-up fin" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/check-img.png">
+                <h3>키오스크에서 확인하세요!</h3>
+            </div>           
+        </div>
+
+        <!-- 환불 실패 팝업 -->
+        <div class="pop-up fin fail" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/failed-img.png">
+                <h3>다시 시도해 주세요.</h3>
+            </div>           
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+   document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const parentLi = this.parentElement;
+      const img = this.querySelector('img');
+
+      // 모든 li에서 on 제거 및 이미지 원복
+      document.querySelectorAll('.aside-header ul > li').forEach(li => {
+        li.classList.remove('on');
+
+        const liImg = li.querySelector('a > img');
+        if (liImg) {
+          // -white 제거
+          liImg.src = liImg.src.replace('-white', '');
+        }
+      });
+
+      // 현재 클릭한 li에 on 토글
+      const isNowOn = parentLi.classList.toggle('on');
+
+      // -white 이미지로 교체
+      if (isNowOn && img) {
+        const src = img.src;
+        if (!src.includes('-white')) {
+          const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
+          img.src = newSrc;
+        }
+      }
+    });
+  });
+    </script>
+</body>
+</html>
