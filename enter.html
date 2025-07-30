@@ -37,6 +37,12 @@
                     <li>
                         <a href="#"><img src="./img/icon-event.png"><span>이벤트 배너 관리</span></a>
                     </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                    </li>
                 </ul>
             </header>
             <main class="main">
@@ -48,6 +54,12 @@
                         </div>
                         <div class="logout">
                             <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -156,11 +168,50 @@
                 </div>
             </main>
         </div>
+        <div class="modal"></div>
     </div>
 
 
 
     <script>
+                document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const parentLi = this.parentElement;
+            const img = this.querySelector('img');
+
+            document.querySelectorAll('.aside-header ul > li').forEach(li => {
+                li.classList.remove('on');
+
+                const liImg = li.querySelector('a > img');
+                if (liImg) {
+                // -white 제거
+                liImg.src = liImg.src.replace('-white', '');
+                }
+            });
+
+            const isNowOn = parentLi.classList.toggle('on');
+
+            // -white 이미지로 교체
+            if (isNowOn && img) {
+                const src = img.src;
+                if (!src.includes('-white')) {
+                const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
+                img.src = newSrc;
+                }
+            }
+            });
+        });
+
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            document.querySelector('.modal')?.classList.add('on');
+            document.querySelector('.aside-header')?.classList.add('on');
+        });
+        document.querySelector('.modal').addEventListener('click', function () {
+            this.classList.remove('on');
+            document.querySelector('.aside-header')?.classList.remove('on');
+        });
 
     </script>
 </body>

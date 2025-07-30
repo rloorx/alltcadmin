@@ -477,37 +477,44 @@
 
 
     <script>
-   document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
+        document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-      const parentLi = this.parentElement;
-      const img = this.querySelector('img');
+            const parentLi = this.parentElement;
+            const img = this.querySelector('img');
 
-      // 모든 li에서 on 제거 및 이미지 원복
-      document.querySelectorAll('.aside-header ul > li').forEach(li => {
-        li.classList.remove('on');
+            document.querySelectorAll('.aside-header ul > li').forEach(li => {
+                li.classList.remove('on');
 
-        const liImg = li.querySelector('a > img');
-        if (liImg) {
-          // -white 제거
-          liImg.src = liImg.src.replace('-white', '');
-        }
-      });
+                const liImg = li.querySelector('a > img');
+                if (liImg) {
+                // -white 제거
+                liImg.src = liImg.src.replace('-white', '');
+                }
+            });
 
-      // 현재 클릭한 li에 on 토글
-      const isNowOn = parentLi.classList.toggle('on');
+            const isNowOn = parentLi.classList.toggle('on');
 
-      // -white 이미지로 교체
-      if (isNowOn && img) {
-        const src = img.src;
-        if (!src.includes('-white')) {
-          const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
-          img.src = newSrc;
-        }
-      }
-    });
-  });
+            // -white 이미지로 교체
+            if (isNowOn && img) {
+                const src = img.src;
+                if (!src.includes('-white')) {
+                const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
+                img.src = newSrc;
+                }
+            }
+            });
+        });
+
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            document.querySelector('.modal')?.classList.add('on');
+            document.querySelector('.aside-header')?.classList.add('on');
+        });
+        document.querySelector('.modal').addEventListener('click', function () {
+            this.classList.remove('on');
+            document.querySelector('.aside-header')?.classList.remove('on');
+        });
     </script>
 </body>
 </html>

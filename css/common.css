@@ -1232,9 +1232,13 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         position: fixed;
         z-index: 99999999;
         left: auto;
-        right: 0;
+        right: -100%;
         border-right: none;
         padding-top: 56px;
+        transition: all 500ms;
+    }
+    .aside-header.on{
+        right: 0;
     }
     .aside-header h1{
         display: none;
