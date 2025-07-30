@@ -126,7 +126,7 @@
                             <input type="text" placeholder="검색어를 입력해 주세요.">
                             <img src="./img/icon-search.png">
                         </div>
-                        <div class="blacklist-toggle">
+                        <div class="blacklist-toggle on">
                             <div class="toggle-bg">
                                 <div class="toggle"></div>
                             </div>
@@ -338,7 +338,7 @@
 
 
         <!-- 엑셀 다운로드 팝업 -->
-        <div class="modal"></div>
+        <div class="modal on"></div>
         <div class="pop-up excel" style="display: none;">
             <div class="pop-top">
                 <h2>엑셀 다운로드</h2>
@@ -363,7 +363,7 @@
         </div>
 
         <!-- 회원상세정보 팝업 -->
-        <div class="pop-up detail" style="display: none;">
+        <div class="pop-up detail" style="display: block;">
             <div class="pop-top">
                 <h2>회원 상세 정보</h2>
             </div>
@@ -434,6 +434,9 @@
                             <div class="toggle"></div>
                         </div>
                     </div>
+                </div>
+                <div class="blacklist-txt">
+                    <textarea name="blacklist-txt"></textarea>
                 </div>
             </div>
             
@@ -762,6 +765,24 @@
             document.querySelector('.aside-header')?.classList.remove('on');
         });
 
+
+        document.querySelectorAll('.blacklist-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function () {
+            this.classList.toggle('on');
+            });
+        });
+
+        const popup = document.querySelector('.pop-up.detail');
+        const toggle = popup.querySelector('.pop-up.detail .blacklist-toggle');
+        const txt = popup.querySelector('.blacklist-txt');
+
+        toggle.addEventListener('click', function () {
+            if (this.classList.contains('on')) {
+            txt.classList.add('on');
+            } else {
+            txt.classList.remove('on');
+            }
+        });
     </script>
 </body>
 </html>

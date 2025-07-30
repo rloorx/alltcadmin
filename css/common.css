@@ -167,6 +167,13 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border-radius: 25px;
     background: #fff;
     border: 1px solid var(--bordera9);
+    transition: all 200ms;
+}
+.blacklist-toggle.on>.toggle-bg{
+    background: var(--maincolor);
+}
+.blacklist-toggle.on .toggle{
+    left: 25px;
 }
 
 .modal{
@@ -552,6 +559,18 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     width: calc(50% - 10px);
     margin-bottom: 10px;
 }
+.pop-up.detail .tab1-area>div.blacklist-txt{
+    width: 100%;
+    display: none;
+}
+.pop-up.detail .tab1-area>div.blacklist-txt.on{
+    display: block;
+}
+.pop-up.detail .tab1-area>div.blacklist-txt textarea{
+    width: 100%;
+    height: 80px;
+}
+
 .pop-up.detail .tab1-area .blacklist-toggle{
     display: flex;
     align-items: center;
