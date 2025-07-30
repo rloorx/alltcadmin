@@ -71,20 +71,36 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     height: 100%;
     object-fit: contain;
 }
-.aside-header ul{
+.aside-header>ul{
     width: 100%;
 }
-.aside-header ul li a{
+.aside-header>ul>li>a{
     display: flex;
     width: 100%;
     padding: 20px 10px;
 }
-.aside-header ul li.on a{
+.aside-header>ul>li.on>a{
     background: var(--maincolor);
     color: #fff;
     font-weight: 700;
 }
-.aside-header ul li a img{
+.aside-header>ul>li>a>img{
+    margin-right: 10px;
+}
+.aside-header>ul>li>ul{
+    width: 100%;
+    display: none;
+    padding-left: 20px;
+}
+.aside-header>ul>li:hover>ul{
+    display: block;
+}
+.aside-header>ul>li>ul>li>a{
+    display: flex;
+    width: 100%;
+    padding: 10px 10px;
+}
+.aside-header>ul>li>ul>li>a>img{
     margin-right: 10px;
 }
 
