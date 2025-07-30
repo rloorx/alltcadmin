@@ -90,7 +90,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .aside-header>ul>li>ul{
     width: 100%;
     display: none;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .aside-header>ul>li:hover>ul{
     display: block;
@@ -98,7 +98,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .aside-header>ul>li>ul>li>a{
     display: flex;
     width: 100%;
-    padding: 10px 10px;
+    padding: 15px 10px;
 }
 .aside-header>ul>li>ul>li>a>img{
     margin-right: 10px;
@@ -666,6 +666,172 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     margin-bottom: 20px;
 }
 
+/* 입퇴실관리화면 */
+#enter .main>.in>h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#enter .main>.in>h2>span{
+    font-size: var(--font24);
+}
+#enter .main>.in>h2>img{
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+#enter .main>.in>.search-area{
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--borderd9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#enter .main>.in>.search-area .start-date,#enter .main>.in>.search-area .finish-date{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+#enter .main>.in>.search-area .start-date input,#enter .main>.in>.search-area .finish-date input, #enter .main>.in>.search-area .select-area select{
+    width: 200px;
+    margin-right: 5px;
+}
+#enter .main>.in>.search-area .search-box{
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+    display: flex;
+    padding-right: 10px;
+}
+#enter .main>.in>.search-area .search-box input{
+    width: 100%;
+    border:none;
+}
+#enter .main>.in>.search-area .blacklist-toggle{
+    display: flex;
+    align-items: center;
+}
+#enter .main>.in>.search-area .blacklist-toggle span{
+    white-space: nowrap;
+    margin-left: 5px;
+}
+#enter .main>.in>.table-area{
+    width: 100%;
+}
+#enter .main>.in>.table-area>.btn-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#enter .main>.in>.table-area>.btn-area .group-box{
+    display: flex;
+    align-items: center;
+}
+#enter .main>.in>.table-area>.btn-area .group-box>div{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+#enter .main>.in>.table-area>.btn-area .group-box .student-group div{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: var(--secondcolor);
+    margin-right: 5px;
+}
+#enter .main>.in>.table-area>.btn-area .group-box .black-group div{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #F24E4E;
+    margin-right: 5px;
+}
+#enter .main>.in>.table-area>.btn-area .group-box .adult-group div{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #a9a9a9;
+    margin-right: 5px;
+}
+#enter .main>.in>.table-area>.btn-area .btn-box{
+    display: flex;
+    align-items: center;
+}
+#enter .main>.in>.table-area>.btn-area .btn-box .new-btn{
+    border-radius: 5px;
+    background: var(--maincolor);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+#enter .main>.in>.table-area>.btn-area .btn-box .new-btn span{
+    white-space: nowrap;
+}
+#enter .main>.in>.table-area>.btn-area .btn-box .excel-btn{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+}
+#enter .main>.in>.table-area>table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+#enter .main>.in>.table-area>table thead td{
+    border-bottom: 2px solid var(--maincolor);
+}
+#enter .main>.in>.table-area>table td{
+    padding: 10px;
+    border-bottom: 1px solid var(--borderd9);
+}
+#enter .main>.in>.table-area>table td>span{
+    font-size: var(--font14);
+    font-weight: 700;
+    display: inline-block;
+    padding: 2px 10px;
+    text-align: center;
+    border-radius: 90px;
+    margin-left: 10px;
+    border: 1px solid var(--bordera9);
+}
+#enter .main>.in>.table-area>table td>span.student{
+    background: var(--secondcolor);
+    border:none;
+    color: #fff;
+}
+#enter .main>.in>.table-area>table td>span.black{
+    background: #F24E4E;
+    border: none;
+    color: #fff;
+}
+#enter .main>.in>.table-area>.page-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#enter .main>.in>.table-area>.page-area button{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--bordera9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#enter .main>.in>.table-area>.page-area span{
+    padding: 0 10px;
+}
+
+
 
 
 @media screen and (max-width:1200px){
@@ -683,6 +849,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     }
     #user .main>.in>.search-area{
         flex-wrap: wrap;
+        padding: 10px;
     }
     #user .main>.in>.search-area .start-date,#user .main>.in>.search-area .finish-date{
         width: calc((100% - 20px) / 2);
@@ -697,6 +864,28 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     #user .main>.in>.search-area .search-box{
         margin-right: 0px;
         margin-bottom: 10px;
+    }
+
+    #enter .main>.in>.search-area{
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    #enter .main>.in>.search-area .start-date,#enter .main>.in>.search-area .finish-date{
+        width: calc((100% - 20px) / 2);
+        margin-bottom: 10px;
+    }
+    #enter .main>.in>.search-area .select-area select{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #enter .main>.in>.search-area .finish-date{
+        margin-right: 0;
+    }
+    #enter .main>.in>.search-area .start-date input,#enter .main>.in>.search-area .finish-date input{
+        width: 100%;
+    }
+    #enter .main>.in>.search-area .search-box{
+        margin-right: 0px;
     }
 
 
