@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>좌석현황화면</title>
+</head>
+<body>
+    <div id="seats">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard.png"><span>대시보드</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store.png"><span>매장 관리</span></a>
+                    </li>
+                    <li class="on">
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat.png"><span>실시간 이용현황</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2><img src="./img/icon-seat-30px.png"><span>실시간 이용현황</span></h2>
+                    <div class="now-tabarea">
+                        <ul>
+                            <li class="on">좌석 관리</li>
+                            <li>스터디룸 관리</li>
+                            <li>사물함 관리</li>
+                        </ul>
+                    </div>
+                    <div class="seats-tit">
+                        <h3>좌석 현황</h3>
+                        <button class="new-btn">
+                            <img src="./img/icon-add.png"><span>좌석/시설 등록</span>
+                        </button>
+                    </div>
+                    <div class="box-area">
+                        <div class="box chair">
+                            <div class="box-top">
+                                <span>좌석</span>
+                                <img src="./img/icon-chair.png">
+                            </div>
+                            <div class="box-bottom">
+                                <span>사용 / 전체</span>
+                            </div>
+                            <div class="box-num">
+                                <h3>13 / 20</h3>
+                            </div>
+                        </div>
+                        <div class="box room">
+                            <div class="box-top">
+                                <span>스터디룸</span>
+                                <img src="./img/icon-studyroom.png">
+                            </div>
+                            <div class="box-bottom">
+                                <span>사용 / 전체</span>
+                            </div>
+                            <div class="box-num">
+                                <h3>13 / 20</h3>
+                            </div>
+                        </div>
+                        <div class="box locker">
+                            <div class="box-top">
+                                <span>사물함</span>
+                                <img src="./img/icon-locker.png">
+                            </div>
+                            <div class="box-bottom">
+                                <span>사용 / 전체</span>
+                            </div>
+                            <div class="box-num">
+                                <h3>13 / 20</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-area">
+                        <div class="search-box">
+                            <input type="text" placeholder="검색어(이름, 연락처)를 입력해 주세요.">
+                            <img src="./img/icon-search.png">
+                        </div>
+                    </div>
+                    <!--<div class="tab-area">
+                        <ul>
+                            <li class="on">5층</li>
+                            <li>6층</li>
+                        </ul>
+                    </div> 층별 구분 탭-->
+                    <div class="seats-area">
+                        <div class="seats-modal"></div>
+                        <h3>좌석 배치도</h3>
+                        <div class="seats-box">
+                            <img src="./img/seats-img.jpg" alt="물푸레센터 좌석배치도">
+                        </div>
+                        <div class="seats-color">
+                            <div class="color01">
+                                <div></div>
+                                <span>자유석/고정석(사용 중)</span>
+                            </div>
+                            <div class="color02">
+                                <div></div>
+                                <span>스터디룸(사용 중)</span>
+                            </div>
+                            <div class="color03">
+                                <div></div>
+                                <span>자유석/고정석/스터디룸(사용 가능)</span>
+                            </div>
+                        </div>
+                        <div class="pop-up seats-pop" style="display: flex;">
+                            <div class="seats-name">
+                                <span>입실</span>
+                                <h3>V08 고정석</h3>
+                            </div>
+                            <div class="pop-bottombtn">
+                                <button class="seat-info">좌석 이용내역</button>
+                                <button class="seat-time">시간 연장</button>
+                                <button class="seat-change">좌석 이동</button>
+                                <button class="exit">퇴실 처리</button>
+                                <button class="close">닫기</button>
+                            </div>
+                            <div class="seats-user-area">
+                                <div class="box">
+                                    <span>이름</span>
+                                    <span>강예슬</span>
+                                </div>
+                                <div class="box">
+                                    <span>연락처</span>
+                                    <span>010-1234-1234</span>
+                                </div>
+                                <div class="box">
+                                    <span>좌석 상태</span>
+                                    <span>입실<br>(2025-09-01 10:00:00)</span>
+                                </div>
+                                <div class="box">
+                                    <span>남은시간</span>
+                                    <span class="red">39일 22시간 30분 32초</span>
+                                </div>
+                                <div class="box">
+                                    <span>만료일</span>
+                                    <span>2025.07.29 10:01</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal"></div>
+
+        <!-- 환불 처리 확인 팝업 -->
+        <div class="pop-up refund" style="display: none;">
+            <div class="pop-top">
+                <h2>환불 처리 확인</h2>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="refund">키오스크로 환불 실행</button>
+                <span>이 작업은 되돌릴 수 없습니다. 계속 진행하시겠습니까?</span>
+            </div>
+            
+            <div class="refund-area">
+                <div class="refund-box">
+                    <span>이름</span>
+                    <span>강예슬</span>
+                </div>
+                <div class="refund-box">
+                    <span>상품</span>
+                    <span>[자유]일일권 8시간</span>
+                </div>
+                <div class="refund-box">
+                    <span>결제금액</span>
+                    <span class="big">5,000원</span>
+                </div>
+                <div class="refund-box">
+                    <span>결제수단</span>
+                    <span>카드</span>
+                </div>
+                <div class="refund-box">
+                    <span>결제일시</span>
+                    <span>2025.07.29 10:01</span>
+                </div>
+                <div class="refund-box">
+                    <span>승인번호</span>
+                    <span>20250729100101</span>
+                </div>
+            </div>
+            <div class="refund-price">
+                <div class="refund-box">
+                    <span>최종 환불 금액</span>
+                    <span class="red">5,000원</span>
+                </div>
+            </div>
+            <div class="refund-info">
+                <span>환불 처리 시 해당 매출은 취소되며, 관련 이용권/상품의 상태가 변경됩니다.</span>
+            </div>
+        </div>
+
+
+        <!-- 환불 완료 팝업 -->
+        <div class="pop-up fin" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/check-img.png">
+                <h3>키오스크에서 확인하세요!</h3>
+            </div>           
+        </div>
+
+        <!-- 환불 실패 팝업 -->
+        <div class="pop-up fin fail" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/failed-img.png">
+                <h3>다시 시도해 주세요.</h3>
+            </div>           
+        </div>
+
+        <!-- 매출등록 팝업-->
+        <div class="pop-up new" style="display: none;">
+            <div class="pop-top">
+                <h2>매출 등록</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">등록</button>
+            </div>
+            
+            <div class="pop-area">
+                <div class="date">
+                    <span>거래일시</span>
+                    <input type="date">
+                </div>
+                <div class="type">
+                    <span>상품명</span>
+                    <select name="type">
+                        <option value="default">선택</option>
+                        <option value="item2">일일권</option>
+                        <option value="item3">자유석 10시간(사용기간 30일)</option>
+                        <option value="item4">자유석 30시간(사용기간 90일)</option>
+                        <option value="item5">자유석 60시간(사용기간 6개월)</option>
+                        <option value="item6">자유석 60시간(사용기간 1년)</option>
+                        <option value="item7">고정석 1개월</option>
+                        <option value="item8">고정석 2개월</option>
+                        <option value="item9">고정석 3개월</option>
+                        <option value="item10">고정석 6개월</option>
+                        <option value="item11">고정석 12개월</option>
+                        <option value="item12">스터디룸1</option>
+                        <option value="item13">스터디룸2</option>
+                    </select>
+                </div>
+                <div class="name">
+                    <span>이름</span>
+                    <input type="text" placeholder="예 : 자유">
+                </div>
+                <div class="num">
+                    <span>연락처</span>
+                    <input type="text" placeholder="예 : 010-1234-1234">
+                </div>
+                <div class="price">
+                    <span>결제금액</span>
+                    <input type="text" value="0">
+                </div>
+                <div class="item">
+                    <span>결제수단</span>
+                    <select name="item">
+                        <option value="default">선택</option>
+                        <option value="item2">네이버페이</option>
+                        <option value="item3">계좌이체</option>
+                        <option value="item4">기타</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+    </div>
+
+
+
+    <script>
+        document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const parentLi = this.parentElement;
+            const img = this.querySelector('img');
+
+            document.querySelectorAll('.aside-header ul > li').forEach(li => {
+                li.classList.remove('on');
+
+                const liImg = li.querySelector('a > img');
+                if (liImg) {
+                // -white 제거
+                liImg.src = liImg.src.replace('-white', '');
+                }
+            });
+
+            const isNowOn = parentLi.classList.toggle('on');
+
+            // -white 이미지로 교체
+            if (isNowOn && img) {
+                const src = img.src;
+                if (!src.includes('-white')) {
+                const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
+                img.src = newSrc;
+                }
+            }
+            });
+        });
+
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            document.querySelector('.modal')?.classList.add('on');
+            document.querySelector('.aside-header')?.classList.add('on');
+        });
+        document.querySelector('.modal').addEventListener('click', function () {
+            this.classList.remove('on');
+            document.querySelector('.aside-header')?.classList.remove('on');
+        });
+    </script>
+</body>
+</html>
