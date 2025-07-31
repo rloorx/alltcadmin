@@ -1023,6 +1023,9 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
+#sales .main>.in>.table-area table td:last-child{
+    text-align: center;
+}
 #sales .main>.in>.table-area table td>span{
     font-size: var(--font14);
     font-weight: 700;
@@ -1111,6 +1114,18 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
+    align-items: center;
+}
+#sales .main>.in>.table-area .btn-area .new-btn{
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--maincolor);
+    background: var(--maincolor);
+    color: #fff;
+    margin-right: 10px;
 }
 #sales .main>.in>.table-area .btn-area .excel-btn{
     display: inline-block;
