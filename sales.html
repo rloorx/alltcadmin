@@ -399,7 +399,7 @@
             </main>
         </div>
 
-        <div class="modal"></div>
+        <div class="modal on"></div>
 
         <!-- 환불 처리 확인 팝업 -->
         <div class="pop-up refund" style="display: none;">
@@ -473,6 +473,66 @@
                 <h3>다시 시도해 주세요.</h3>
             </div>           
         </div>
+
+        <!-- 매출등록 팝업-->
+        <div class="pop-up new" style="display: block;">
+            <div class="pop-top">
+                <h2>매출 등록</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">등록</button>
+            </div>
+            
+            <div class="pop-area">
+                <div class="date">
+                    <span>거래일시</span>
+                    <input type="date">
+                </div>
+                <div class="type">
+                    <span>상품명</span>
+                    <select name="type">
+                        <option value="default">선택</option>
+                        <option value="item2">일일권</option>
+                        <option value="item3">자유석 10시간(사용기간 30일)</option>
+                        <option value="item4">자유석 30시간(사용기간 90일)</option>
+                        <option value="item5">자유석 60시간(사용기간 6개월)</option>
+                        <option value="item6">자유석 60시간(사용기간 1년)</option>
+                        <option value="item7">고정석 1개월</option>
+                        <option value="item8">고정석 2개월</option>
+                        <option value="item9">고정석 3개월</option>
+                        <option value="item10">고정석 6개월</option>
+                        <option value="item11">고정석 12개월</option>
+                        <option value="item12">스터디룸1</option>
+                        <option value="item13">스터디룸2</option>
+                    </select>
+                </div>
+                <div class="name">
+                    <span>이름</span>
+                    <input type="text" placeholder="예 : 자유">
+                </div>
+                <div class="num">
+                    <span>연락처</span>
+                    <input type="text" placeholder="예 : 010-1234-1234">
+                </div>
+                <div class="price">
+                    <span>결제금액</span>
+                    <input type="text" value="0">
+                </div>
+                <div class="item">
+                    <span>결제수단</span>
+                    <select name="item">
+                        <option value="default">선택</option>
+                        <option value="item2">네이버페이</option>
+                        <option value="item3">계좌이체</option>
+                        <option value="item4">기타</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+
 
 
     </div>
