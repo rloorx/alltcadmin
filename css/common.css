@@ -531,7 +531,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     align-items: center;
     margin-left: 20px;
 }
-
 .pop-up.detail .pop-tabmenu ul{
     display: flex;
     width: 100%;
@@ -570,7 +569,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     width: 100%;
     height: 80px;
 }
-
 .pop-up.detail .tab1-area .blacklist-toggle{
     display: flex;
     align-items: center;
@@ -684,6 +682,56 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
+.pop-up.ticket .pop-area2 table td>span{
+    margin-left: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    background: var(--maincolor);
+    border-radius: 50px;
+    color: #fff;
+    font-size: var(--font14);
+}
+.pop-up.ticket .pop-area-seats-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+.pop-up.ticket .pop-area-seats-date .date-input{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.pop-up.ticket .pop-area-seats-date .start-date,.pop-up.ticket .pop-area-seats-date .finish-date{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.pop-up.ticket.seats .pop-bottombtn button.cancel{
+    margin-right: 0px;
+}
+.pop-up.ticket .pop-area-seats-date .seats-state{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.pop-up.ticket .pop-area-seats-date .seats-state span{
+    margin-right: 5px;
+}
+.pop-up.ticket .pop-area-seats-date .seats-state span.state{
+    margin-right: 0px;
+    display: inline-block;
+    padding: 5px 10px;
+    background: var(--maincolor);
+    border-radius: 50px;
+    color: #fff;
+    font-size: var(--font14);
+}
+.pop-up.ticket.seats .pop-area2 table{
+    margin-bottom: 0;
+}
+
 .pop-up.new .pop-area{
     display: flex;
     flex-wrap: wrap;
@@ -699,6 +747,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     align-items: center;
     justify-content: center;
     padding-top: 30px;
+    margin-bottom: 20px;
 }
 .pop-up.fin .pop-area img{
     margin-bottom: 20px;
@@ -752,6 +801,52 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 .pop-up.refund .refund-info span{
     font-size: var(--font14);
+}
+.pop-up.seats-enter .pop-top{
+    margin-bottom: 20px;
+}
+.pop-up.seats-enter h2 span{
+    font-size: inherit;
+    color: var(--maincolor);
+}
+.pop-up.seats-enter .pop-area{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.pop-up.seats-enter .pop-area button.view{
+    width: auto;
+    padding: 0 10px;
+    border: 1px solid var(--bordera9);
+    white-space: nowrap;
+}
+.pop-up.seats-enter .pop-area .name,
+.pop-up.seats-enter .pop-area .num{
+    width: 45%;
+    margin-right: 10px;
+}
+.pop-up .pop-bottombtn button.disabled{  /*버튼 비활성화일때 클래스 disabled 붙여주심 됩니다(클래스 빼면 메인컬러 뜸)*/
+    background: var(--bordera9);
+}
+.pop-up.seats-enter .view-area{
+    padding-top: 20px;
+}
+.pop-up.seats-enter .view-area .item{
+    margin-bottom: 10px;
+}
+.pop-up.seats-enter .view-area span.state-bar{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2AACB6;
+    background: #2aadb628;
+    border-radius: 5px;
+    color: #2AACB6;
+}
+.pop-up.seats-enter .view-area span.state-bar.state02{
+    border: 1px solid #F24E4E;
+    background: #F24E4E28;
+    color: #F24E4E;
 }
 
 /* 입퇴실관리화면 */
@@ -1231,9 +1326,16 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     flex-direction: column;
     justify-content: space-between;
 }
-#seats .main>.in>.box-area>.box.current{
+#seats .main>.in>.box-area>.box.chair{
+    border: 1px solid #2AACB6;
+    background: #2aadb628;
+}
+#seats .main>.in>.box-area>.box.room{
+    border: 1px solid #9CBA42;
+    background: #fff59b50;
+}
+#seats .main>.in>.box-area>.box.locker{
     border: 1px solid var(--maincolor);
-    color: var(--maincolor);
 }
 #seats .main>.in>.box-area>.box .box-top{
     width: 100%;
@@ -1303,6 +1405,39 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
+#seats .main>.in>.seats-area .seats-color{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+#seats .main>.in>.seats-area .seats-color>div{
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+/* 아래 : 좌석 구분 컬러 - 좌석 좌표 넣으실때 width,height값 40px(좌석)/ width 35px, height 122px(스터디룸) 으로 바꿔주심 됩니다!! */
+#seats .main>.in>.seats-area .seats-color>div>div{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--maincolor);
+    border-radius: 5px;
+    background: #d9d9d9;
+    margin-right: 5px;
+    color: var(--maincolor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#seats .main>.in>.seats-area .seats-color>div.color01>div{
+    border: 1px solid #2AACB6;
+    background: #2aadb670;
+}
+#seats .main>.in>.seats-area .seats-color>div.color02>div{
+    border: 1px solid #9CBA42;
+    background: #fff59b;
+}
 #seats .main>.in>.seats-area .seats-modal{
     width: 100%;
     position: absolute;
@@ -1315,7 +1450,14 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 #seats .main>.in>.seats-area .seats-modal.on{
     display: block;
 }
-.pop-up.seats-pop{
+#seats .modal{
+    z-index: 99999999;
+}
+.pop-up.seats-pop.on,
+.pop-up.seats-select-pop.on,
+.pop-up.seats-confirm-pop.on,
+.pop-up.seats-fin-pop.on,
+.pop-up.exit-confirm-pop.on{
     left: auto;
     right: 20px;
     transform: translateX(0);
@@ -1327,6 +1469,13 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     flex-direction: column;
     align-items: center;
     padding-bottom: 70px;
+}
+.pop-up.seats-pop,
+.pop-up.seats-select-pop,
+.pop-up.seats-confirm-pop,
+.pop-up.seats-fin-pop,
+.pop-up.exit-confirm-pop{
+    display: none;
 }
 .pop-up.seats-pop .seats-name{
     display: flex;
@@ -1386,9 +1535,101 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     color: #fff;
     border: 1px solid #F24E4E;
 }
+.pop-up.seats-pop .pop-bottombtn button.enter{
+    background: var(--maincolor);
+    color: #fff;
+    border: 1px solid var(--maincolor);
+}
+
+.pop-up.seats-select-pop .seats-name{
+    margin-bottom: 40px;
+}
+.pop-up.seats-select-pop .seats-name h3{
+    font-size: var(--font24);
+}
+.pop-up.seats-select-pop .seats-name span{
+    font-size: inherit;
+    color: var(--maincolor);
+}
+.pop-up.seats-select-pop .pop-area{
+    margin-bottom: 20px;
+}
+.pop-up.seats-select-pop .pop-area h3{
+    font-size: var(--font20);
+    font-weight: 400;
+}
+
+.pop-up.seats-confirm-pop .seats-name{
+    margin-bottom: 40px;
+}
+.pop-up.seats-confirm-pop .seats-name h3{
+    font-size: var(--font24);
+}
+.pop-up.seats-confirm-pop .pop-area{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pop-up.seats-confirm-pop .pop-area h3:first-child,.pop-up.seats-confirm-pop .pop-area span{
+    display: block;
+    margin-bottom: 20px;
+}
+.pop-up.seats-confirm-pop .pop-area h3{
+    color: var(--maincolor);
+}
+.pop-up.seats-confirm-pop .pop-area h3:last-child{
+    font-size: var(--font24);
+    word-break: keep-all;
+}
+.pop-up.seats-confirm-pop .pop-area span.big{
+    font-size: var(--font20);
+    font-weight: 700;
+}
+
+.pop-up.seats-fin-pop .pop-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+.pop-up.seats-fin-pop .pop-area img{
+    margin-bottom: 20px;
+}
+.pop-up.seats-fin-pop .pop-area h3{
+    font-size: var(--font24);
+}
+
+.pop-up.exit-confirm-pop .seats-name{
+    margin-bottom: 30px;
+}
+.pop-up.exit-confirm-pop .seats-name h3{
+    font-size: var(--font24);
+    color: #F24E4E;
+}
+.pop-up.exit-confirm-pop .pop-area{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pop-up.exit-confirm-pop .pop-area>span{
+    display: block;
+    margin-bottom: 10px;
+}
+.pop-up.exit-confirm-pop .pop-area>h3{
+    padding-top: 10px;
+    font-size: var(--font24);
+    word-break: keep-all;
+}
+.pop-up.exit-confirm-pop .pop-area>h3>span{
+    font-size: inherit;
+    color: #F24E4E;
+}
+.pop-up.exit-confirm-pop .pop-bottombtn button.save{
+    background: #F24E4E;
+}
 
 @media screen and (max-width:1313px){
-    .pop-up.seats-pop{
+    .pop-up.seats-pop.on{
         padding-bottom: 100px;
     }
 }
@@ -1475,6 +1716,15 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     }
     #sales .main>.in>.table-area .search-area .search-box{
         margin-right: 0px;
+    }
+
+    #seats .main>.in>.box-area{
+        height: auto;
+        flex-direction: column;
+    }
+    #seats .main>.in>.box-area>.box{
+        width: 100%;
+        margin-bottom: 10px;
     }
 
 
@@ -1602,6 +1852,18 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     .pop-up.refund .pop-bottombtn span{
         margin-left: 10px;
         font-size: var(--font12);
+    }
+    .pop-up.seats-select-pop .pop-area h3{
+        font-size: var(--font16);
+    }
+    .pop-up.seats-confirm-pop .pop-area h3:last-child{
+        font-size: var(--font20);
+    }
+    .pop-up.seats-confirm-pop .pop-area span.big{
+        font-size: var(--font16);
+    }
+    .pop-up.exit-confirm-pop .pop-area>h3{
+        font-size: var(--font20);
     }
 
     #login .txt-area{

@@ -129,7 +129,7 @@
                         </ul>
                     </div> 층별 구분 탭-->
                     <div class="seats-area">
-                        <div class="seats-modal"></div>
+                        <div class="seats-modal on"></div>
                         <h3>좌석 배치도</h3>
                         <div class="seats-box">
                             <img src="./img/seats-img.jpg" alt="물푸레센터 좌석배치도">
@@ -148,7 +148,9 @@
                                 <span>자유석/고정석/스터디룸(사용 가능)</span>
                             </div>
                         </div>
-                        <div class="pop-up seats-pop" style="display: flex;">
+
+                        <!-- 좌석상세팝업 -->
+                        <div class="pop-up seats-pop on">
                             <div class="seats-name">
                                 <span>입실</span>
                                 <h3>V08 고정석</h3>
@@ -158,6 +160,7 @@
                                 <button class="seat-time">시간 연장</button>
                                 <button class="seat-change">좌석 이동</button>
                                 <button class="exit">퇴실 처리</button>
+                                <button class="enter" style="display: none;">입실 처리</button>
                                 <button class="close">닫기</button>
                             </div>
                             <div class="seats-user-area">
@@ -183,6 +186,68 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 좌석이동팝업 : 좌석 선택 -->
+                        <div class="pop-up seats-select-pop">
+                            <div class="seats-name">
+                                <h3><span>V08</span> 좌석 이동</h3>
+                            </div>
+                            <div class="pop-bottombtn">
+                                <button class="cancel">취소</button>
+                                <button class="save">확인</button>
+                            </div>
+                            <div class="pop-area">
+                                <h3>이동할 좌석을 선택하세요.</h3>
+                            </div>           
+                        </div>
+ 
+                        <!-- 좌석이동팝업 : 좌석 이동 확인 -->
+                        <div class="pop-up seats-confirm-pop">
+                            <div class="seats-name">
+                                <h3>V08 좌석 이동 확인</h3>
+                            </div>
+                            <div class="pop-bottombtn">
+                                <button class="cancel">취소</button>
+                                <button class="save">이동</button>
+                            </div>
+                            <div class="pop-area">
+                                <h3>V08 → V20</h3>
+                                <span class="big">선택한 좌석을 변경합니다.</span>
+                                <span>좌석 이동 시 기존 좌석 이용은 즉시 종료되며,<br>새 좌석에서 바로 이용이 시작됩니다.</span>
+                                <h3>좌석 이동을 하시겠습니까?</h3>
+                            </div>           
+                        </div>
+
+                        <!-- 좌석이동팝업 : 좌석 이동 성공/ 퇴실처리 팝업 : 퇴실 성공 -->
+                        <div class="pop-up seats-fin-pop">
+                            <div class="pop-bottombtn">
+                                <button class="save">확인</button>
+                            </div>
+                            
+                            <div class="pop-area">
+                                <img src="./img/check-img.png">
+                                <h3>좌석 이동 처리되었습니다.</h3>
+                            </div>           
+                        </div>
+
+                        <!-- 퇴실처리팝업 : 퇴실 처리 안내 -->
+                        <div class="pop-up exit-confirm-pop">
+                            <div class="seats-name">
+                                <h3>V08</h3>
+                            </div>
+                            <div class="pop-bottombtn">
+                                <button class="cancel">취소</button>
+                                <button class="save">퇴실처리</button>
+                            </div>
+                            <div class="pop-area">
+                                <span><strong>사용 중인 이용권 :</strong> 자유석 시간권 60시간</span>
+                                <span><strong>총 이용 시간 :</strong> 1시간 30분</span>
+                                <span><strong>잔여 이용 시간 :</strong> 59시간 30분</span>
+                                <h3><span>V08 </span>좌석을 퇴실처리 하시겠습니까?</h3>
+                            </div>           
+                        </div>
+
+
                     </div>
                 </div>
             </main>
@@ -190,113 +255,84 @@
 
         <div class="modal"></div>
 
-        <!-- 환불 처리 확인 팝업 -->
-        <div class="pop-up refund" style="display: none;">
-            <div class="pop-top">
-                <h2>환불 처리 확인</h2>
-            </div>
-            <div class="pop-bottombtn">
-                <button class="cancel">취소</button>
-                <button class="refund">키오스크로 환불 실행</button>
-                <span>이 작업은 되돌릴 수 없습니다. 계속 진행하시겠습니까?</span>
-            </div>
-            
-            <div class="refund-area">
-                <div class="refund-box">
-                    <span>이름</span>
-                    <span>강예슬</span>
-                </div>
-                <div class="refund-box">
-                    <span>상품</span>
-                    <span>[자유]일일권 8시간</span>
-                </div>
-                <div class="refund-box">
-                    <span>결제금액</span>
-                    <span class="big">5,000원</span>
-                </div>
-                <div class="refund-box">
-                    <span>결제수단</span>
-                    <span>카드</span>
-                </div>
-                <div class="refund-box">
-                    <span>결제일시</span>
-                    <span>2025.07.29 10:01</span>
-                </div>
-                <div class="refund-box">
-                    <span>승인번호</span>
-                    <span>20250729100101</span>
-                </div>
-            </div>
-            <div class="refund-price">
-                <div class="refund-box">
-                    <span>최종 환불 금액</span>
-                    <span class="red">5,000원</span>
-                </div>
-            </div>
-            <div class="refund-info">
-                <span>환불 처리 시 해당 매출은 취소되며, 관련 이용권/상품의 상태가 변경됩니다.</span>
-            </div>
-        </div>
-
-
-        <!-- 환불 완료 팝업 -->
-        <div class="pop-up fin" style="display: none;">
-            <div class="pop-bottombtn">
-                <button class="save">확인</button>
-            </div>
-            
-            <div class="pop-area">
-                <img src="./img/check-img.png">
-                <h3>키오스크에서 확인하세요!</h3>
-            </div>           
-        </div>
-
-        <!-- 환불 실패 팝업 -->
-        <div class="pop-up fin fail" style="display: none;">
-            <div class="pop-bottombtn">
-                <button class="save">확인</button>
-            </div>
-            
-            <div class="pop-area">
-                <img src="./img/failed-img.png">
-                <h3>다시 시도해 주세요.</h3>
-            </div>           
-        </div>
-
-        <!-- 매출등록 팝업-->
-        <div class="pop-up new" style="display: none;">
+        <!-- 좌석 이용내역 팝업-->
+        <div class="pop-up ticket seats" style="display: none;">
             <div class="pop-top">
                 <h2>매출 등록</h2>
                 <button class="close-pop" style="display: none;"><img src=""></button>
             </div>
             <div class="pop-bottombtn">
-                <button class="cancel">취소</button>
-                <button class="save">등록</button>
+                <button class="cancel">닫기</button>
             </div>
             
             <div class="pop-area">
-                <div class="date">
-                    <span>거래일시</span>
-                    <input type="date">
+                <div class="pop-area-seats-date">
+                    <div class="date-input">
+                        <div class="start-date">
+                            <input type="date">
+                            <span>부터</span>
+                        </div>
+                        <div class="finish-date">
+                            <input type="date">
+                            <span>까지</span>
+                        </div>
+                    </div>
+                    <div class="seats-state">
+                        <span>좌석 상태</span>
+                        <span class="state">사용중</span>
+                    </div>
                 </div>
-                <div class="type">
-                    <span>상품명</span>
-                    <select name="type">
-                        <option value="default">선택</option>
-                        <option value="item2">일일권</option>
-                        <option value="item3">자유석 10시간(사용기간 30일)</option>
-                        <option value="item4">자유석 30시간(사용기간 90일)</option>
-                        <option value="item5">자유석 60시간(사용기간 6개월)</option>
-                        <option value="item6">자유석 60시간(사용기간 1년)</option>
-                        <option value="item7">고정석 1개월</option>
-                        <option value="item8">고정석 2개월</option>
-                        <option value="item9">고정석 3개월</option>
-                        <option value="item10">고정석 6개월</option>
-                        <option value="item11">고정석 12개월</option>
-                        <option value="item12">스터디룸1</option>
-                        <option value="item13">스터디룸2</option>
-                    </select>
-                </div>
+                <div class="pop-area2">
+                    <h3>입퇴실 기록</h3>
+                    <div class="table-layout">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>구분</td>
+                                    <td>입실 시간</td>
+                                    <td>이름</td>
+                                    <td>연락처</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>입실<span>사용중</span></td>
+                                    <td>2025-07-15 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-15 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>           
+            </div>
+            
+        </div>
+
+        <!-- 입실처리 팝업 -->
+        <div class="pop-up seats-enter" style="display: none;">
+            <div class="pop-top">
+                <h2><span>V08</span> 좌석 입실</h2>
+            </div>
+            <div class="pop-area">
                 <div class="name">
                     <span>이름</span>
                     <input type="text" placeholder="예 : 자유">
@@ -305,24 +341,46 @@
                     <span>연락처</span>
                     <input type="text" placeholder="예 : 010-1234-1234">
                 </div>
-                <div class="price">
-                    <span>결제금액</span>
-                    <input type="text" value="0">
+                <button class="view">조회</button>
+            </div>
+            <div class="view-area">
+                <div class="item">
+                    <span>상품</span>
+                    <input type="text" value="자유석 50시간권">
                 </div>
                 <div class="item">
-                    <span>결제수단</span>
-                    <select name="item">
-                        <option value="default">선택</option>
-                        <option value="item2">네이버페이</option>
-                        <option value="item3">계좌이체</option>
-                        <option value="item4">기타</option>
-                    </select>
+                    <span>남은 시간</span>
+                    <input type="text" value="07시간 30분 02초">
                 </div>
+                <div class="item">
+                    <span>만료일</span>
+                    <input type="text" value="2025/02/01 18:00:00">
+                </div>
+                <span class="state-bar">
+                    입실 가능한 상태입니다. <strong>등록</strong> 버튼을 눌러 입실처리를 완료하세요.
+                </span>
+                <span class="state-bar state02" style="display: none;">
+                    남은 이용 시간이 없어 입실이 불가합니다. 시간 연장 또는 이용권 구매가 필요합니다.
+                </span>
+            </div>
+            <div class="pop-bottombtn">
+                <button type="button" class="cancel">취소</button>
+                <button type="button" class="cancel" style="display: none;">이용권 추가/연장</button>
+                <button type="button" class="save disabled">등록</button>
+            </div>
+        </div>
+ 
+        <!-- 입실처리 완료 팝업 -->
+        <div class="pop-up fin" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
             </div>
             
+            <div class="pop-area">
+                <img src="./img/check-img.png">
+                <h3>입실 처리되었습니다.</h3>
+            </div>           
         </div>
-
-
 
     </div>
 
@@ -366,6 +424,11 @@
         document.querySelector('.modal').addEventListener('click', function () {
             this.classList.remove('on');
             document.querySelector('.aside-header')?.classList.remove('on');
+        });
+
+        document.querySelector('.pop-up.seats-pop .pop-bottombtn .close')?.addEventListener('click', () => {
+            document.querySelector('.pop-up.seats-pop')?.classList.remove('on');
+            document.querySelector('.seats-modal')?.classList.remove('on');
         });
     </script>
 </body>
