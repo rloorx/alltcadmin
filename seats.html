@@ -253,7 +253,7 @@
             </main>
         </div>
 
-        <div class="modal"></div>
+        <div class="modal on"></div>
 
         <!-- 좌석 이용내역 팝업-->
         <div class="pop-up ticket seats" style="display: none;">
@@ -328,22 +328,18 @@
         </div>
 
         <!-- 입실처리 팝업 -->
-        <div class="pop-up seats-enter" style="display: none;">
+        <div class="pop-up seats-enter" style="display: block;">
             <div class="pop-top">
                 <h2><span>V08</span> 좌석 입실</h2>
             </div>
             <div class="pop-area">
-                <div class="name">
-                    <span>이름</span>
-                    <input type="text" placeholder="예 : 자유">
-                </div>
                 <div class="num">
                     <span>연락처</span>
                     <input type="text" placeholder="예 : 010-1234-1234">
                 </div>
                 <button class="view">조회</button>
             </div>
-            <div class="view-area">
+            <div class="view-area" style="display: none;">
                 <div class="item">
                     <span>상품</span>
                     <input type="text" value="자유석 50시간권">

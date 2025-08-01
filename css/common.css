@@ -822,7 +822,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 .pop-up.seats-enter .pop-area .name,
 .pop-up.seats-enter .pop-area .num{
-    width: 45%;
+    width: 95%;
     margin-right: 10px;
 }
 .pop-up .pop-bottombtn button.disabled{  /*버튼 비활성화일때 클래스 disabled 붙여주심 됩니다(클래스 빼면 메인컬러 뜸)*/
