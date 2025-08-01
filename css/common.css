@@ -1342,6 +1342,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 #seats .main>.in>.box-area>.box .box-bottom span{
     color: var(--txt777);
@@ -1432,7 +1433,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 #seats .main>.in>.seats-area .seats-color>div.color01>div{
     border: 1px solid #2AACB6;
-    background: #2aadb670;
+    background: #A1DBDF;
 }
 #seats .main>.in>.seats-area .seats-color>div.color02>div{
     border: 1px solid #9CBA42;
