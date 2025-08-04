@@ -825,6 +825,9 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.seats-enter .pop-top{
     margin-bottom: 20px;
 }
+.pop-up.seats-enter .pop-top>span{
+    color: var(--txt777);
+}
 .pop-up.seats-enter h2 span{
     font-size: inherit;
     color: var(--maincolor);
@@ -868,6 +871,12 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     background: #F24E4E28;
     color: #F24E4E;
 }
+.pop-up.seats-enter .view-area span.state-bar.state03{
+    border: 1px solid #9CBA42;
+    background: #fff59b;
+    color: #536e00;
+}
+
 
 /* 입퇴실관리화면 */
 #enter .main>.in>h2{
@@ -1877,9 +1886,11 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     transform: translateX(-50%);
     opacity: 0;
     transition: opacity 500ms;
+    pointer-events: none;
 }
-.pop-up.seats-pop .toast-pop.on{
+.pop-up.seats-pop .toast-pop.show{
     opacity: 1;
+    pointer-events: auto;
 }
 .pop-up.seats-pop .toast-pop span.state-bar{
     width: 100%;
@@ -1902,6 +1913,58 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.room-timepop .pop-area{
     margin-bottom: 20px;
 }
+.pop-up.rooms-select-pop .seats-name{
+    margin-bottom: 20px;
+}
+.pop-up.rooms-select-pop .pop-area .room-box{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+}
+.pop-up.rooms-select-pop .pop-area .room-box.on{
+    border: 2px solid #2AACB6;
+}
+.pop-up.rooms-select-pop .pop-area .room-box>span.room-state{
+    font-size: var(--font14);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-align: center;
+    background: #2AACB6;
+    color: #fff;
+}
+.pop-up.rooms-select-pop .pop-area .room-box>span.room-state.room-state02{
+    background: #F24E4E;
+    color: #fff;
+}
+.pop-up.room-confirm-pop .seats-name{
+    margin-bottom: 40px;
+}
+.pop-up.room-confirm-pop .pop-area{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pop-up.room-confirm-pop .pop-area h3:first-child,.pop-up.room-confirm-pop .pop-area span{
+    display: block;
+    margin-bottom: 20px;
+}
+.pop-up.room-confirm-pop .pop-area h3{
+    color: var(--maincolor);
+}
+.pop-up.room-confirm-pop .pop-area h3:last-child{
+    font-size: var(--font24);
+    word-break: keep-all;
+}
+.pop-up.room-confirm-pop .pop-area span.big{
+    font-size: var(--font20);
+    font-weight: 700;
+}
+
 
 
 @media screen and (max-width:1313px){
@@ -2135,10 +2198,12 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     .pop-up.seats-select-pop .pop-area h3{
         font-size: var(--font16);
     }
-    .pop-up.seats-confirm-pop .pop-area h3:last-child{
+    .pop-up.seats-confirm-pop .pop-area h3:last-child,
+    .pop-up.room-confirm-pop .pop-area h3:last-child{
         font-size: var(--font20);
     }
-    .pop-up.seats-confirm-pop .pop-area span.big{
+    .pop-up.seats-confirm-pop .pop-area span.big,
+    .pop-up.room-confirm-pop .pop-area span.big{
         font-size: var(--font16);
     }
     .pop-up.exit-confirm-pop .pop-area>h3{
