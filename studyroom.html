@@ -144,72 +144,112 @@
                             </div>
                         </div>
 
-                        <!-- 좌석상세팝업 -->
-                        <div class="pop-up seats-pop on">
+                        <!-- 스터디룸 상세팝업 -->
+                        <div class="pop-up seats-pop room on">
                             <div class="seats-name">
-                                <span>입실</span>
-                                <h3>V08 고정석</h3>
+                                <h3>예약 상세 정보</h3>
                             </div>
                             <div class="pop-bottombtn">
-                                <button class="seat-info">좌석 이용내역</button>
-                                <button class="seat-time">시간 연장</button>
-                                <button class="seat-change">좌석 이동</button>
+                                <button class="room-time disabled">시간 연장</button>
+                                <button class="room-change">스터디룸 이동</button>
                                 <button class="exit">퇴실 처리</button>
-                                <button class="enter" style="display: none;">입실 처리</button>
                                 <button class="close">닫기</button>
                             </div>
-                            <div class="seats-user-area">
-                                <div class="box">
-                                    <span>이름</span>
-                                    <span>강예슬</span>
-                                </div>
-                                <div class="box">
-                                    <span>연락처</span>
-                                    <span>010-1234-1234</span>
-                                </div>
-                                <div class="box">
-                                    <span>좌석 상태</span>
-                                    <span>입실<br>(2025-09-01 10:00:00)</span>
-                                </div>
-                                <div class="box">
-                                    <span>남은시간</span>
-                                    <span class="red">39일 22시간 30분 32초</span>
-                                </div>
-                                <div class="box">
-                                    <span>만료일</span>
-                                    <span>2025.07.29 10:01</span>
+                            <div class="room-tab">
+                                <ul>
+                                    <li class="on">스터디룸1</li>
+                                    <li>스터디룸2</li>
+                                </ul>
+                            </div>
+                            <div class="user-area-layout">
+                                <div class="seats-user-area room">
+                                    <h4><span>사용중</span>현재 이용중인 예약</h4>
+                                    <div class="box">
+                                        <span>이름</span>
+                                        <span>강예슬</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>연락처</span>
+                                        <span>010-1234-1234</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>좌석 상태</span>
+                                        <span>입실<br>(2025-09-01 10:00:00)</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>예약시간</span>
+                                        <span class="red">16:00 ~ 20:00 (4시간)</span>
+                                    </div>
+                                    <div class="box">
+                                        <span>예약일</span>
+                                        <span>2025.07.09</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- 좌석이동팝업 : 좌석 선택 -->
-                        <div class="pop-up seats-select-pop">
-                            <div class="seats-name">
-                                <h3><span>V08</span> 좌석 이동</h3>
+                            <div class="room-list">
+                                <div class="room-list-top">
+                                    <h4>7월 22일 예약내역</h4>
+                                    <button><img src="./img/icon-add.png"><span>스터디룸 예약</span></button>
+                                </div>
+                                <div class="table-layout">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>예약 시간</td>
+                                                <td>상품명</td>
+                                                <td>이름</td>
+                                                <td>예약 삭제</td>
+                                                <td>예약일</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>12:00 ~ 16:00</td>
+                                                <td>스터디룸 4시간</td>
+                                                <td>김예지</td>
+                                                <td>x</td>
+                                                <td>2025/07/21<span class="kiosk">키오스크</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>16:00 ~ 20:00</td>
+                                                <td>스터디룸 4시간</td>
+                                                <td>김예지</td>
+                                                <td>x</td>
+                                                <td>2025/07/21<span class="kiosk">키오스크</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>20:00 ~ 22:00</td>
+                                                <td>스터디룸 2시간</td>
+                                                <td>김예지</td>
+                                                <td>x</td>
+                                                <td>2025/07/22<span>관리자</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="room-info">
+                                    <div class="toast-pop"><!--시간연장 비활성화일때 클릭시 노출-->
+                                        <span class="state-bar">이미 다음 예약이 있어 연장 불가합니다.</span>
+                                    </div>
+                                    <span class="state-bar state03">수동으로 추가한 예약 건은 장비 관리 메뉴에서 직접 문을 열어 주셔야 합니다.</span>
+                                </div>
                             </div>
-                            <div class="pop-bottombtn">
-                                <button class="cancel">취소</button>
-                                <button class="save">확인</button>
-                            </div>
-                            <div class="pop-area">
-                                <h3>이동할 좌석을 선택하세요.</h3>
-                            </div>           
                         </div>
  
-                        <!-- 좌석이동팝업 : 좌석 이동 확인 -->
-                        <div class="pop-up seats-confirm-pop">
+                        <!-- 예약삭제 확인 -->
+                        <div class="pop-up seats-confirm-pop room">
                             <div class="seats-name">
-                                <h3>V08 좌석 이동 확인</h3>
+                                <h3>예약 삭제 확인</h3>
                             </div>
                             <div class="pop-bottombtn">
                                 <button class="cancel">취소</button>
-                                <button class="save">이동</button>
+                                <button class="save">예약 삭제</button>
                             </div>
                             <div class="pop-area">
-                                <h3>V08 → V20</h3>
-                                <span class="big">선택한 좌석을 변경합니다.</span>
-                                <span>좌석 이동 시 기존 좌석 이용은 즉시 종료되며,<br>새 좌석에서 바로 이용이 시작됩니다.</span>
-                                <h3>좌석 이동을 하시겠습니까?</h3>
+                                <h3>스터디룸2</h3>
+                                <span><strong>예약시간 :</strong> 20:00 ~ 22:00</span>
+                                <h3 class="small">해당 예약을 삭제하시겠습니까?</h3>
+                                <span class="red">삭제된 예약은 복구할 수 없습니다.</span>
                             </div>           
                         </div>
 
@@ -221,24 +261,42 @@
                             
                             <div class="pop-area">
                                 <img src="./img/check-img.png">
-                                <h3>좌석 이동 처리되었습니다.</h3>
+                                <h3>예약 삭제되었습니다.</h3>
                             </div>           
                         </div>
 
+                        <!-- 시간연장 팝업 : 연장시간 선택(활성화된 버튼 클릭했을때) -->
+                        <div class="pop-up room-timepop room">
+                            <div class="seats-name">
+                                <h3>연장시간 선택</h3>
+                            </div>
+                            <div class="pop-bottombtn">
+                                <button class="cancel">취소</button>
+                                <button class="save">연장</button>
+                            </div>
+                            <div class="pop-area">
+                                <span>연장시간 선택</span>
+                                <select id="time-room">
+                                    <option value="default">선택</option>
+                                    <option value="room-time01">20:30(30분 연장)</option>
+                                    <option value="room-time02">21:00(1시간 연장)</option>
+                                    <option value="room-time03">21:30(1시간 30분 연장)</option>
+                                </select>
+                            </div>           
+                        </div>
+                        
                         <!-- 퇴실처리팝업 : 퇴실 처리 안내 -->
                         <div class="pop-up exit-confirm-pop">
                             <div class="seats-name">
-                                <h3>V08</h3>
+                                <h3>스터디룸2</h3>
                             </div>
                             <div class="pop-bottombtn">
                                 <button class="cancel">취소</button>
                                 <button class="save">퇴실처리</button>
                             </div>
                             <div class="pop-area">
-                                <span><strong>사용 중인 이용권 :</strong> 자유석 시간권 60시간</span>
-                                <span><strong>총 이용 시간 :</strong> 1시간 30분</span>
-                                <span><strong>잔여 이용 시간 :</strong> 59시간 30분</span>
-                                <h3><span>V08 </span>좌석을 퇴실처리 하시겠습니까?</h3>
+                                <span><strong>예약 시간 :</strong> 20:00 ~ 22:00</span>
+                                <h3><span>스터디룸2 </span>좌석을 퇴실처리 하시겠습니까?</h3>
                             </div>           
                         </div>
 
@@ -249,6 +307,43 @@
         </div>
 
         <div class="modal"></div>
+
+        <!-- 스터디룸 이동 선택 -->
+        <div class="pop-up rooms-select-pop">
+            <div class="seats-name">
+                <h3>스터디룸 이동 선택</h3>
+                <span>현재 예약(16:00 ~ 20:00)을 이동할 스터디룸을 선택하세요.</span>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">이동</button>
+            </div>
+            <div class="pop-area">
+                <div class="room-box">
+                    <span>스터디룸1</span>
+                    <span class="room-state01">공실</span>
+                    <span class="room-state02" style="display: none;">예약중</span>
+                </div>
+            </div>           
+        </div>
+
+
+        <!-- 좌석이동팝업 : 좌석 이동 확인 -->
+        <div class="pop-up rooms-confirm-pop" style="display: none;">
+            <div class="seats-name">
+                <h3>스터디룸2 이동 확인</h3>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">이동</button>
+            </div>
+            <div class="pop-area">
+                <h3>스터디룸2 → 스터디룸1</h3>
+                <span class="big">선택한 좌석을 변경합니다.</span>
+                <span>좌석 이동 시 기존 좌석 이용은 즉시 종료되며,<br>새 좌석에서 바로 이용이 시작됩니다.</span>
+                <h3>좌석 이동을 하시겠습니까?</h3>
+            </div>           
+        </div>
 
         <!-- 좌석 이용내역 팝업-->
         <div class="pop-up ticket seats" style="display: none;">
@@ -325,7 +420,8 @@
         <!-- 입실처리 팝업 -->
         <div class="pop-up seats-enter" style="display: none;">
             <div class="pop-top">
-                <h2><span>V08</span> 좌석 입실</h2>
+                <h2><span>스터디룸2</span> 입실</h2>
+                <span>예약 날짜 :2025/08/01</span>
             </div>
             <div class="pop-area">
                 <div class="num">
@@ -337,31 +433,57 @@
             <div class="view-area" style="display: none;">
                 <div class="item">
                     <span>상품</span>
-                    <input type="text" value="자유석 50시간권">
+                    <input type="text" value="스터디룸 2시간권">
+                    <div class="no-item">
+                        <span>결제내역 없음</span>
+                        <select id="room-items">
+                            <option value="default">선택</option>
+                            <option value="item01">스터디룸 1시간</option>
+                            <option value="item02">스터디룸 2시간</option>
+                            <option value="item03">스터디룸 3시간</option>
+                            <option value="item04">스터디룸 4시간</option>
+                            <option value="item05">스터디룸 5시간</option>
+                            <option value="item06">스터디룸 6시간</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="item">
-                    <span>남은 시간</span>
-                    <input type="text" value="07시간 30분 02초">
+                    <span>이용 시간</span>
+                    <select id="room-time">
+                        <option value="default">단위 선택</option>
+                        <option value="time01">1시간</option>
+                        <option value="time02">2시간</option>
+                        <option value="time03">3시간</option>
+                        <option value="time04">4시간</option>
+                        <option value="time05">5시간</option>
+                        <option value="time06">6시간</option>
+                    </select>
                 </div>
                 <div class="item">
-                    <span>만료일</span>
-                    <input type="text" value="2025/02/01 18:00:00">
+                    <span>예약 시간</span>
+                    <select id="room-time">
+                        <option value="default">시간 선택</option>
+                        <option value="time01">13:00 ~ 15:00</option>
+                        <option value="time02">15:00 ~ 17:00</option>
+                        <option value="time03">17:00 ~ 19:00</option>
+                        <option value="time04">19:00 ~ 21:00</option>
+                        <option value="time05">21:00 ~ 23:00</option>
+                    </select>
                 </div>
                 <span class="state-bar">
                     입실 가능한 상태입니다. <strong>등록</strong> 버튼을 눌러 입실처리를 완료하세요.
                 </span>
-                <span class="state-bar state02" style="display: none;">
-                    남은 이용 시간이 없어 입실이 불가합니다. 시간 연장 또는 이용권 구매가 필요합니다.
+                <span class="state-bar state03" style="display: none;">
+                    수동으로 추가한 예약 건은 장비 관리 메뉴에서 직접 문을 열어 주셔야 합니다.
                 </span>
             </div>
             <div class="pop-bottombtn">
                 <button type="button" class="cancel">취소</button>
-                <button type="button" class="cancel" style="display: none;">이용권 추가/연장</button>
                 <button type="button" class="save disabled">등록</button>
             </div>
         </div>
  
-        <!-- 입실처리 완료 팝업 -->
+        <!-- 좌석이동 완료 팝업, 입실처리 완료 팝업 -->
         <div class="pop-up fin" style="display: none;">
             <div class="pop-bottombtn">
                 <button class="save">확인</button>
@@ -369,7 +491,7 @@
             
             <div class="pop-area">
                 <img src="./img/check-img.png">
-                <h3>입실 처리되었습니다.</h3>
+                <h3>좌석 이동 처리되었습니다.</h3>
             </div>           
         </div>
 
