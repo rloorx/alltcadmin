@@ -2232,6 +2232,11 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         padding-bottom: 240px;
     }
 
+    .pop-up.seats-pop .toast-pop{
+        width: 90%;
+    }
+
+
 
 
 
