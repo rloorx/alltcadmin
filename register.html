@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>시설등록화면</title>
+</head>
+<body>
+    <div id="seats">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard.png"><span>대시보드</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store.png"><span>매장 관리</span></a>
+                    </li>
+                    <li class="on">
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat.png"><span>실시간 이용현황</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2><span>좌석/시설 등록</span></h2>
+                    <div class="now-tabarea">
+                        <ul>
+                            <li class="on">좌석 관리</li>
+                            <li>스터디룸 관리</li>
+                            <li>사물함 관리</li>
+                        </ul>
+                    </div>
+                    <div class="tab-area register">
+                        <ul>
+                            <li class="on">5층<img src="./img/icon-close-16px.png" class="close-btn"></li>
+                            <li>6층<img src="./img/icon-close-16px.png" class="close-btn"></li>
+                        </ul>
+                        <button class="register-btn"><img src="./img/icon-add.png"><span>층수 등록</span></button>
+                    </div>
+                    <div class="register-area">
+                        <button class="upload-img"><img src="./img/icon-upload-img-white.png">도면 파일 업로드</button>
+                        <button class="delete-img"><img src="./img/icon-back-img.png">도면 초기화</button>
+                    </div>
+                    <div class="seats-area">
+                        <div class="seats-modal"></div>
+                        <h3>5F 좌석 배치도</h3>
+                        <div class="seats-box register">
+                            <img src="./img/seats-img.jpg" alt="물푸레센터 좌석배치도">
+                            <div>v20
+                                <img src="./img/icon-close-16px.png">
+                                <div class="pop-up-edit">
+                                    <div class="edit-top">
+                                        <span><strong>좌석편집</strong></span>
+                                        <img src="./img/icon-close-20px.png">
+                                    </div>
+                                    <div class="edit-area">
+                                        <div class="name">
+                                            <span>좌석명</span>
+                                            <input type="text" value="V12">
+                                        </div>
+                                        <div class="type">
+                                            <span>좌석 유형</span>
+                                            <div class="radio-area">
+                                                <input type="radio" name="seat-type" checked><span>자유석</span>
+                                                <input type="radio" name="seat-type"><span>고정석</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="edit-btn">
+                                        <button class="seat-delete">좌석 삭제</button>
+                                        <button class="save">확정</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-bottom">
+                            <span>화면을 클릭하여 좌석을 추가하거나, 기존 좌석을 클릭하여 편집·삭제하세요.</span>
+                            <div class="btn-area">
+                                <button class="cancel">취소</button>
+                                <button class="save">좌석도면 변경</button>
+                            </div>
+                        </div>
+
+                        <!-- 층삭제 확인 -->
+                        <div class="pop-up seats-confirm-pop register">
+                            <div class="seats-name">
+                                <h3>층 삭제 확인</h3>
+                            </div>
+                            <div class="pop-bottombtn">
+                                <button class="cancel">취소</button>
+                                <button class="save">층 삭제</button>
+                            </div>
+                            <div class="pop-area">
+                                <h3>5층</h3>
+                                <h3 class="small">해당 층을 삭제하시겠습니까?</h3>
+                                <span class="red">삭제된 층은 복구할 수 없습니다.</span>
+                            </div>           
+                        </div>
+
+                        <!-- 층수 등록 팝업 -->
+                        <div class="pop-up register-pop">
+                            <div class="seats-name">
+                                <h3>층수 등록</h3>
+                                <span>새로운 층의 이름을 입력해주세요.</span>
+                            </div>
+                            <div class="pop-bottombtn">
+                                <button class="cancel">취소</button>
+                                <button class="save">추가</button>
+                            </div>
+                            <div class="pop-area">
+                                <span>층 이름</span>
+                                <input type="text" placeholder="예 : 1, B1">
+                                <span>층</span>
+                            </div>           
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal"></div>
+
+        <!-- 좌석 이용내역 팝업-->
+        <div class="pop-up ticket seats" style="display: none;">
+            <div class="pop-top">
+                <h2>매출 등록</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+            </div>
+            
+            <div class="pop-area">
+                <div class="pop-area-seats-date">
+                    <div class="date-input">
+                        <div class="start-date">
+                            <input type="date">
+                            <span>부터</span>
+                        </div>
+                        <div class="finish-date">
+                            <input type="date">
+                            <span>까지</span>
+                        </div>
+                    </div>
+                    <div class="seats-state">
+                        <span>좌석 상태</span>
+                        <span class="state">사용중</span>
+                    </div>
+                </div>
+                <div class="pop-area2">
+                    <h3>입퇴실 기록</h3>
+                    <div class="table-layout">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>구분</td>
+                                    <td>입실 시간</td>
+                                    <td>이름</td>
+                                    <td>연락처</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>입실<span>사용중</span></td>
+                                    <td>2025-07-15 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-15 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                                <tr>
+                                    <td>입실</td>
+                                    <td>2025-07-14 00:00:00</td>
+                                    <td>김샛별</td>
+                                    <td>010-1234-1234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page-area">
+                        <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                        <span>1/2</span>
+                        <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                    </div>
+                </div>           
+            </div>
+            
+        </div>
+
+        <!-- 입실처리 팝업 -->
+        <div class="pop-up seats-enter" style="display: none;">
+            <div class="pop-top">
+                <h2><span>V08</span> 좌석 입실</h2>
+            </div>
+            <div class="pop-area">
+                <div class="num">
+                    <span>연락처</span>
+                    <input type="text" placeholder="예 : 010-1234-1234">
+                </div>
+                <button class="view">조회</button>
+            </div>
+            <div class="view-area" style="display: none;">
+                <div class="item">
+                    <span>상품</span>
+                    <input type="text" value="자유석 50시간권">
+                </div>
+                <div class="item">
+                    <span>남은 시간</span>
+                    <input type="text" value="07시간 30분 02초">
+                </div>
+                <div class="item">
+                    <span>만료일</span>
+                    <input type="text" value="2025/02/01 18:00:00">
+                </div>
+                <span class="state-bar">
+                    입실 가능한 상태입니다. <strong>등록</strong> 버튼을 눌러 입실처리를 완료하세요.
+                </span>
+                <span class="state-bar state02" style="display: none;">
+                    남은 이용 시간이 없어 입실이 불가합니다. 시간 연장 또는 이용권 구매가 필요합니다.
+                </span>
+            </div>
+            <div class="pop-bottombtn">
+                <button type="button" class="cancel">취소</button>
+                <button type="button" class="cancel" style="display: none;">이용권 추가/연장</button>
+                <button type="button" class="save disabled">등록</button>
+            </div>
+        </div>
+ 
+        <!-- 입실처리 완료 팝업 -->
+        <div class="pop-up fin" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/check-img.png">
+                <h3>입실 처리되었습니다.</h3>
+            </div>           
+        </div>
+
+    </div>
+
+
+
+    <script>
+        document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const parentLi = this.parentElement;
+            const img = this.querySelector('img');
+
+            document.querySelectorAll('.aside-header ul > li').forEach(li => {
+                li.classList.remove('on');
+
+                const liImg = li.querySelector('a > img');
+                if (liImg) {
+                // -white 제거
+                liImg.src = liImg.src.replace('-white', '');
+                }
+            });
+
+            const isNowOn = parentLi.classList.toggle('on');
+
+            // -white 이미지로 교체
+            if (isNowOn && img) {
+                const src = img.src;
+                if (!src.includes('-white')) {
+                const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
+                img.src = newSrc;
+                }
+            }
+            });
+        });
+
+        document.querySelector('.mobile-menu').addEventListener('click', function () {
+            document.querySelector('.modal')?.classList.add('on');
+            document.querySelector('.aside-header')?.classList.add('on');
+        });
+        document.querySelector('.modal').addEventListener('click', function () {
+            this.classList.remove('on');
+            document.querySelector('.aside-header')?.classList.remove('on');
+        });
+
+        document.querySelector('.pop-up.seats-pop .pop-bottombtn .close')?.addEventListener('click', () => {
+            document.querySelector('.pop-up.seats-pop')?.classList.remove('on');
+            document.querySelector('.seats-modal')?.classList.remove('on');
+        });
+
+        document.querySelector('.seats-box.register > div').addEventListener('click', () => {
+            document.querySelector('.pop-up-edit')?.classList.add('on');
+        });
+    </script>
+</body>
+</html>

@@ -1435,6 +1435,10 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     width: 100%;
     border:none;
 }
+#seats .main>.in>.tab-area{
+    display: flex;
+    align-items: center;
+}
 #seats .main>.in>.tab-area ul{
     display: flex;
     align-items: center;
@@ -1446,12 +1450,36 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     margin-right: 10px;
     border-radius: 5px;
     border: 1px solid var(--borderd9);
+    position: relative;
 }
 #seats .main>.in>.tab-area ul li.on{
     background: var(--maincolor);
     border: 1px solid var(--maincolor);
     color: #fff;
     font-weight: 700;
+}
+#seats .main>.in>.tab-area.register ul li.on{
+    background: #02515736;
+    color: var(--txt);
+    font-weight: 400;
+}
+#seats .main>.in>.tab-area.register ul li{
+    padding: 10px 20px;
+}
+#seats .main>.in>.tab-area.register ul li img{
+    position: absolute;
+    top: 0; right: 0;
+}
+#seats .main>.in>.tab-area button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 10px;
+    background: var(--maincolor);
+    color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid var(--maincolor);
 }
 #seats .main>.in>.seats-area{
     width: 100%;
@@ -1511,6 +1539,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     background: rgba(0,0,0,0.6);
     border-radius: 10px;
     display: none;
+    z-index: 999;
 }
 #seats .main>.in>.seats-area .seats-modal.on{
     display: block;
@@ -1523,7 +1552,8 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.seats-confirm-pop.on,
 .pop-up.seats-fin-pop.on,
 .pop-up.exit-confirm-pop.on,
-.pop-up.room-timepop.on{
+.pop-up.room-timepop.on,
+.pop-up.register-pop.on{
     left: auto;
     right: 20px;
     transform: translateX(0);
@@ -1545,7 +1575,8 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.seats-confirm-pop,
 .pop-up.seats-fin-pop,
 .pop-up.exit-confirm-pop,
-.pop-up.room-timepop{
+.pop-up.room-timepop,
+.pop-up.register-pop{
     display: none;
 }
 .pop-up.seats-pop .seats-name{
@@ -2050,6 +2081,149 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border: 1px solid #2AACB6;
     background: #A1DBDF;
 }
+
+#seats .register-area{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+#seats .register-area button{
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 0px 10px;
+    margin-left: 10px;
+    border-radius: 50px;
+    border: 1px solid var(--borderd9);
+    font-size: var(--font14);
+}
+#seats .register-area button.upload-img{
+    background: #2AACB6;
+    color: #fff;
+    border: none;
+}
+
+.pop-up.seats-confirm-pop.register .pop-area h3.small{
+    font-size: var(--font24);
+    color: var(--txt);
+}
+.pop-up.register-pop .seats-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+.pop-up.register-pop .seats-name h3{
+    font-size: var(--font24);
+}
+.pop-up.register-pop .pop-area{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.pop-up.register-pop .pop-area span{
+    white-space: nowrap;
+    margin: 0 5px;
+
+}
+#seats .main>.in>.seats-area .seats-box.register{
+    position: relative;
+}
+#seats .main>.in>.seats-area .seats-box.register>div{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #2AACB6;
+    background: #2aadb628;
+    position: absolute;
+    top: 470px; left: 740px;
+    font-weight: 700;
+    font-size: var(--font14);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>img{
+    position: absolute;
+    right: 0; top: 0;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit{
+    position: absolute;
+    left: 120%; top: 0;
+    padding: 20px;
+    border: 1px solid var(--borderd9);
+    background: #fff;
+    width: 200px;
+    font-weight: 400;
+    display: none;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit.on{
+    display: block;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-top{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-area{
+    margin-bottom: 20px;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-area .name{
+    margin-bottom: 10px;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-area .radio-area{
+    display: flex;
+    align-items: center;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-area .radio-area input{
+    width: 20px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-area .radio-area input:first-child{
+    margin-left: 0;
+}
+
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-btn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-btn button{
+    width: auto;
+    padding: 10px;
+    background: var(--maincolor);
+    color: #fff;
+    margin-left: 10px;
+}
+#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit .edit-btn button.seat-delete{
+    background: #F24E4E;
+}
+#seats .seats-area .edit-bottom .btn-area{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+#seats .seats-area .edit-bottom .btn-area button{
+    margin-left: 10px;
+    width: auto;
+    padding: 10px;
+    background: var(--maincolor);
+    color: #fff;
+}
+#seats .seats-area .edit-bottom .btn-area button.cancel{
+    background: #fff;
+    border: 1px solid var(--borderd9);
+    color: var(--txt);
+}
+
 
 @media screen and (max-width:1377px){
     .pop-up.seats-pop.locker.on{
