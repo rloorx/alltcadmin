@@ -608,8 +608,20 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border-collapse: collapse;
     margin-bottom: 20px;
 }
+.pop-up.detail .tab2-area2 .area2-box .table-layout{
+    max-height: 190px;
+    overflow-y: auto;
+}
 .pop-up.detail .tab2-area2 .area2-box table thead td{
-    border-bottom: 2px solid var(--maincolor);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: inset 0 -2px 0 0 var(--maincolor);
+    border-bottom: none;
+}
+.pop-up.detail .tab2-area2 .area2-box table tbody tr.color{
+    background: #02515736;
 }
 .pop-up.detail .tab2-area2 .area2-box table td{
     padding: 10px;
@@ -644,6 +656,29 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
+.pop-up.detail .tab3-area .area-box table td:first-child{
+    text-align: center;
+}
+.pop-up.detail .tab3-area .page-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.pop-up.detail .tab3-area .page-area button{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--bordera9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pop-up.detail .tab3-area .page-area span{
+    padding: 0 10px;
+}
+
 .pop-up.ticket .pop-top{
     display: flex;
     align-items: center;
@@ -1836,7 +1871,14 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     width: 100%;
 }
 .pop-up.seats-pop .room-list table thead td{
+    background: #fff;
     border-bottom: 2px solid var(--maincolor);
+}
+.pop-up.seats-pop .room-list table tr.past-table{
+    opacity: 0.4;
+}
+.pop-up.seats-pop .room-list table tr.current-table{
+    background: #02515736;
 }
 .pop-up.seats-pop .room-list table td{
     padding: 10px;
@@ -1857,6 +1899,11 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.seats-pop .room-list table td>span.kiosk{
     background: var(--borderd9);
     color: var(--txt);
+    border: 1px solid #fff;
+}
+.pop-up.seats-pop .room-list table td>span.current{
+    background: var(--maincolor);
+    color: #fff;
 }
 .pop-up.seats-pop span.state-bar{
     display: block;
@@ -1900,6 +1947,19 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     opacity: 0.4;
     background: var(--borderd9);
 }
+.pop-up.seats-pop.room .table-layout{
+    max-height: 190px;
+    overflow-y: auto;
+}
+.pop-up.seats-pop.room .room-list table thead td{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: inset 0 -2px 0 0 var(--maincolor);
+    border-bottom: none;
+}
+
 .pop-up.room-timepop .seats-name{
     display: flex;
     align-items: center;
@@ -1965,6 +2025,37 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     font-weight: 700;
 }
 
+#seats .main>.in>.seats-area.locker .seats-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    min-width: 330px;
+    max-width: 400px;
+}
+#seats .main>.in>.seats-area.locker .seats-box>div.locker{
+    width: calc(100% / 4 - 20px);
+    max-width: 80px;
+    aspect-ratio: 1/1;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--maincolor);
+    background: var(--borderd9);
+}
+#seats .main>.in>.seats-area.locker .seats-box>div.locker.occupied{
+    border: 1px solid #2AACB6;
+    background: #A1DBDF;
+}
+
+@media screen and (max-width:1377px){
+    .pop-up.seats-pop.locker.on{
+        padding-bottom: 100px;
+    }
+}
 
 
 @media screen and (max-width:1313px){
@@ -2090,7 +2181,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     .in{width: 95%; min-width:350px; margin: 0 auto; position: relative;}
     .aside-header{
         position: fixed;
-        z-index: 99999999;
+        z-index: 999999999;
         left: auto;
         right: -100%;
         border-right: none;
@@ -2235,10 +2326,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     .pop-up.seats-pop .toast-pop{
         width: 90%;
     }
-
-
-
-
 
 }
 
