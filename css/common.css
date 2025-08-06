@@ -892,6 +892,14 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.seats-enter .view-area .item{
     margin-bottom: 10px;
 }
+.pop-up.seats-enter .view-area .item .no-item select{
+    display: none;
+}
+.pop-up.seats-enter .view-area .item .no-item>span{
+    color: red;
+    padding-top: 5px;
+    display: block;
+}
 .pop-up.seats-enter .view-area span.state-bar{
     display: block;
     width: 100%;
@@ -910,6 +918,65 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border: 1px solid #9CBA42;
     background: #fff59b;
     color: #536e00;
+}
+
+/* 스터디룸 입실 - 다중선택 select박스 */
+.pop-up.seats-enter .view-area .item.multiselect form{
+    position: relative;
+}
+.pop-up.seats-enter .view-area .item.multiselect select,
+.pop-up.seats-enter .view-area .item.multiselect ul { 
+    height: inherit; 
+    overflow: auto; 
+    width: 100%; 
+    border: 1px solid #000; 
+}
+.pop-up.seats-enter .view-area .item.multiselect ul { 
+    list-style-type: none;
+     margin: 0; 
+     padding: 0; 
+     overflow-x: hidden;
+     background: #fff;
+}
+.pop-up.seats-enter .view-area .item.multiselect li { 
+    margin: 0; 
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.pop-up.seats-enter .view-area .item.multiselect li:hover{
+    background: #2AACB6;
+    color: #fff;
+}
+.pop-up.seats-enter .view-area .item.multiselect label { 
+    display: block; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+}
+.pop-up.seats-enter .view-area .item.multiselect table{
+    width: 100%;
+    border-spacing: 0;
+}
+.pop-up.seats-enter .view-area .item.multiselect table td{
+    border: 1px solid var(--borderd9);
+    padding: 10px 0px 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pop-up.seats-enter .view-area .item.multiselect table td img{
+    width: 20px;
+}
+.pop-up.seats-enter .view-area .item.multiselect #Div { 
+    width: 100%;
+    z-index: 10;
+}
+.pop-up.seats-enter .view-area .item.multiselect #Div ul li input { 
+    width: 20px;
+    margin-right: 5px;
 }
 
 

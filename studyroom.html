@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/common.css">
     <title>스터디룸현황화면</title>
+
+    <script>
+        function multiSelect() {
+            var div = document.getElementById("Div");
+            if (div.style.visibility === "visible") {
+                div.style.visibility = "hidden";
+            } else {
+                div.style.visibility = "visible";
+            }
+        }    
+    </script>
 </head>
 <body>
     <div id="seats">
@@ -306,7 +317,7 @@
             </main>
         </div>
 
-        <div class="modal"></div>
+        <div class="modal on"></div>
 
         <!-- 스터디룸 이동 선택 -->
         <div class="pop-up rooms-select-pop" style="display: none;">
@@ -350,7 +361,7 @@
         </div>
 
         <!-- 입실처리 팝업 -->
-        <div class="pop-up seats-enter" style="display: none;">
+        <div class="pop-up seats-enter">
             <div class="pop-top">
                 <h2><span>스터디룸2</span> 입실</h2>
                 <span>예약 날짜 :2025/08/01</span>
@@ -362,11 +373,11 @@
                 </div>
                 <button class="view">조회</button>
             </div>
-            <div class="view-area" style="display: none;">
+            <div class="view-area" style="display: block;">
                 <div class="item">
                     <span>상품</span>
                     <input type="text" value="스터디룸 2시간권">
-                    <div class="no-item">
+                    <div class="no-item" style="display: none;">
                         <span>결제내역 없음</span>
                         <select id="room-items">
                             <option value="default">선택</option>
@@ -391,8 +402,8 @@
                         <option value="time06">6시간</option>
                     </select>
                 </div>
-                <div class="item">
-                    <span>예약 시간</span>
+                <div class="item multiselect">
+                    <!-- <span>예약 시간</span>
                     <select id="room-time">
                         <option value="default">시간 선택</option>
                         <option value="time01">13:00 ~ 15:00</option>
@@ -400,7 +411,28 @@
                         <option value="time03">17:00 ~ 19:00</option>
                         <option value="time04">19:00 ~ 21:00</option>
                         <option value="time05">21:00 ~ 23:00</option>
-                    </select>
+                    </select> -->
+                    <form name="form1">
+                        <table style="cursor:pointer" onClick="multiSelect('OPEN')">
+                            <tbody>
+                                <tr>
+                                    <td>시간 선택 <img src="./img/icon-arrow-bottom.png"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div id="Div" style="position:absolute;visibility:hidden;">
+                            <ul>
+                                <li><input type="checkbox" name="chk1" id="chk1">13:00 ~ 14:00</li>
+                                <li><input type="checkbox" name="chk2" id="chk2">14:00 ~ 15:00</li>
+                                <li><input type="checkbox" name="chk3" id="chk3">15:00 ~ 16:00</li>
+                                <li><input type="checkbox" name="chk4" id="chk4">16:00 ~ 17:00</li>
+                                <li><input type="checkbox" name="chk5" id="chk5">17:00 ~ 18:00</li>
+                                <li><input type="checkbox" name="chk6" id="chk6">18:00 ~ 19:00</li>
+                                <li><input type="checkbox" name="chk7" id="chk7">19:00 ~ 20:00</li>
+                            </ul>       
+                        </div>
+                    </form>
                 </div>
                 <span class="state-bar">
                     입실 가능한 상태입니다. <strong>등록</strong> 버튼을 눌러 입실처리를 완료하세요.
