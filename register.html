@@ -87,9 +87,7 @@
                         <div class="seats-modal"></div>
                         <h3>5F 좌석 배치도</h3>
                         <div class="seats-box register">
-                            <img src="./img/seats-img.jpg" alt="물푸레센터 좌석배치도">
-                            <div>v20
-                                <img src="./img/icon-close-16px.png">
+                            <div class="seats-wrap">
                                 <div class="pop-up-edit">
                                     <div class="edit-top">
                                         <span><strong>좌석편집</strong></span>
@@ -113,7 +111,16 @@
                                         <button class="save">확정</button>
                                     </div>
                                 </div>
+                                <div class="seats">
+                                    <div>v20
+                                        <img src="./img/icon-close-16px.png">
+                                    </div>
+                                    <div>v08
+                                        <img src="./img/icon-close-16px.png">
+                                    </div>
+                                </div>
                             </div>
+                            <img src="./img/seats-img.jpg" alt="물푸레센터 좌석배치도">
                         </div>
                         <div class="edit-bottom">
                             <span>화면을 클릭하여 좌석을 추가하거나, 기존 좌석을 클릭하여 편집·삭제하세요.</span>
@@ -376,8 +383,26 @@
             document.querySelector('.seats-modal')?.classList.remove('on');
         });
 
-        document.querySelector('.seats-box.register > div').addEventListener('click', () => {
-            document.querySelector('.pop-up-edit')?.classList.add('on');
+        document.querySelectorAll('.seats-box.register .seats > div').forEach(seat => {
+            seat.addEventListener('click', function () {
+                const popup = document.querySelector('.seats-box.register .pop-up-edit');
+                const input = popup.querySelector('input[type="text"]');
+
+                const seatName = this.childNodes[0].nodeValue.trim();
+                input.value = seatName;
+
+                const offsetTop = this.offsetTop;
+                const offsetLeft = this.offsetLeft;
+                const seatWidth = this.offsetWidth;
+
+                popup.style.top = (offsetTop - 10) + 'px';
+                popup.style.left = (offsetLeft + seatWidth + 20) + 'px';
+
+                popup.style.display = 'block';
+            });
+        });    
+        document.querySelector('.pop-up-edit .edit-top img').addEventListener('click', () => {
+            document.querySelector('.pop-up-edit').style.display = 'none';
         });
     </script>
 </body>

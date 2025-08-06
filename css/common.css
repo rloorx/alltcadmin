@@ -2199,7 +2199,10 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 #seats .main>.in>.seats-area .seats-box.register{
     position: relative;
 }
-#seats .main>.in>.seats-area .seats-box.register>div{
+#seats .main>.in>.seats-area .seats-box.register .seats{
+    position: relative;
+}
+#seats .main>.in>.seats-area .seats-box.register .seats div{
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -2214,13 +2217,18 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     align-items: center;
     justify-content: center;
 }
-#seats .main>.in>.seats-area .seats-box.register>div>img{
+#seats .main>.in>.seats-area .seats-box.register .seats div:nth-child(2){
+    top: 558px; left: 740px;
+}
+#seats .main>.in>.seats-area .seats-box.register .seats div>img{
     position: absolute;
     right: 0; top: 0;
 }
-#seats .main>.in>.seats-area .seats-box.register>div>div.pop-up-edit{
+#seats .main>.in>.seats-area .seats-box.register .seats-wrap{
+    position: relative;
+}
+#seats .main>.in>.seats-area .seats-box.register .seats-wrap .pop-up-edit{
     position: absolute;
-    left: 120%; top: 0;
     padding: 20px;
     border: 1px solid var(--borderd9);
     background: #fff;
