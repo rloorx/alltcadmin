@@ -53,7 +53,7 @@
                 </div>
                 <div class="in">
                     <div class="cscenter">
-                        <button class="cscenter-btn"><img src="./img/icon-chat.png"><span>고객센터에 문의하기</span></button>
+                        <button class="cscenter-btn" onClick="window.open('https://pf.kakao.com/_UxlxgUxj', '_blank')" ><img src="./img/icon-chat.png"><span>고객센터에 문의하기</span></button>
                     </div>
                     <div class="login-area">
                         <div class="txt-area">
@@ -75,9 +75,15 @@
                                 <span>비밀번호</span>
                                 <div class="pwd-box">
                                     <img src="./img/icon-password.png">
-                                    <input type="password" placeholder="비밀번호를 입력하세요.">
+                                    <input type="password" placeholder="비밀번호를 입력하세요." id="password-input">
+                                    <img src="./img/icon-show.png" id="toggle-password">
+                                    <span>비밀번호 틀렸을때 노출</span>
                                 </div>
                                 <button type="submit">로그인</button>
+                            </div>
+                            <div class="info-area">
+                                <span>아이디, 비밀번호 분실 시 올티칭으로 문의 부탁드립니다.</span>
+                                <p><img src="./img/icon-call.png">1599-8230</p>
                             </div>
                         </div>
                     </div>
@@ -95,7 +101,15 @@
 
 
     <script>
+    const toggleIcon = document.getElementById('toggle-password');
+    const passwordInput = document.getElementById('password-input');
+    let isVisible = false;
 
+    toggleIcon.addEventListener('click', () => {
+        isVisible = !isVisible;
+        passwordInput.type = isVisible ? 'text' : 'password';
+        toggleIcon.src = isVisible ? './img/icon-hide.png' : './img/icon-show.png';
+    });
     </script>
 </body>
 </html>

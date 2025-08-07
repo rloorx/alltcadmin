@@ -99,7 +99,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     width: 100%;
     display: none;
 }
-.aside-header>ul>li:hover>ul{
+.aside-header>ul>li.on>ul{
     display: block;
 }
 .aside-header>ul>li>ul>li>a{
@@ -195,6 +195,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: none;
 }
 #login .main{
+    height: 100vh;
     padding-left: 0;
     padding-bottom: 0;
     background: #f9f9f9;
@@ -220,23 +221,42 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 #login .login-area{
     width: 100%;
-    height: calc(100vh - 90px);
+    padding:30px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #login .txt-area{
-    margin-right: 250px;
+    margin-right: 150px;
+}
+#login h2{
+    word-break: keep-all;
 }
 #login .txt-area .tit{
     color: var(--maincolor);
 }
 #login .login-box{
+    width: 45%;
+    min-width: 350px;
+    aspect-ratio: 1/1;
     padding: 100px 50px;
     background: #fff;
     border-radius: 10px;
     border: 1px solid var(--borderd9);
     text-align: center;
+}
+#login .login-box .info-area{
+    padding-top: 20px;
+    color: #777;
+}
+#login .login-box .info-area span{
+    display: block;
+    margin-bottom: 5px;
+}
+#login .login-box .info-area p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #login .login-box .txt{
     margin-bottom: 30px;
@@ -257,14 +277,26 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     align-items: center;
     padding-left: 10px;
     margin-bottom: 10px;
+    padding-right: 10px;
+}
+#login .login-box .pwd-box{
+    position: relative;
 }
 #login .login-box .id-box input,#login .login-box .pwd-box input{
     border: none;
 }
+#login .login-box .pwd-box>span{
+    position: absolute;
+    top: 100%;
+    transform: translateY(2px);
+    font-size: var(--font14);
+    color: red;
+    display: none;
+}
 #login .login-box .login button{
     background: var(--maincolor);
     color: #fff;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 #login footer .copyright p{
     text-align: right;

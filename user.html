@@ -796,37 +796,112 @@
 
 
     <script>
-        document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const gnbItems = document.querySelectorAll('.aside-header > ul > li');
 
-            const parentLi = this.parentElement;
-            const img = this.querySelector('img');
+    function updateImageSrc(li, isOn) {
+        const img = li.querySelector('a > img');
+        if (!img) return;
 
-            document.querySelectorAll('.aside-header ul > li').forEach(li => {
-                li.classList.remove('on');
+        const src = img.getAttribute('src');
+        const ext = src.slice(src.lastIndexOf('.'));
+        let base = src.slice(0, -ext.length);
+        const whiteSuffix = '-white';
 
-                const liImg = li.querySelector('a > img');
-                if (liImg) {
-                // -white 제거
-                liImg.src = liImg.src.replace('-white', '');
-                }
-            });
+        if (isOn && !base.endsWith(whiteSuffix)) {
+            img.setAttribute('src', `${base}${whiteSuffix}${ext}`);
+        } else if (!isOn && base.endsWith(whiteSuffix)) {
+            base = base.slice(0, -whiteSuffix.length);
+            img.setAttribute('src', `${base}${ext}`);
+        }
+    }
 
-            const isNowOn = parentLi.classList.toggle('on');
-
-            // -white 이미지로 교체
-            if (isNowOn && img) {
-                const src = img.src;
-                if (!src.includes('-white')) {
-                const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
-                img.src = newSrc;
-                }
-            }
+    function clearAllActive() {
+        gnbItems.forEach(item => {
+            item.classList.remove('on');
+            updateImageSrc(item, false);
+            const subLis = item.querySelectorAll('ul li');
+            subLis.forEach(subLi => {
+                subLi.classList.remove('on');
+                updateImageSrc(subLi, false);
             });
         });
+    }
 
-        document.querySelector('.mobile-menu').addEventListener('click', function () {
+    function initializeGNB() {
+        const first = gnbItems[0];
+        first.classList.add('on');
+        updateImageSrc(first, true);
+
+        const sub = first.querySelector('ul li');
+        if (sub) {
+            sub.classList.add('on');
+            updateImageSrc(sub, true);
+        }
+    }
+
+    // GNB 클릭 이벤트
+    gnbItems.forEach(item => {
+        const gnbLink = item.querySelector('a');
+
+        gnbLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 상위 메뉴 초기화
+            clearAllActive();
+
+            // 본인 on 설정
+            item.classList.add('on');
+            updateImageSrc(item, true);
+
+            const subLi = item.querySelector('ul li');
+            if (subLi) {
+                subLi.classList.add('on');
+                updateImageSrc(subLi, true);
+            }
+        });
+
+        // 하위 메뉴 클릭 이벤트
+        const subItems = item.querySelectorAll('ul li');
+        subItems.forEach(subLi => {
+            const subLink = subLi.querySelector('a');
+
+            subLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 상위 메뉴 활성화 유지
+                gnbItems.forEach(gnb => {
+                    if (gnb.contains(subLi)) {
+                        gnb.classList.add('on');
+                        updateImageSrc(gnb, true);
+                    } else {
+                        gnb.classList.remove('on');
+                        updateImageSrc(gnb, false);
+                        const others = gnb.querySelectorAll('ul li');
+                        others.forEach(li => {
+                            li.classList.remove('on');
+                            updateImageSrc(li, false);
+                        });
+                    }
+                });
+
+                // 현재 하위메뉴만 on
+                const siblings = subLi.parentElement.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('on');
+                    updateImageSrc(sib, false);
+                });
+
+                subLi.classList.add('on');
+                updateImageSrc(subLi, true);
+            });
+        });
+    });
+
+    initializeGNB();
+});
+
+    document.querySelector('.mobile-menu').addEventListener('click', function () {
             document.querySelector('.modal')?.classList.add('on');
             document.querySelector('.aside-header')?.classList.add('on');
         });
