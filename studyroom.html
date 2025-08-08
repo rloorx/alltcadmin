@@ -594,6 +594,45 @@
             });
         });
 
+
+        (function(){
+  const targetSelector = '.state-bar.state02';
+  const itemsSelector = '.pop-up.seats-enter .view-area .item>h4';
+
+  function updateDashed() {
+    const bar = document.querySelector(targetSelector);
+    if (!bar) return;
+    const isBlock = window.getComputedStyle(bar).display === 'block';
+    document.querySelectorAll(itemsSelector).forEach(el => {
+      el.classList.toggle('dashed', isBlock);
+    });
+  }
+
+  // 초기 실행
+  document.addEventListener('DOMContentLoaded', updateDashed);
+  // 안전망: DOMContentLoaded 이후에도 바로 한 번 실행
+  if (document.readyState === 'complete' || document.readyState === 'interactive') updateDashed();
+
+  // 변경 감시: .state-bar.state02 요소의 class/style 변경 감지
+  function observeBar() {
+    const bar = document.querySelector(targetSelector);
+    if (!bar) return;
+    const mo = new MutationObserver(() => updateDashed());
+    mo.observe(bar, { attributes: true, attributeFilter: ['style','class'] });
+    // 경우에 따라 .state-bar.state02 요소가 동적으로 바뀔 수 있으니 바 자체의 생성도 관찰
+    const bodyObserver = new MutationObserver(() => {
+      if (!document.querySelector(targetSelector)) return;
+      // 이미 연결되어 있다면 중복 관찰 방지
+      // (간단히 다시 호출해도 안전하게 동작함)
+      updateDashed();
+    });
+    bodyObserver.observe(document.body, { childList: true, subtree: true });
+  }
+
+  // 초기 관찰 설정 (DOMContentLoaded 후)
+  document.addEventListener('DOMContentLoaded', observeBar);
+  if (document.readyState === 'complete' || document.readyState === 'interactive') observeBar();
+})();
     </script>
 </body>
 </html>

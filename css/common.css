@@ -935,6 +935,11 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.seats-enter .view-area .item>h4{
     color: var(--maincolor);
 }
+.pop-up.seats-enter .view-area .item>h4.dashed{
+    color: red;
+    font-weight: 400;
+    text-decoration: line-through;
+}
 .pop-up.seats-enter .view-area span.state-bar{
     display: block;
     width: 100%;
