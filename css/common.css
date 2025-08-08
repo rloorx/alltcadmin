@@ -922,7 +922,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     padding-top: 20px;
 }
 .pop-up.seats-enter .view-area .item{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .pop-up.seats-enter .view-area .item .no-item select{
     display: none;
@@ -932,6 +932,9 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     padding-top: 5px;
     display: block;
 }
+.pop-up.seats-enter .view-area .item>h4{
+    color: var(--maincolor);
+}
 .pop-up.seats-enter .view-area span.state-bar{
     display: block;
     width: 100%;
@@ -940,6 +943,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     background: #2aadb628;
     border-radius: 5px;
     color: #2AACB6;
+    margin-top: 40px;
 }
 .pop-up.seats-enter .view-area span.state-bar.state02{
     border: 1px solid #F24E4E;
@@ -961,7 +965,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     height: inherit; 
     overflow: auto; 
     width: 100%; 
-    border: 1px solid #000; 
 }
 .pop-up.seats-enter .view-area .item.multiselect ul { 
     list-style-type: none;

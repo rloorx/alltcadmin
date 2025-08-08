@@ -16,7 +16,7 @@
             }
         }    
     </script>
-</head>
+</head>/
 <body>
     <div id="seats">
         <div class="wrap">
@@ -374,7 +374,7 @@
                 <button class="view">조회</button>
             </div>
             <div class="view-area" style="display: block;">
-                <div class="item">
+                <!-- <div class="item">
                     <span>상품</span>
                     <input type="text" value="스터디룸 2시간권">
                     <div class="no-item" style="display: none;">
@@ -389,7 +389,7 @@
                             <option value="item06">스터디룸 6시간</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 <div class="item">
                     <span>이용 시간</span>
                     <select id="room-time">
@@ -403,16 +403,16 @@
                     </select>
                 </div>
                 <div class="item multiselect">
-                    <!-- <span>예약 시간</span>
+                    <span>시작 시간 선택</span>
                     <select id="room-time">
                         <option value="default">시간 선택</option>
-                        <option value="time01">13:00 ~ 15:00</option>
-                        <option value="time02">15:00 ~ 17:00</option>
-                        <option value="time03">17:00 ~ 19:00</option>
-                        <option value="time04">19:00 ~ 21:00</option>
-                        <option value="time05">21:00 ~ 23:00</option>
-                    </select> -->
-                    <form name="form1">
+                        <option value="time01">13:00</option>
+                        <option value="time02">14:00</option>
+                        <option value="time03">15:00</option>
+                        <option value="time04">16:00</option>
+                        <option value="time05">17:00</option>
+                    </select>
+                    <!-- <form name="form1">
                         <table style="cursor:pointer" onClick="multiSelect('OPEN')">
                             <tbody>
                                 <tr>
@@ -432,7 +432,11 @@
                                 <li><input type="checkbox" name="chk7" id="chk7">19:00 ~ 20:00</li>
                             </ul>       
                         </div>
-                    </form>
+                    </form> -->
+                </div>
+                <div class="item">
+                    <span>예약 시간</span>
+                    <h4>13:00 ~ 15:00</h4>
                 </div>
                 <span class="state-bar">
                     입실 가능한 상태입니다. <strong>등록</strong> 버튼을 눌러 입실처리를 완료하세요.
