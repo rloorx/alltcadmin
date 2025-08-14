@@ -274,7 +274,7 @@
         <div class="modal"></div>
 
         <!-- 좌석 이용내역 팝업-->
-        <div class="pop-up ticket seats" style="display: none;">
+        <div class="pop-up ticket seats pop-outside" style="display: none;">
             <div class="pop-top">
                 <h2>매출 등록</h2>
                 <button class="close-pop" style="display: none;"><img src=""></button>
@@ -387,7 +387,7 @@
         </div>
 
         <!-- 입실처리 팝업 -->
-        <div class="pop-up seats-enter" style="display: none;">
+        <div class="pop-up seats-enter pop-outside" style="display: none;">
             <div class="pop-top">
                 <h2><span>V08</span> 좌석 입실</h2>
             </div>
@@ -426,7 +426,7 @@
         </div>
  
         <!-- 입실처리 완료 팝업 -->
-        <div class="pop-up fin" style="display: none;">
+        <div class="pop-up fin pop-outside" style="display: none;">
             <div class="pop-bottombtn">
                 <button class="save">확인</button>
             </div>
@@ -485,6 +485,40 @@
             document.querySelector('.pop-up.seats-pop')?.classList.remove('on');
             document.querySelector('.seats-modal')?.classList.remove('on');
         });
+
+        function openPopup(popup) {
+            if (!popup) return;
+            const scrollTop = window.scrollY || window.pageYOffset;
+            popup.style.position = 'absolute'; // 필요 시 fixed 가능
+            popup.style.top = (scrollTop + 100) + 'px';
+            popup.style.left = '50%';
+            popup.style.transform = 'translateX(-50%)';
+            popup.style.display = 'block';
+        }
+
+        document.querySelector('.seat-info').addEventListener('click', () => {
+            const popup = document.querySelector('.pop-up.ticket.seats');
+            openPopup(popup);
+
+            const modal = document.querySelector('.modal');
+            if (modal) modal.classList.add('on');
+        });
+
+        document.querySelector('.enter').addEventListener('click', () => {
+            const popup = document.querySelector('.pop-up.seats-enter');
+            openPopup(popup);
+
+            const modal = document.querySelector('.modal');
+            if (modal) modal.classList.add('on');
+        });
+
+        document.querySelector('.modal').addEventListener('click', function () {
+            this.classList.remove('on');
+            document.querySelectorAll('.pop-outside').forEach(popup => {
+                popup.style.display = 'none';
+            });
+        });
+
     </script>
 </body>
 </html>

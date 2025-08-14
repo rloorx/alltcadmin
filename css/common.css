@@ -503,8 +503,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 /* 회원관리 - 엑셀 다운로드 팝업 */
 .pop-up{
     position: absolute;
-    left: 50%;
-    top: 100px;
     z-index: 99999999;
     transform: translateX(-50%);
     width: 786px;
@@ -1945,7 +1943,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     justify-content: space-between;
 }
 .pop-up.seats-pop .room-tab ul li{
-    width: 50%;
+    width: 100%;
     text-align: center;
     border: 1px solid var(--borderd9);
     padding: 10px;
@@ -2022,7 +2020,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     padding: 10px;
     border-bottom: 1px solid var(--borderd9);
 }
-.pop-up.seats-pop .room-list table td:nth-child(4){
+.pop-up.seats-pop .room-list table td:nth-child(5){
     text-align: center;
 }
 .pop-up.seats-pop .room-list table td>span{
