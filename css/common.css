@@ -590,21 +590,36 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 .pop-up.detail .tab1-area>div.blacklist-txt{
     width: 100%;
-    display: none;
-}
-.pop-up.detail .tab1-area>div.blacklist-txt.on{
     display: block;
 }
 .pop-up.detail .tab1-area>div.blacklist-txt textarea{
     width: 100%;
     height: 80px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
 }
 .pop-up.detail .tab1-area .blacklist-toggle{
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .pop-up.detail .tab1-area .blacklist-toggle>span{
     margin-right: 10px;
+}
+.pop-up.detail .tab1-area .password-reset{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pop-up.detail .tab1-area .password-reset button{
+    width: auto;
+    height: auto;
+    padding: 6px 10px;
+    border-radius: 50px;
+    border: 1px solid var(--borderd9);
+    font-size: var(--font14);
+    color: var(--txt777);
 }
 .pop-up.detail .tab2-area{
     padding-top: 20px;
@@ -815,6 +830,82 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.ticket.seats .page-area span{
     padding: 0 10px;
 }
+
+.pop-up.password-pop .pop-top{
+    margin-bottom: 20px;
+}
+.pop-up.password-pop .pop-top button{
+    margin-right: 10px;
+    width: auto;
+}
+.pop-up.password-pop .pop-top h2{
+    margin-bottom: 0;
+}
+.pop-up.password-pop .pop-top span{
+    color: var(--txt777);
+}
+.pop-up.password-pop .pop-area1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pop-up.password-pop .pop-area1>div{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.pop-up.password-pop .pop-area1>div.reset-box{
+    padding: 60px 20px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+    margin-top: 20px;
+    position: relative;
+}
+.pop-up.password-pop .pop-area1>div.reset-box h2{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: var(--font18);
+    padding: 10px 20px;
+    background: linear-gradient(to left, #A1DBDF, #acf9ff);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: var(--maincolor);
+}
+.pop-up.password-pop .pop-area1>div.reset-box h2 img{
+    margin-right: 5px;
+}
+.pop-up.password-pop .pop-area1 .pwd-box{
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+.pop-up.password-pop .pop-area1 .pwd-box img#toggle-password{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.pop-up.password-pop .pop-area1 .pwd-box input{
+    border: none;
+}
+.pop-up.password-pop .pop-area1 .pwd-box>span{
+    position: absolute;
+    top: 100%;
+    transform: translateY(2px);
+    font-size: var(--font14);
+    color: red;
+    display: none;
+}
+
 
 
 .pop-up.new .pop-area{
@@ -2586,6 +2677,9 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     }
     .pop-up.exit-confirm-pop .pop-area>h3{
         font-size: var(--font20);
+    }    
+    .pop-up.password-pop .pop-area1>div.reset-box h2{
+        font-size: var(--font16);
     }
 
     #login .txt-area{

@@ -185,7 +185,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><span class="detail-btn pop-btn">상세</span></td>
                                     </tr>
                                     <tr>
                                         <td>이태민<span class="black">출입 제한</span></td>
@@ -338,8 +338,8 @@
 
 
         <!-- 엑셀 다운로드 팝업 -->
-        <div class="modal on"></div>
-        <div class="pop-up excel" style="display: none;">
+        <div class="modal"></div>
+        <div class="pop-up excel pop-outside" style="display: none;">
             <div class="pop-top">
                 <h2>엑셀 다운로드</h2>
             </div>
@@ -363,7 +363,7 @@
         </div>
 
         <!-- 회원상세정보 팝업 -->
-        <div class="pop-up detail" style="display: none;">
+        <div class="pop-up detail pop-outside" style="display:none;">
             <div class="pop-top">
                 <h2>회원 상세 정보</h2>
             </div>
@@ -427,6 +427,10 @@
                     <span>가입일</span>
                     <input type="text" value="2025-07-05" disabled>
                 </div>
+                <div class="blacklist-txt">
+                    <span>메모</span>
+                    <textarea name="blacklist-txt"></textarea>
+                </div>
                 <div>
                     <div class="blacklist-toggle">
                         <span>블랙리스트</span>
@@ -435,8 +439,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="blacklist-txt">
-                    <textarea name="blacklist-txt"></textarea>
+                <div class="password-reset">
+                    <span>계정관리</span>
+                    <button>비밀번호 재설정</button>
                 </div>
             </div>
             
@@ -631,7 +636,7 @@
         </div>
 
         <!-- 이용권 내역탭 - 상세 클릭시 뜨는 팝업 : 기획단에서 삭제된듯 합니당 -->
-        <div class="pop-up ticket" style="display: none;">
+        <div class="pop-up ticket pop-outside" style="display: none;">
             <div class="pop-top">
                 <button class="prev-pop"><img src="./img/icon-back.png"></button>
                 <h2>이용권 상세 내역</h2>
@@ -716,8 +721,44 @@
             </div>           
         </div>
 
+        <!-- 비밀번호 관리/재설정 팝업 -->
+        <div class="pop-up password-pop pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>비밀번호 관리</h2>
+                <span>회원의 비밀번호를 재설정합니다. 초기화 후 회원에게 알림톡으로 안내됩니다.</span>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="close">확인</button>
+            </div>
+            
+            <div class="pop-area1">
+                <div class="name">
+                    <span>이름</span>
+                    <input type="text" value="이태민">
+                </div>
+                <div class="num">
+                    <span>연락처</span>
+                    <input type="text" value="010-1234-1234">
+                </div>
+                <div class="reset-box">
+                    <h2><img src="./img/icon-password-color.png">비밀번호 변경</h2>
+                    <span>비밀번호</span>
+                    <div class="pwd-box pwd-box01">
+                        <input type="password" placeholder="새 비밀번호를 입력하세요.(4자리 숫자 입력)" id="password-input">
+                        <img src="./img/icon-show.png" id="toggle-password">
+                    </div>
+                    <div class="pwd-box">
+                        <input type="password" placeholder="새 비밀번호를 다시 입력하세요.">
+                        <span>비밀번호 틀렸을때 노출</span>
+                    </div>
+                </div>              
+            </div>
+        </div>
+
+
         <!-- 회원등록 팝업 : 종류에서 드롭다운 옵션별로 생성되는 input박스가 달라지는데, 레이아웃은 같아서 최초화면 한가지만 작성해두겠습니다! -->
-        <div class="pop-up new" style="display: none;">
+        <div class="pop-up new pop-outside" style="display: none;">
             <div class="pop-top">
                 <h2><img src="">회원 등록</h2>
                 <button class="close-pop" style="display: none;"><img src=""></button>
@@ -779,7 +820,7 @@
         </div>
 
         <!-- 회원등록 완료 팝업 -->
-        <div class="pop-up fin" style="display: none;">
+        <div class="pop-up fin pop-outside" style="display: none;">
             <div class="pop-bottombtn">
                 <button class="save">확인</button>
             </div>
@@ -901,33 +942,111 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeGNB();
 });
 
-    document.querySelector('.mobile-menu').addEventListener('click', function () {
-            document.querySelector('.modal')?.classList.add('on');
-            document.querySelector('.aside-header')?.classList.add('on');
-        });
-        document.querySelector('.modal').addEventListener('click', function () {
-            this.classList.remove('on');
-            document.querySelector('.aside-header')?.classList.remove('on');
-        });
+document.querySelector('.mobile-menu').addEventListener('click', function () {
+    document.querySelector('.modal')?.classList.add('on');
+    document.querySelector('.aside-header')?.classList.add('on');
+});
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelector('.aside-header')?.classList.remove('on');
+});
 
 
-        document.querySelectorAll('.blacklist-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function () {
-            this.classList.toggle('on');
-            });
-        });
+document.querySelectorAll('.blacklist-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function () {
+    this.classList.toggle('on');
+    });
+});
 
-        const popup = document.querySelector('.pop-up.detail');
-        const toggle = popup.querySelector('.pop-up.detail .blacklist-toggle');
-        const txt = popup.querySelector('.blacklist-txt');
+const toggleIcon = document.getElementById('toggle-password');
+const passwordInput = document.getElementById('password-input');
+let isVisible = false;
 
-        toggle.addEventListener('click', function () {
-            if (this.classList.contains('on')) {
-            txt.classList.add('on');
-            } else {
-            txt.classList.remove('on');
-            }
-        });
+toggleIcon.addEventListener('click', () => {
+    isVisible = !isVisible;
+    passwordInput.type = isVisible ? 'text' : 'password';
+    toggleIcon.src = isVisible ? './img/icon-hide.png' : './img/icon-show.png';
+});
+
+function openPopup(popup) {
+    if (!popup) return;
+    const scrollTop = window.scrollY || window.pageYOffset;
+    popup.style.position = 'absolute'; // 필요 시 fixed 가능
+    popup.style.top = (scrollTop + 100) + 'px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.display = 'block';
+}
+
+document.querySelector('.detail-btn.pop-btn').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.detail');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+document.querySelector('.password-reset>button').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.password-pop');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+document.querySelector('.new-btn').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.new');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+document.querySelector('.excel-btn').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.excel');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+document.querySelector('.pop-up.new .save').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.fin');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+});
+
+
     </script>
 </body>
 </html>
