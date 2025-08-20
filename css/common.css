@@ -952,6 +952,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 .pop-up.refund .refund-area{
     border-bottom: 1px solid var(--borderd9);
+    padding: 0 10%;
 }
 .pop-up.refund .refund-box{
     display: flex;
@@ -962,6 +963,9 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.refund .refund-box span{
     width: calc((100% - 10px) / 2);
     padding: 10px 0;
+}
+.pop-up.refund .refund-price{
+    padding: 0 10%;
 }
 .pop-up.refund .refund-price .refund-box span{
     font-weight: 700;
@@ -1440,9 +1444,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     align-items: center;
     margin-right: 10px;
 }
-#sales .main>.in>.table-area .search-area.tab2 .start-date,#sales .main>.in>.table-area .search-area.tab2 .finish-date,#sales .main>.in>.table-area .search-area.tab2 .select-area{
-    margin-bottom: 10px;
-}
 #sales .main>.in>.table-area .search-area .start-date input,#sales .main>.in>.table-area .search-area .finish-date input{
     width: 200px;
     margin-right: 5px;
@@ -1455,6 +1456,14 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: flex;
     padding-right: 10px;
     margin-bottom: 10px;
+}
+#sales .main>.in>.table-area .search-area.tab2 .start-date input,
+#sales .main>.in>.table-area .search-area.tab2 .finish-date input{
+    width: 100%;
+}
+#sales .main>.in>.table-area .search-area.tab2 .search-box{
+    width: 40%;
+    margin-bottom: 0;
 }
 #sales .main>.in>.table-area .search-area .search-box input{
     width: 100%;
@@ -2428,6 +2437,15 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     color: var(--txt);
 }
 
+@media screen and (max-width:1440px){
+    #sales .main>.in>.table-area .search-area.tab2 .search-box{
+        width: 80%;
+        margin-top: 10px;
+    }
+    #sales .main>.in>.table-area .search-area.tab2 .blacklist-toggle{
+        margin-top: 10px;
+    }
+}
 
 @media screen and (max-width:1377px){
     .pop-up.seats-pop.locker.on{
@@ -2524,6 +2542,17 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     }
     #sales .main>.in>.table-area .search-area .search-box{
         margin-right: 0px;
+    }
+    #sales .main>.in>.table-area .search-area .select-area{
+        width: 100px;
+    }
+    #sales .main>.in>.table-area .search-area.tab2 .search-box{
+        width: calc(100% - 260px);
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+    #sales .main>.in>.table-area .search-area.tab2 .blacklist-toggle{
+        margin-top: 0;
     }
 
     #seats .main>.in>.box-area{
@@ -2689,6 +2718,12 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 
     #sales .main>.in>.box-area>.box .bottom-flex span{
         font-size: var(--font12);
+    }
+    #sales .main>.in>.table-area .search-area.tab2 .search-box{
+        width: calc(100% - 120px);
+    }
+    #sales .main>.in>.table-area .search-area.tab2 .blacklist-toggle{
+        margin-top: 10px;
     }
 
     #seats .cal-area .day-header{
