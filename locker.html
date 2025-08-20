@@ -122,12 +122,13 @@
                             <img src="./img/icon-search.png">
                         </div>
                     </div>
-                    <!--<div class="tab-area">
-                        <ul>
+                    <div class="tab-area">
+                        <!-- <ul>
                             <li class="on">5층</li>
                             <li>6층</li>
-                        </ul>
-                    </div> 층별 구분 탭-->
+                        </ul> -->
+                        <button class="user">실시간 이용자 확인</button>
+                    </div>
                     <div class="seats-area locker">
                         <div class="seats-modal on"></div>
                         <h3>5F 사물함 배치도</h3>
@@ -378,7 +379,11 @@
                     </div>
                     <div class="page-area">
                         <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
-                        <span>1/2</span>
+                        <span class="on">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
                         <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
                     </div>
                 </div>           
@@ -435,6 +440,106 @@
                 <img src="./img/check-img.png">
                 <h3>입실 처리되었습니다.</h3>
             </div>           
+        </div>
+
+        <!-- 실시간 이용자 확인 팝업-->
+        <div class="pop-up ticket user pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>실시간 이용자 확인</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+            </div>  
+            <div class="pop-area">
+                <div class="pop-area2">
+                    <div class="table-layout">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>이름</td>
+                                    <td>연락처</td>
+                                    <td>사물함</td>
+                                    <td>남은시간</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+                                <tr>
+                                    <td>김지은</td>
+                                    <td>010-1234-1234</td>
+                                    <td>1번</td>
+                                    <td>9시간 30분 2초</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="page-area">
+                        <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                        <span class="on">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                    </div>
+                </div>           
+            </div>
+            
         </div>
 
     </div>
@@ -496,14 +601,6 @@
             popup.style.display = 'block';
         }
 
-        document.querySelector('.seat-info').addEventListener('click', () => {
-            const popup = document.querySelector('.pop-up.ticket.seats');
-            openPopup(popup);
-
-            const modal = document.querySelector('.modal');
-            if (modal) modal.classList.add('on');
-        });
-
         document.querySelector('.enter').addEventListener('click', () => {
             const popup = document.querySelector('.pop-up.seats-enter');
             openPopup(popup);
@@ -512,10 +609,35 @@
             if (modal) modal.classList.add('on');
         });
 
+        document.querySelector('button.user').addEventListener('click', () => {
+            document.querySelectorAll('.pop-outside').forEach(popup => {
+                popup.style.display = 'none';
+            });
+
+            const popup = document.querySelector('.pop-up.ticket.user');
+            openPopup(popup);
+
+            const modal = document.querySelector('.modal');
+            if (modal) modal.classList.add('on');
+        });
+
+
         document.querySelector('.modal').addEventListener('click', function () {
             this.classList.remove('on');
             document.querySelectorAll('.pop-outside').forEach(popup => {
                 popup.style.display = 'none';
+            });
+        });
+
+        const pageSpans = document.querySelectorAll('.page-area > span');
+
+        pageSpans.forEach(span => {
+            span.addEventListener('click', (event) => {
+                pageSpans.forEach(s => {
+                    s.classList.remove('on');
+                });
+
+                event.target.classList.add('on');
             });
         });
 

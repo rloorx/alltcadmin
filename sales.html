@@ -391,7 +391,11 @@
                         </div>
                         <div class="page-area">
                             <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
-                            <span>1/2</span>
+                            <span class="on">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
                             <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
                         </div>
                     </div>
@@ -633,6 +637,19 @@
                 popup.style.display = 'none';
             });
         });
+
+        const pageSpans = document.querySelectorAll('.page-area > span');
+
+        pageSpans.forEach(span => {
+            span.addEventListener('click', (event) => {
+                pageSpans.forEach(s => {
+                    s.classList.remove('on');
+                });
+
+                event.target.classList.add('on');
+            });
+        });
+
 
     </script>
 </body>

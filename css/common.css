@@ -189,6 +189,40 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: block;
 }
 
+.page-area{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.page-area button{
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--bordera9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+.page-area span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid var(--borderd9);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.page-area span.on{
+    background: var(--maincolor);
+    border: 1px solid var(--maincolor);
+    color: #fff;
+}
+
+
 
 /* 로그인화면 */
 #login .aside-header{
@@ -481,24 +515,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border: none;
     color: #fff;
 }
-#user .main>.in>.table-area>.page-area{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#user .main>.in>.table-area>.page-area button{
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid var(--bordera9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#user .main>.in>.table-area>.page-area span{
-    padding: 0 10px;
-}
 
 /* 회원관리 - 엑셀 다운로드 팝업 */
 .pop-up{
@@ -704,25 +720,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.detail .tab3-area .area-box table td:first-child{
     text-align: center;
 }
-.pop-up.detail .tab3-area .page-area{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-.pop-up.detail .tab3-area .page-area button{
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid var(--bordera9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.pop-up.detail .tab3-area .page-area span{
-    padding: 0 10px;
-}
 
 .pop-up.ticket .pop-top{
     display: flex;
@@ -810,25 +807,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 .pop-up.ticket.seats .pop-area2 table{
     margin-bottom: 0;
-}
-.pop-up.ticket.seats .page-area{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-.pop-up.ticket.seats .page-area button{
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid var(--bordera9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.pop-up.ticket.seats .page-area span{
-    padding: 0 10px;
 }
 
 .pop-up.password-pop .pop-top{
@@ -1259,24 +1237,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     border: none;
     color: #fff;
 }
-#enter .main>.in>.table-area>.page-area{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#enter .main>.in>.table-area>.page-area button{
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid var(--bordera9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#enter .main>.in>.table-area>.page-area span{
-    padding: 0 10px;
-}
 
 /* 매출관리 화면 */
 #sales .main>.in>h2{
@@ -1407,24 +1367,6 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     background: #F24E4E;
     border: none;
     color: #fff;
-}
-#sales .main>.in>.table-area>.page-area{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#sales .main>.in>.table-area>.page-area button{
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid var(--bordera9);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#sales .main>.in>.table-area>.page-area span{
-    padding: 0 10px;
 }
 #sales .main>.in>.table-area .search-area{
     padding: 20px;
@@ -1643,6 +1585,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 #seats .main>.in>.tab-area{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 #seats .main>.in>.tab-area ul{
     display: flex;
@@ -1663,6 +1606,12 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     color: #fff;
     font-weight: 700;
 }
+#seats .main>.in>.tab-area button.user{
+    margin-left: auto;
+    background: #2AACB6;
+    border: none;
+}
+
 #seats .main>.in>.tab-area.register ul li.on{
     background: #02515736;
     color: var(--txt);
