@@ -63,7 +63,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     z-index: 999999;
     width: 270px;
     height: 100vh;
-    background: #fff;
+    background: #292F30;
     border-right: 1px solid var(--borderd9);
     text-align: center;
     display: flex;
@@ -86,10 +86,10 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: flex;
     width: 100%;
     padding: 20px 10px;
+    color: #fff;
 }
 .aside-header>ul>li.on>a{
     background: var(--maincolor);
-    color: #fff;
     font-weight: 700;
 }
 .aside-header>ul>li>a>img{
@@ -106,10 +106,10 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: flex;
     width: 100%;
     padding: 15px 40px;
+    color: #fff;
 }
 .aside-header>ul>li>ul>li.on>a{
     background: var(--maincolor);
-    color: #fff;
     font-weight: 700;
 }
 .aside-header>ul>li>ul>li>a>img{

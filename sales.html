@@ -10,38 +10,38 @@
     <div id="sales">
         <div class="wrap">
             <header class="aside-header">
-                <h1><img src="./img/logo.png" alt="올티칭 스터디카페"></h1>
+                <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
                 <ul>
                     <li>
-                        <a href="#"><img src="./img/icon-dashboard.png"><span>대시보드</span></a>
+                        <a href="#"><img src="./img/icon-dashboard-white.png"><span>대시보드</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-chart.png"><span>매출 관리</span></a>
+                        <a href="#"><img src="./img/icon-chart-white.png"><span>매출 관리</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-store.png"><span>매장 관리</span></a>
+                        <a href="#"><img src="./img/icon-store-white.png"><span>매장 관리</span></a>
                     </li>
-                    <li class="on">
+                    <li>
                         <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
                         <ul>
-                            <li><a href="#"><img src="./img/icon-man.png">회원 관리</a></li>
-                            <li><a href="#"><img src="./img/icon-enter.png">입·퇴실 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-man-white.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter-white.png">입·퇴실 관리</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-item.png"><span>이용상품</span></a>
+                        <a href="#"><img src="./img/icon-item-white.png"><span>이용상품</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-seat.png"><span>좌석 및 시설 관리</span></a>
+                        <a href="#"><img src="./img/icon-seat-white.png"><span>좌석 및 시설 관리</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-event.png"><span>이벤트 배너 관리</span></a>
+                        <a href="#"><img src="./img/icon-event-white.png"><span>이벤트 배너 관리</span></a>
                     </li>
                     <li class="mobile">
-                        <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        <a href="#"><img src="./img/icon-my-white.png"><span>마이페이지</span></a>
                     </li>
                     <li class="mobile">
-                        <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        <a href="#"><img src="./img/icon-logout-white.png"><span>로그아웃</span></a>
                     </li>
                 </ul>
             </header>
@@ -544,35 +544,82 @@
 
 
     <script>
-        document.querySelectorAll('.aside-header ul > li > a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+document.addEventListener('DOMContentLoaded', function () {
+    const gnbItems = document.querySelectorAll('.aside-header > ul > li');
 
-            const parentLi = this.parentElement;
-            const img = this.querySelector('img');
-
-            document.querySelectorAll('.aside-header ul > li').forEach(li => {
-                li.classList.remove('on');
-
-                const liImg = li.querySelector('a > img');
-                if (liImg) {
-                // -white 제거
-                liImg.src = liImg.src.replace('-white', '');
-                }
-            });
-
-            const isNowOn = parentLi.classList.toggle('on');
-
-            // -white 이미지로 교체
-            if (isNowOn && img) {
-                const src = img.src;
-                if (!src.includes('-white')) {
-                const newSrc = src.replace(/(\.png|\.jpg|\.jpeg|\.gif)$/i, '-white$1');
-                img.src = newSrc;
-                }
-            }
+    function clearAllActive() {
+        gnbItems.forEach(item => {
+            item.classList.remove('on');
+            const subLis = item.querySelectorAll('ul li');
+            subLis.forEach(subLi => {
+                subLi.classList.remove('on');
             });
         });
+    }
+
+    function initializeGNB() {
+        const first = gnbItems[0];
+        first.classList.add('on');
+
+        const sub = first.querySelector('ul li');
+        if (sub) {
+            sub.classList.add('on');
+        }
+    }
+
+    // GNB 클릭 이벤트
+    gnbItems.forEach(item => {
+        const gnbLink = item.querySelector('a');
+
+        gnbLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 상위 메뉴 초기화
+            clearAllActive();
+
+            // 본인 on 설정
+            item.classList.add('on');
+
+            const subLi = item.querySelector('ul li');
+            if (subLi) {
+                subLi.classList.add('on');
+            }
+        });
+
+        // 하위 메뉴 클릭 이벤트
+        const subItems = item.querySelectorAll('ul li');
+        subItems.forEach(subLi => {
+            const subLink = subLi.querySelector('a');
+
+            subLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 상위 메뉴 활성화 유지
+                gnbItems.forEach(gnb => {
+                    if (gnb.contains(subLi)) {
+                        gnb.classList.add('on');
+                    } else {
+                        gnb.classList.remove('on');
+                        const others = gnb.querySelectorAll('ul li');
+                        others.forEach(li => {
+                            li.classList.remove('on');
+                        });
+                    }
+                });
+
+                // 현재 하위메뉴만 on
+                const siblings = subLi.parentElement.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('on');
+                });
+
+                subLi.classList.add('on');
+            });
+        });
+    });
+
+    initializeGNB();
+});
 
         document.querySelector('.mobile-menu').addEventListener('click', function () {
             document.querySelector('.modal')?.classList.add('on');

@@ -10,38 +10,38 @@
     <div id="user">
         <div class="wrap">
             <header class="aside-header">
-                <h1><img src="./img/logo.png" alt="올티칭 스터디카페"></h1>
+                <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
                 <ul>
                     <li>
-                        <a href="#"><img src="./img/icon-dashboard.png"><span>대시보드</span></a>
+                        <a href="#"><img src="./img/icon-dashboard-white.png"><span>대시보드</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-chart.png"><span>매출 관리</span></a>
+                        <a href="#"><img src="./img/icon-chart-white.png"><span>매출 관리</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-store.png"><span>매장 관리</span></a>
+                        <a href="#"><img src="./img/icon-store-white.png"><span>매장 관리</span></a>
                     </li>
-                    <li class="on">
+                    <li>
                         <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
                         <ul>
-                            <li><a href="#"><img src="./img/icon-man.png">회원 관리</a></li>
-                            <li><a href="#"><img src="./img/icon-enter.png">입·퇴실 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-man-white.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter-white.png">입·퇴실 관리</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-item.png"><span>이용상품</span></a>
+                        <a href="#"><img src="./img/icon-item-white.png"><span>이용상품</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-seat.png"><span>좌석 및 시설 관리</span></a>
+                        <a href="#"><img src="./img/icon-seat-white.png"><span>좌석 및 시설 관리</span></a>
                     </li>
                     <li>
-                        <a href="#"><img src="./img/icon-event.png"><span>이벤트 배너 관리</span></a>
+                        <a href="#"><img src="./img/icon-event-white.png"><span>이벤트 배너 관리</span></a>
                     </li>
                     <li class="mobile">
-                        <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        <a href="#"><img src="./img/icon-my-white.png"><span>마이페이지</span></a>
                     </li>
                     <li class="mobile">
-                        <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        <a href="#"><img src="./img/icon-logout-white.png"><span>로그아웃</span></a>
                     </li>
                 </ul>
             </header>
@@ -848,31 +848,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     const gnbItems = document.querySelectorAll('.aside-header > ul > li');
 
-    function updateImageSrc(li, isOn) {
-        const img = li.querySelector('a > img');
-        if (!img) return;
-
-        const src = img.getAttribute('src');
-        const ext = src.slice(src.lastIndexOf('.'));
-        let base = src.slice(0, -ext.length);
-        const whiteSuffix = '-white';
-
-        if (isOn && !base.endsWith(whiteSuffix)) {
-            img.setAttribute('src', `${base}${whiteSuffix}${ext}`);
-        } else if (!isOn && base.endsWith(whiteSuffix)) {
-            base = base.slice(0, -whiteSuffix.length);
-            img.setAttribute('src', `${base}${ext}`);
-        }
-    }
-
     function clearAllActive() {
         gnbItems.forEach(item => {
             item.classList.remove('on');
-            updateImageSrc(item, false);
             const subLis = item.querySelectorAll('ul li');
             subLis.forEach(subLi => {
                 subLi.classList.remove('on');
-                updateImageSrc(subLi, false);
             });
         });
     }
@@ -880,12 +861,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function initializeGNB() {
         const first = gnbItems[0];
         first.classList.add('on');
-        updateImageSrc(first, true);
 
         const sub = first.querySelector('ul li');
         if (sub) {
             sub.classList.add('on');
-            updateImageSrc(sub, true);
         }
     }
 
@@ -901,12 +880,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // 본인 on 설정
             item.classList.add('on');
-            updateImageSrc(item, true);
 
             const subLi = item.querySelector('ul li');
             if (subLi) {
                 subLi.classList.add('on');
-                updateImageSrc(subLi, true);
             }
         });
 
@@ -922,14 +899,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 gnbItems.forEach(gnb => {
                     if (gnb.contains(subLi)) {
                         gnb.classList.add('on');
-                        updateImageSrc(gnb, true);
                     } else {
                         gnb.classList.remove('on');
-                        updateImageSrc(gnb, false);
                         const others = gnb.querySelectorAll('ul li');
                         others.forEach(li => {
                             li.classList.remove('on');
-                            updateImageSrc(li, false);
                         });
                     }
                 });
@@ -938,11 +912,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 const siblings = subLi.parentElement.querySelectorAll('li');
                 siblings.forEach(sib => {
                     sib.classList.remove('on');
-                    updateImageSrc(sib, false);
                 });
 
                 subLi.classList.add('on');
-                updateImageSrc(subLi, true);
             });
         });
     });
