@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>홈화면</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="./plugin/c3.min.js"></script>
+    <link rel="stylesheet" href="./plugin/c3.css">
+</head>
+<body>
+    <div id="home">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard-white.png"><span>홈</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart-white.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store-white.png"><span>매장 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-info-white.png"><span>운영정보 설정</span></a></li>
+                            <li><a href="#"><img src="./img/icon-notify-white.png"><span>알림 관리</span></a></li>
+                            <li><a href="#"><img src="./img/icon-setting-white.png"><span>기기 관리</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man-white.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter-white.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item-white.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat-white.png"><span>실시간 이용현황</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-board-white.png"><span>공지사항</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event-white.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-notify-white.png" alt="알림"><span>공지사항</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my-white.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout-white.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="notify">
+                            <a href="#"><img src="./img/icon-notify.png" alt="알림"></a>
+                            <span class="noti-value">99</span>
+                        </div>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2><img src="./img/icon-dashboard-30px.png"><span>홈</span></h2>
+                    <div class="box-area">
+                        <div class="box current">
+                            <div class="box-top">
+                                <span>총 매출</span>
+                                <img src="./img/icon-saving.png">
+                            </div>
+                            <div class="box-num">
+                                <h3>12,345,678원</h3>
+                            </div>
+                            <div class="box-bottom">
+                                <span>현재 매장을 이용 중인 회원</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-top">
+                                <span>회원 수</span>
+                                <img src="./img/icon-group-gray.png">
+                            </div>
+                            <div class="box-num">
+                                <h3>50 / 100</h3>
+                            </div>
+                            <div class="box-bottom">
+                                <span>현재 유효 이용권 회원 수 / 총 회원 수</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-top">
+                                <span>현재 좌석 점유율</span>
+                                <img src="./img/icon-chair-gray.png">
+                            </div>
+                            <div class="box-num">
+                                <h3>15 / 20 (75%)</h3>
+                            </div>
+                            <div class="box-bottom">
+                                <span>현재 이용 중인 좌석</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-area">
+                        <div class="chart-top-area">
+                            <h3><img src="./img/icon-monitoring.png">매출 추이</h3>
+                            <div class="ai-btn">
+                                <button>AI 매출분석 보기</button>
+                            </div>
+                        </div>
+                        <div class="chart-tab-area">
+                            <ul>
+                                <li class="on">월 매출</li>
+                                <li>주간 매출</li>
+                                <li>일일 매출</li>
+                            </ul>
+                            <div class="calendar-btn">
+                                <button class="prev">◀</button>
+                                <span class="current-month">2025년 12월</span>
+                                <button class="next">▶</button>
+                            </div>
+                        </div>
+                        <div id="chart"></div>
+                    </div>
+                    <div class="box-area bottom">
+                        <div class="box">
+                            <div class="box-top">
+                                <div>
+                                    <img src="./img/icon-door.png">
+                                    <span>매장 출입문</span>
+                                </div>
+                            </div>
+                            <div class="ser-num">
+                                <h3>시리얼 넘버 : AJYS201060073</h3>
+                                <button>🔓 문 열기</button>
+                            </div>
+                            <div class="box-bottom">
+                                <span>매장관리 > 기기관리</span>
+                                <span class="state success">문이 열림 명령을 전송했습니다.</span>
+                                <span class="state failed">명령 전송에 실패했습니다. 다시 시도하거나 관리자에 문의하세요.</span>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-top">
+                                <div>
+                                    <img src="./img/icon-studyroom.png">
+                                    <span>스터디룸 현황</span>
+                                </div>
+                                <input type="date" class="studyroom-date">
+                            </div>
+                            <div class="box-room">
+                                <div class="room room01">
+                                    <h4>스터디룸1<span class="state01">사용중</span></h4>
+                                    <span>다음 예약 : 19:00</span>
+                                </div>
+                                <div class="room room02">
+                                    <h4>스터디룸2<span class="state02">공실</span></h4>
+                                    <span>-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal"></div>
+
+
+    </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gnbItems = document.querySelectorAll('.aside-header > ul > li');
+
+    function clearAllActive() {
+        gnbItems.forEach(item => {
+            item.classList.remove('on');
+            const subLis = item.querySelectorAll('ul li');
+            subLis.forEach(subLi => {
+                subLi.classList.remove('on');
+            });
+        });
+    }
+
+    function initializeGNB() {
+        const first = gnbItems[0];
+        first.classList.add('on');
+
+        const sub = first.querySelector('ul li');
+        if (sub) {
+            sub.classList.add('on');
+        }
+    }
+
+    // GNB 클릭 이벤트
+    gnbItems.forEach(item => {
+        const gnbLink = item.querySelector('a');
+
+        gnbLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 상위 메뉴 초기화
+            clearAllActive();
+
+            // 본인 on 설정
+            item.classList.add('on');
+
+            const subLi = item.querySelector('ul li');
+            if (subLi) {
+                subLi.classList.add('on');
+            }
+        });
+
+        // 하위 메뉴 클릭 이벤트
+        const subItems = item.querySelectorAll('ul li');
+        subItems.forEach(subLi => {
+            const subLink = subLi.querySelector('a');
+
+            subLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 상위 메뉴 활성화 유지
+                gnbItems.forEach(gnb => {
+                    if (gnb.contains(subLi)) {
+                        gnb.classList.add('on');
+                    } else {
+                        gnb.classList.remove('on');
+                        const others = gnb.querySelectorAll('ul li');
+                        others.forEach(li => {
+                            li.classList.remove('on');
+                        });
+                    }
+                });
+
+                // 현재 하위메뉴만 on
+                const siblings = subLi.parentElement.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('on');
+                });
+
+                subLi.classList.add('on');
+            });
+        });
+    });
+
+    initializeGNB();
+});
+
+document.querySelector('.mobile-menu').addEventListener('click', function () {
+    document.querySelector('.modal')?.classList.add('on');
+    document.querySelector('.aside-header')?.classList.add('on');
+});
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelector('.aside-header')?.classList.remove('on');
+});
+
+function openPopup(popup) {
+    if (!popup) return;
+    const scrollTop = window.scrollY || window.pageYOffset;
+    popup.style.position = 'absolute'; // 필요 시 fixed 가능
+    popup.style.top = (scrollTop + 100) + 'px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.display = 'block';
+}
+
+document.querySelectorAll('.detail-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.refund');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+});
+
+const pageSpans = document.querySelectorAll('.page-area > span');
+
+pageSpans.forEach(span => {
+    span.addEventListener('click', (event) => {
+        pageSpans.forEach(s => {
+            s.classList.remove('on');
+        });
+
+        event.target.classList.add('on');
+    });
+});
+
+document.querySelectorAll(".chart-tab-area ul li").forEach(li => {
+    li.addEventListener("click", function () {
+        this.parentElement.querySelectorAll(".chart-tab-area ul li").forEach(sibling => {
+            sibling.classList.remove("on");
+        });
+        this.classList.add("on");
+    });
+});
+
+const currentMonthEl = document.querySelector('.current-month');
+let currentDate = new Date(); 
+const today = new Date(); 
+
+function updateMonth() {
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1;
+    const nextBtn = document.querySelector('.next');
+    currentMonthEl.textContent = `${year}년 ${month}월`;
+    if (currentDate.getFullYear() === today.getFullYear() && currentDate.getMonth() === today.getMonth()) {
+        nextBtn.style.color = "#ccc";
+    } else {
+        nextBtn.style.color = "";
+    }
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    updateMonth();
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+    const nextMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1);
+    if (nextMonth.getFullYear() > today.getFullYear() ||
+        (nextMonth.getFullYear() === today.getFullYear() && nextMonth.getMonth() > today.getMonth())) {
+        return;
+    }
+
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    updateMonth();
+});
+
+updateMonth();
+
+const t = new Date();
+const yyyy = t.getFullYear();
+const mm = String(t.getMonth() + 1).padStart(2, '0');
+const dd = String(t.getDate()).padStart(2, '0');
+
+const formattedToday = `${yyyy}-${mm}-${dd}`;
+
+document.querySelectorAll('.studyroom-date').forEach(input => {
+    input.value = formattedToday;
+});
+
+var chart = c3.generate({ 
+    bindto: '#chart',
+    data: {
+      columns: [
+        ['매출액', 6400000, 3780000, 5940000, 2160000],
+        ['증감률',5,-6,5,-10]
+      ],
+      axes: {
+        data2: 'y2'
+      }
+    },
+    color:{
+        pattern:['#2aacb6']
+    },
+    axis : {
+        x : { 
+            type: 'category',
+            categories: ['4월', '5월', '6월', '7월']
+        },
+        y : {
+            tick: {
+                format: d3.format(",")
+            }
+        },
+        y2: {
+            show: false,
+            tick: {
+                format: d3.format("p")
+            }
+        }
+    },
+    grid:{
+        y:{
+            show:true,
+        }
+    },
+    tooltip: {
+        format: {
+            value: function (value, ratio, id) {
+            if (id === '매출액') {
+                return d3.format(',')(value) + '원';
+            } else if (id === '증감률') {
+                return value + '%';
+            }
+            return value;
+        }
+        }
+	}
+});
+
+
+    </script>
+</body>
+</html>
