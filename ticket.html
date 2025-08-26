@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>이용권관리화면</title>
+</head>
+<body>
+    <div id="tickets">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard-white.png"><span>홈</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart-white.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store-white.png"><span>매장 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-info-white.png"><span>운영정보 설정</span></a></li>
+                            <li><a href="#"><img src="./img/icon-notify-white.png"><span>알림 관리</span></a></li>
+                            <li><a href="#"><img src="./img/icon-setting-white.png"><span>기기 관리</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man-white.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter-white.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item-white.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat-white.png"><span>실시간 이용현황</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-board-white.png"><span>공지사항</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event-white.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-notify-white.png" alt="알림"><span>공지사항</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my-white.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout-white.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="notify">
+                            <a href="#"><img src="./img/icon-notify.png" alt="알림"></a>
+                            <span class="noti-value">99</span>
+                        </div>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2><img src="./img/icon-item-30px.png"><span>이용권 관리</span></h2>
+                    <div class="search-area">
+                        <div class="search-box">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                            <img src="./img/icon-search.png">
+                        </div>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                            <span>사용중만 보기</span>
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <button class="new-btn">
+                            <img src="./img/icon-add.png"><span>이용권 등록</span>
+                        </button>
+                    </div>
+                    <ul class="tab-btn">
+                        <li class="on">자유석</li>
+                        <li>고정석</li>
+                        <li>스터디룸</li>
+                        <li>사물함</li>
+                    </ul>
+                    <div class="table-area">
+                        <div class="table-layout li01 on">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>생성일자</td>
+                                        <td>이용상품</td>
+                                        <td>상품명</td>
+                                        <td>이용시간(일/시간)</td>
+                                        <td>유효기간(일)</td>
+                                        <td><div class="cost">가격<img src="./img/icon-swap.png"></div></td>
+                                        <td>사용</td>
+                                        <td>상세보기</td>
+                                        <td> </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>일일권</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-layout li02">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>생성일자</td>
+                                        <td>상품명</td>
+                                        <td>이용기간</td>
+                                        <td>유효기간(일)</td>
+                                        <td><div class="cost">가격<img src="./img/icon-swap.png"></div></td>
+                                        <td>사용</td>
+                                        <td>상세보기</td>
+                                        <td> </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-layout li03">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>생성일자</td>
+                                        <td>상품명</td>
+                                        <td>이용기간</td>
+                                        <td><div class="cost">가격<img src="./img/icon-swap.png"></div></td>
+                                        <td>사용</td>
+                                        <td>상세보기</td>
+                                        <td> </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025.07.17</td>
+                                        <td>자유석 4주 13만 → 10만</td>
+                                        <td>28일</td>
+                                        <td>100,000원</td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-area">
+                            <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                            <span class="on">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal"></div>
+
+        <!-- 이용권 삭제 확인 -->
+        <div class="pop-up seats-confirm-pop tickets pop-outside">
+            <div class="seats-name">
+                <h3>이용권 삭제 확인</h3>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">삭제</button>
+            </div>
+            <div class="pop-area">
+                <h3>상품명</h3>
+                <h3 class="small">해당 이용권을 삭제하시겠습니까?</h3>
+                <span class="red">삭제된 이용권은 복구할 수 없습니다.</span>
+            </div>           
+        </div>
+
+
+        <!-- 삭제 완료/등록 완료/수정완료 팝업 -->
+        <div class="pop-up fin success pop-outside" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/check-img.png">
+                <h3>삭제되었습니다.</h3>
+            </div>           
+        </div>
+
+        <!-- 실패 팝업 -->
+        <div class="pop-up fin fail pop-outside" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/failed-img.png">
+                <h3>다시 시도해 주세요.</h3>
+            </div>           
+        </div>
+
+        <!-- 이용권 등록 팝업-->
+        <div class="pop-up new tickets pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>이용권 등록</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">등록</button>
+            </div>
+            <div class="pop-area">
+                <ul class="pop-tap-btn">
+                    <li class="on">자유석</li>
+                    <li>고정석</li>
+                    <li>스터디룸</li>
+                    <li>사물함</li>
+                </ul>
+                <div class="input-area li01 on">
+                    <div class="name">
+                        <span>상품명</span>
+                        <input type="text" placeholder="상품명을 입력하세요.">
+                    </div>
+                    <div class="type">
+                        <span>이용상품</span>
+                        <select name="type">
+                            <option value="default">선택</option>
+                            <option value="item2">일일권</option>
+                            <option value="item3">시간권</option>
+                            <option value="item4">기간권</option>
+                        </select>
+                    </div>
+                    <div class="period">
+                        <span>이용시간(일/시간)</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>시간</span>
+                        </div>
+                    </div>
+                    <div class="period">
+                        <span>유효기간(일)</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>일</span>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <span>가격</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <span>사용여부</span>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-area li02">
+                    <div class="name">
+                        <span>상품명</span>
+                        <input type="text" placeholder="상품명을 입력하세요.">
+                    </div>
+                    <div class="period">
+                        <span>이용시간(일/시간)</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>시간</span>
+                        </div>
+                    </div>
+                    <div class="period">
+                        <span>유효기간(일)</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>일</span>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <span>가격</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <span>사용여부</span>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-area li03">
+                    <div class="name">
+                        <span>상품명</span>
+                        <input type="text" placeholder="상품명을 입력하세요.">
+                    </div>
+                    <div class="period">
+                        <span>이용시간(일/시간)</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>시간</span>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <span>가격</span>
+                        <div class="input-box">
+                            <input type="text" value="0">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <span>사용여부</span>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 이용권 상세 팝업 : 자유석-->
+        <div class="pop-up new tickets li01 pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>이용권 상세</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+                <button class="save">수정</button>
+            </div>
+            <div class="pop-area">
+                <div class="input-area li01 on">
+                    <div class="name">
+                        <span>상품명</span>
+                        <input type="text" value="자유석 4주 13만 → 10만">
+                    </div>
+                    <div class="type">
+                        <span>이용상품</span>
+                        <select name="type">
+                            <option value="default">선택</option>
+                            <option value="item2">일일권</option>
+                            <option value="item3">시간권</option>
+                            <option value="item4">기간권</option>
+                        </select>
+                    </div>
+                    <div class="period">
+                        <span>이용시간(일/시간)</span>
+                        <div class="input-box">
+                            <input type="text" value="28">
+                            <span>일</span>
+                        </div>
+                    </div>
+                    <div class="period">
+                        <span>유효기간(일)</span>
+                        <div class="input-box">
+                            <input type="text" value="28">
+                            <span>일</span>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <span>가격</span>
+                        <div class="input-box">
+                            <input type="text" value="100,000">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <span>사용여부</span>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 이용권 상세 팝업 : 고정석-->
+        <div class="pop-up new tickets li02 pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>이용권 상세</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+                <button class="save">수정</button>
+            </div>
+            <div class="pop-area">
+                <div class="input-area li02 on">
+                    <div class="name">
+                        <span>상품명</span>
+                        <input type="text" value="고정석 4주">
+                    </div>
+                    <div class="period">
+                        <span>이용시간(일/시간)</span>
+                        <div class="input-box">
+                            <input type="text" value="28">
+                            <span>일</span>
+                        </div>
+                    </div>
+                    <div class="period">
+                        <span>유효기간(일)</span>
+                        <div class="input-box">
+                            <input type="text" value="28">
+                            <span>일</span>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <span>가격</span>
+                        <div class="input-box">
+                            <input type="text" value="150,000">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <span>사용여부</span>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 이용권 상세 팝업 : 스터디룸, 사물함 레이아웃 같습니당-->
+        <div class="pop-up new tickets li03 pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>이용권 상세</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+                <button class="save">수정</button>
+            </div>
+            <div class="pop-area">
+                <div class="input-area li03 on">
+                    <div class="name">
+                        <span>상품명</span>
+                        <input type="text" value="스터디룸 1시간">
+                    </div>
+                    <div class="period">
+                        <span>이용시간(일/시간)</span>
+                        <div class="input-box">
+                            <input type="text" value="1">
+                            <span>시간</span>
+                        </div>
+                    </div>
+                    <div class="cost">
+                        <span>가격</span>
+                        <div class="input-box">
+                            <input type="text" value="7,000">
+                            <span>원</span>
+                        </div>
+                    </div>
+                    <div class="use">
+                        <span>사용여부</span>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gnbItems = document.querySelectorAll('.aside-header > ul > li');
+
+    function clearAllActive() {
+        gnbItems.forEach(item => {
+            item.classList.remove('on');
+            const subLis = item.querySelectorAll('ul li');
+            subLis.forEach(subLi => {
+                subLi.classList.remove('on');
+            });
+        });
+    }
+
+    function initializeGNB() {
+        const first = gnbItems[0];
+        first.classList.add('on');
+
+        const sub = first.querySelector('ul li');
+        if (sub) {
+            sub.classList.add('on');
+        }
+    }
+
+    // GNB 클릭 이벤트
+    gnbItems.forEach(item => {
+        const gnbLink = item.querySelector('a');
+
+        gnbLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 상위 메뉴 초기화
+            clearAllActive();
+
+            // 본인 on 설정
+            item.classList.add('on');
+
+            const subLi = item.querySelector('ul li');
+            if (subLi) {
+                subLi.classList.add('on');
+            }
+        });
+
+        // 하위 메뉴 클릭 이벤트
+        const subItems = item.querySelectorAll('ul li');
+        subItems.forEach(subLi => {
+            const subLink = subLi.querySelector('a');
+
+            subLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 상위 메뉴 활성화 유지
+                gnbItems.forEach(gnb => {
+                    if (gnb.contains(subLi)) {
+                        gnb.classList.add('on');
+                    } else {
+                        gnb.classList.remove('on');
+                        const others = gnb.querySelectorAll('ul li');
+                        others.forEach(li => {
+                            li.classList.remove('on');
+                        });
+                    }
+                });
+
+                // 현재 하위메뉴만 on
+                const siblings = subLi.parentElement.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('on');
+                });
+
+                subLi.classList.add('on');
+            });
+        });
+    });
+
+    initializeGNB();
+});
+
+document.querySelector('.mobile-menu').addEventListener('click', function () {
+    document.querySelector('.modal')?.classList.add('on');
+    document.querySelector('.aside-header')?.classList.add('on');
+});
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelector('.aside-header')?.classList.remove('on');
+});
+
+function openPopup(popup) {
+    if (!popup) return;
+    const scrollTop = window.scrollY || window.pageYOffset;
+    popup.style.position = 'absolute'; // 필요 시 fixed 가능
+    popup.style.top = (scrollTop + 100) + 'px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.display = 'block';
+}
+
+document.querySelectorAll('.detail-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.refund');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelector('.new-btn').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.new');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+document.querySelectorAll('.li01 .detail-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.new.li01');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelectorAll('.li02 .detail-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.new.li02');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelectorAll('.li03 .detail-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.new.li03');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+
+document.querySelectorAll('.delete').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.seats-confirm-pop.tickets');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelector('.pop-up.seats-confirm-pop.tickets .save').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.fin.success');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+});
+
+const pageSpans = document.querySelectorAll('.page-area > span');
+
+pageSpans.forEach(span => {
+    span.addEventListener('click', (event) => {
+        pageSpans.forEach(s => {
+            s.classList.remove('on');
+        });
+
+        event.target.classList.add('on');
+    });
+});
+
+const tabs = document.querySelectorAll(".tab-btn li");
+const tables = document.querySelectorAll(".table-layout");
+
+tabs.forEach((tab, index) => {
+tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("on"));
+    tables.forEach(tbl => tbl.classList.remove("on"));
+
+    tab.classList.add("on");
+
+    if (index === 0) {
+    document.querySelector(".li01").classList.add("on");
+    } else if (index === 1) {
+    document.querySelector(".li02").classList.add("on");
+    } else if (index === 2 || index === 3) {
+    document.querySelector(".li03").classList.add("on");
+    }
+});
+});
+
+document.querySelectorAll('.blacklist-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function () {
+    this.classList.toggle('on');
+    });
+});
+
+const poptabs = document.querySelectorAll(".pop-up.new .pop-tap-btn li");
+const popareas = document.querySelectorAll(".pop-up.new .input-area");
+
+poptabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+        // 탭, 영역 초기화
+        poptabs.forEach(t => t.classList.remove("on"));
+        popareas.forEach(a => a.classList.remove("on"));
+
+        // 클릭한 탭에 on
+        tab.classList.add("on");
+
+        // 탭 index에 맞춰 영역 on
+        if (index === 0) {
+        document.querySelector(".pop-up.new .li01").classList.add("on");
+        } else if (index === 1) {
+        document.querySelector(".pop-up.new .li02").classList.add("on");
+        } else if (index === 2) {
+        document.querySelector(".pop-up.new .li03").classList.add("on");
+        } else if (index === 3) {
+        document.querySelector(".pop-up.new .li03").classList.add("on");
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
