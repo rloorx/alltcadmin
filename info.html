@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>운영정보 설정 화면</title>
+</head>
+<body>
+    <div id="info">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard-white.png"><span>홈</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart-white.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store-white.png"><span>매장 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-info-white.png"><span>운영정보 설정</span></a></li>
+                            <li><a href="#"><img src="./img/icon-notify-white.png"><span>알림 관리</span></a></li>
+                            <li><a href="#"><img src="./img/icon-setting-white.png"><span>기기 관리</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man-white.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter-white.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item-white.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat-white.png"><span>실시간 이용현황</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-board-white.png"><span>공지사항</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event-white.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-notify-white.png" alt="알림"><span>공지사항</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my-white.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout-white.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="notify">
+                            <a href="#"><img src="./img/icon-notify.png" alt="알림"></a>
+                            <span class="noti-value">99</span>
+                        </div>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2><img src="./img/icon-info-30px.png"><span>운영정보 설정</span></h2>
+                    <div class="time-info-area">
+                        <h3><img src="./img/icon-time.png">운영 설정</h3>
+                        <div class="time-flex-area">
+                            <div class="info-area">
+                                <span class="toast-pop">마감 시간은 시작 시간보다 늦게 설정해야 합니다. 시간을 다시 선택해 주세요.</span>
+                                <div class="top-area">
+                                    <h3>⏰ 운영 시간 설정</h3>
+                                    <div class="blacklist-toggle">
+                                        <div class="toggle-bg">
+                                            <div class="toggle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time-set-area">
+                                    <div class="time-set open">
+                                        <span>오픈 시간</span>
+                                        <div class="input-box">
+                                            <div class="time-set-wrap">
+                                                <ul class="ampm">
+                                                </ul>
+                                                <ul class="hour">
+                                                </ul>
+                                                <ul class="minute">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="time-set close">
+                                        <span>마감 시간</span>
+                                        <div class="input-box">
+                                            <div class="time-set-wrap">
+                                                <ul class="ampm">
+                                                </ul>
+                                                <ul class="hour">
+                                                </ul>
+                                                <ul class="minute">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="save">저장</button>
+                                </div>
+                            </div>
+                            <div class="info-area">
+                                <div class="top-area">
+                                    <h3>⌛ 좌석 초기화 예약 설정</h3>
+                                    <div class="blacklist-toggle">
+                                        <div class="toggle-bg">
+                                            <div class="toggle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="time-set-area">
+                                    <div class="time-set reset">
+                                        <span>좌석 초기화 예약</span>
+                                        <div class="input-box">
+                                            <div class="time-set-wrap">
+                                                <ul class="ampm">
+                                                </ul>
+                                                <ul class="hour">
+                                                </ul>
+                                                <ul class="minute">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="save">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ban-info-area">
+                        <div class="ban-top">
+                            <h3><img src="./img/icon-man.png">출입 연령 제한 설정</h3>
+                            <div class="blacklist-toggle">
+                                <div class="toggle-bg">
+                                    <div class="toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ban-area">
+                            <div class="info-area">
+                                <div class="top-area">
+                                    <h3>🙍‍♂️ 연령 제한 설정<span>* 2025년 기준</span></h3>
+                                </div>
+                                <div class="ban-set-box">
+                                    <span>출입 가능 최소 연령</span>
+                                    <select>
+                                        <option value="default">14세 이상 (2012년생)</option>
+                                        <option value="opt1">15세 이상 (2011년생)</option>
+                                        <option value="opt2">16세 이상 (2010년생)</option>
+                                        <option value="opt3">17세 이상 (2009년생)</option>
+                                        <option value="opt3">18세 이상 (2008년생)</option>
+                                        <option value="opt3">19세 이상 (2007년생)</option>
+                                        <option value="opt3">20세 이상 (2006년생)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="info-area">
+                                <div class="top-area">
+                                    <h3>📅 적용 시간대 / 요일</h3>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" name="ban-time"><span>전체</span>
+                                    <input type="radio" name="ban-time"><span>선택</span>
+                                </div>
+                                <div class="ban-set-area">
+                                    <div class="ban-set-box">
+                                        <span>시간대 설정</span>
+                                        <div class="time-set-area">
+                                            <div class="time-set open">
+                                                <div class="input-box">
+                                                    <div class="time-set-wrap">
+                                                        <ul class="ampm">
+                                                        </ul>
+                                                        <ul class="hour">
+                                                        </ul>
+                                                        <ul class="minute">
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span>~</span>
+                                            <div class="time-set close">
+                                                <div class="input-box">
+                                                    <div class="time-set-wrap">
+                                                        <ul class="ampm">
+                                                        </ul>
+                                                        <ul class="hour">
+                                                        </ul>
+                                                        <ul class="minute">
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ban-set-box day">
+                                        <span>요일 선택</span>
+                                        <div class="check-area">
+                                            <label><input type="checkbox" name="ban-day"><span>월</span></label>
+                                            <label><input type="checkbox" name="ban-day"><span>화</span></label>
+                                            <label><input type="checkbox" name="ban-day"><span>수</span></label>
+                                            <label><input type="checkbox" name="ban-day"><span>목</span></label>
+                                            <label><input type="checkbox" name="ban-day"><span>금</span></label>
+                                            <label><input type="checkbox" name="ban-day"><span>토</span></label>
+                                            <label><input type="checkbox" name="ban-day"><span>일</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-area">
+                                <div class="top-area">
+                                    <h3>안내 문구 설정</h3>
+                                </div>
+                                <div class="ban-set-box txt">
+                                    <span>안내 문구</span>
+                                    <textarea name="ban-txt" placeholder="본 매장은 14세 이상만 출입 가능합니다. (2012년생 이상)"></textarea>
+                                    <span class="sub">* 기본 안내 문구가 노출됩니다.</span>
+                                </div>
+                            </div>
+                            <div class="info-area">
+                                <div class="top-area">
+                                    <h3>적용 범위</h3>
+                                </div>
+                                <div class="radio-box">
+                                    <input type="radio" name="ban-area"><span>전체 구역 적용</span>
+                                    <input type="radio" name="ban-area"><span>특정 구역 선택</span>
+                                </div>
+                                <div class="ban-set-box area">
+                                    <span>구역 선택</span>
+                                    <div class="check-area">
+                                        <label><input type="checkbox" name="ban-item"><span>고정석</span></label>
+                                        <label><input type="checkbox" name="ban-item"><span>자유석</span></label>
+                                        <label><input type="checkbox" name="ban-item"><span>스터디룸</span></label>
+                                        <label><input type="checkbox" name="ban-item"><span>사물함</span></label>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="btn-area">
+                            <button class="save">저장</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal"></div>
+
+        <!-- 저장 완료 팝업 -->
+        <div class="pop-up fin success pop-outside" style="display: none;">
+            <div class="pop-bottombtn">
+                <button class="save">확인</button>
+            </div>
+            
+            <div class="pop-area">
+                <img src="./img/check-img.png">
+                <h3>저장이 완료되었습니다.</h3>
+            </div>           
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gnbItems = document.querySelectorAll('.aside-header > ul > li');
+
+    function clearAllActive() {
+        gnbItems.forEach(item => {
+            item.classList.remove('on');
+            const subLis = item.querySelectorAll('ul li');
+            subLis.forEach(subLi => {
+                subLi.classList.remove('on');
+            });
+        });
+    }
+
+    function initializeGNB() {
+        const first = gnbItems[0];
+        first.classList.add('on');
+
+        const sub = first.querySelector('ul li');
+        if (sub) {
+            sub.classList.add('on');
+        }
+    }
+
+    // GNB 클릭 이벤트
+    gnbItems.forEach(item => {
+        const gnbLink = item.querySelector('a');
+
+        gnbLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 상위 메뉴 초기화
+            clearAllActive();
+
+            // 본인 on 설정
+            item.classList.add('on');
+
+            const subLi = item.querySelector('ul li');
+            if (subLi) {
+                subLi.classList.add('on');
+            }
+        });
+
+        // 하위 메뉴 클릭 이벤트
+        const subItems = item.querySelectorAll('ul li');
+        subItems.forEach(subLi => {
+            const subLink = subLi.querySelector('a');
+
+            subLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 상위 메뉴 활성화 유지
+                gnbItems.forEach(gnb => {
+                    if (gnb.contains(subLi)) {
+                        gnb.classList.add('on');
+                    } else {
+                        gnb.classList.remove('on');
+                        const others = gnb.querySelectorAll('ul li');
+                        others.forEach(li => {
+                            li.classList.remove('on');
+                        });
+                    }
+                });
+
+                // 현재 하위메뉴만 on
+                const siblings = subLi.parentElement.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('on');
+                });
+
+                subLi.classList.add('on');
+            });
+        });
+    });
+
+    initializeGNB();
+});
+
+document.querySelector('.mobile-menu').addEventListener('click', function () {
+    document.querySelector('.modal')?.classList.add('on');
+    document.querySelector('.aside-header')?.classList.add('on');
+});
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelector('.aside-header')?.classList.remove('on');
+});
+
+(function() {
+  const ampmItems = ["오전", "오후"];
+  const hours = Array.from({ length: 12 }, (_, i) => String(i + 1).padStart(2, "0"));
+  const minutes = Array.from({ length: 60 }, (_, i) => String(i).padStart(2, "0"));
+
+  function makeInfiniteList(ul, items) {
+    ul.innerHTML = "";
+    for (let n = 0; n < 3; n++) {
+      items.forEach(txt => {
+        const li = document.createElement("li");
+        li.textContent = txt;
+        ul.appendChild(li);
+      });
+    }
+    const liHeight = ul.querySelector("li")?.offsetHeight || 30;
+    ul.scrollTop = liHeight * items.length;
+    ul.addEventListener("scroll", () => {
+      const maxScroll = liHeight * items.length * 2;
+      if (ul.scrollTop <= 0) ul.scrollTop = liHeight * items.length;
+      else if (ul.scrollTop >= maxScroll) ul.scrollTop = liHeight * items.length;
+    });
+    return liHeight;
+  }
+
+  function setInitialValue(ul, items, value, liHeight) {
+    const liList = ul.querySelectorAll("li");
+    liList.forEach(l => l.classList.remove("on"));
+    const index = items.indexOf(value);
+    if (index >= 0) liList[items.length + index].classList.add("on");
+    ul.scrollTop = liHeight * (items.length + index);
+  }
+
+  function updateInputBox(displayEl, ampmUl, hourUl, minuteUl) {
+    const ampm = ampmUl.querySelector("li.on")?.textContent || "오전";
+    const hour = hourUl.querySelector("li.on")?.textContent || "09";
+    const minute = minuteUl.querySelector("li.on")?.textContent || "00";
+    displayEl.textContent = `${ampm} ${hour}:${minute}`;
+  }
+
+  const wraps = document.querySelectorAll(".time-set-wrap");
+  wraps.forEach(wrap => {
+    const ampmUl = wrap.querySelector(".ampm");
+    const hourUl = wrap.querySelector(".hour");
+    const minuteUl = wrap.querySelector(".minute");
+
+    // 표시용 요소 (inputBox 대신 span 생성)
+    let displayEl = wrap.querySelector(".display-time");
+    if (!displayEl) {
+      displayEl = document.createElement("span");
+      displayEl.className = "display-time";
+      wrap.parentElement.insertBefore(displayEl, wrap);
+    }
+
+    // AM/PM
+    ampmUl.innerHTML = "";
+    ampmItems.forEach((txt, i) => {
+      const li = document.createElement("li");
+      li.textContent = txt;
+      if (i === 0) li.classList.add("on");
+      ampmUl.appendChild(li);
+    });
+
+    const hourLiHeight = makeInfiniteList(hourUl, hours);
+    const minuteLiHeight = makeInfiniteList(minuteUl, minutes);
+
+    setInitialValue(hourUl, hours, "09", hourLiHeight);
+    setInitialValue(minuteUl, minutes, "00", minuteLiHeight);
+
+    // 클릭 이벤트
+    ampmUl.addEventListener("click", e => {
+      if (e.target.tagName !== "LI") return;
+      ampmUl.querySelectorAll("li").forEach(li => li.classList.remove("on"));
+      e.target.classList.add("on");
+      updateInputBox(displayEl, ampmUl, hourUl, minuteUl);
+    });
+
+    [hourUl, minuteUl].forEach(ul => {
+      ul.addEventListener("click", e => {
+        if (e.target.tagName !== "LI") return;
+        const liList = ul.querySelectorAll("li");
+        const items = Array.from(new Set([...liList].map(li => li.textContent)));
+        const index = items.indexOf(e.target.textContent);
+        const centerIndex = items.length + index;
+
+        liList.forEach(l => l.classList.remove("on"));
+        liList[centerIndex].classList.add("on");
+        ul.scrollTo({ top: ul.querySelector("li").offsetHeight * centerIndex, behavior: "smooth" });
+
+        updateInputBox(displayEl, ampmUl, hourUl, minuteUl);
+      });
+    });
+
+    updateInputBox(displayEl, ampmUl, hourUl, minuteUl);
+  });
+})();
+
+const inputBoxes = document.querySelectorAll(".input-box");
+
+inputBoxes.forEach(box => {
+  const wrap = box.querySelector(".time-set-wrap");
+
+  box.addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.querySelectorAll(".time-set-wrap.on").forEach(w => {
+      if (w !== wrap) w.classList.remove("on");
+    });
+    wrap.classList.add("on");
+  });
+});
+
+document.body.addEventListener("click", () => {
+  document.querySelectorAll(".time-set-wrap.on").forEach(w => w.classList.remove("on"));
+});
+
+function openPopup(popup) {
+    if (!popup) return;
+    const scrollTop = window.scrollY || window.pageYOffset;
+    popup.style.position = 'absolute'; // 필요 시 fixed 가능
+    popup.style.top = (scrollTop + 100) + 'px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.display = 'block';
+}
+
+document.querySelectorAll('button.save').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.fin.success');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+});
+
+
+    </script>
+</body>
+</html>
