@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>알림 관리</title>
+</head>
+<body>
+    <div id="notify">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard-white.png"><span>홈</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart-white.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store-white.png"><span>매장 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-info-white.png"><span>운영정보 설정</span></a></li>
+                            <li><a href="#"><img src="./img/icon-notify-white.png"><span>알림 관리</span></a></li>
+                            <li><a href="#"><img src="./img/icon-setting-white.png"><span>기기 관리</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man-white.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter-white.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item-white.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat-white.png"><span>실시간 이용현황</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-board-white.png"><span>공지사항</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event-white.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-notify-white.png" alt="알림"><span>공지사항</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my-white.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout-white.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="notify">
+                            <a href="#"><img src="./img/icon-notify.png" alt="알림"></a>
+                            <span class="noti-value">99</span>
+                        </div>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <h2><img src="./img/icon-notify-30px.png"><span>알림 관리</span></h2>
+                    <ul class="tab-btn">
+                        <li class="on">카카오톡 알림톡 관리</li>
+                        <li>문자 관리</li>
+                        <li>전송 및 통계</li>
+                    </ul>
+                    <div class="kakao-info-area">
+                        <div class="top-area">
+                            <h3><img src="./img/kakao-img-20px.png">카카오톡 알림톡 관리</h3>
+                        </div>
+                        <div class="info-flex-area">
+                            <div class="info-left">
+                                <h3>카카오톡 플러스 채널</h3>
+                                <ul>
+                                    <li>
+                                        <span>카카오 플러스 검색용 아이디</span>
+                                        <div class="input-box">
+                                            <input type="text" value="@ASDF">
+                                            <img src="./img/icon-edit.png" alt="수정하기" class="edit">
+                                        </div>
+                                        <div class="btn-edit"> <!--li에 on 들어갈때 btn-edit 활성화됩니당-->
+                                            <button class="cancel"><img src="./img/icon-close-16px.png">취소</button>
+                                            <button class="save"><img src="./img/icon-check-16px.png">저장</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>카카오 플러스 채널 URL</span>
+                                        <div class="input-box">
+                                            <input type="text" value="https://pf.kakao.com/abcdef">
+                                            <img src="./img/icon-edit.png" alt="수정하기" class="edit">
+                                        </div>
+                                        <div class="btn-edit"> <!--li에 on 들어갈때 btn-edit 활성화됩니당-->
+                                            <button class="cancel"><img src="./img/icon-close-16px.png">취소</button>
+                                            <button class="save"><img src="./img/icon-check-16px.png">저장</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>카카오톡 채널 senderKey</span>
+                                        <div class="input-box">
+                                            <input type="text" value="asdfadfasdfasdfdff">
+                                            <img src="./img/icon-edit.png" alt="수정하기" class="edit">
+                                        </div>
+                                        <div class="btn-edit"> <!--li에 on 들어갈때 btn-edit 활성화됩니당-->
+                                            <button class="cancel"><img src="./img/icon-close-16px.png">취소</button>
+                                            <button class="save"><img src="./img/icon-check-16px.png">저장</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info-right">
+                                <div class="right-top">
+                                    <h3>카카오톡 추가 안내문구</h3>
+                                    <span>모든 카카오 알림톡 메시지 하단에 자동으로 추가되는 안내문구입니다.</span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="li-top">
+                                            <span>추가 안내 문구</span>
+                                            <button><img src="./img/icon-edit-20px.png">수정하기</button>
+                                        </div>
+                                        <textarea class="kakao-txt" placeholder="카카오톡 추가 안내문구를 작성해 주세요."></textarea>
+                                        <span class="sub">0/300자</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-bottom-area">
+                            <div class="bottom-top">
+                                <h3>카카오톡 알림톡 템플릿 관리</h3>
+                                <span>* 발송 가능한 템플릿만 조회됩니다. 검수 대기/반려된 템플릿은 목록에 나타나지 않으며, 발송에 사용할 수 없습니다.</span>
+                            </div>
+                            <div class="search-area">
+                                <div class="search-box">
+                                    <input type="text" placeholder="검색어(템플릿 명)를 입력해 주세요.">
+                                    <img src="./img/icon-search.png">
+                                </div>
+                            </div>
+                            <div class="table-area">
+                                <div class="table-layout">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>분류</td>
+                                                <td>템플릿 명</td>
+                                                <td>메시지 내용</td>
+                                                <td>미리보기</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="page-area">
+                                    <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                                    <span class="on">1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                    <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sms-info-area" style="display: none;">
+                        <div class="top-area">
+                            <h3><img src="./img/icon-mail-20px.png">문자 관리</h3>
+                        </div>
+                        <div class="info-flex-area">
+                            <div class="info-left">
+                                <h3>문자 발송</h3>
+                                <ul>
+                                    <li>
+                                        <span>발신자</span>
+                                        <div class="input-box">
+                                            <input type="text" value="010-1234-5678">
+                                            <img src="./img/icon-edit.png" alt="수정하기" class="edit">
+                                        </div>
+                                        <div class="btn-edit"> <!--li에 on 들어갈때 btn-edit 활성화됩니당-->
+                                            <button class="cancel"><img src="./img/icon-close-16px.png">취소</button>
+                                            <button class="save"><img src="./img/icon-check-16px.png">저장</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>수신자 선택</span>
+                                        <div class="radio-box">
+                                            <label><input type="radio" name="sms" checked><span>전체 회원</span></label>
+                                            <label><input type="radio" name="sms"><span>회원 찾기</span></label>
+                                        </div>
+                                        <div class="sms-option-area">
+                                            <button class="sms-option">회원 목록에서 찾기</button>
+                                            <div class="sms-list">
+                                                <span>선택된 회원(0명)</span>
+                                                <ul class="group">
+                                                    <li>
+                                                        <span>김티칭 (010-1234-1234)</span>
+                                                        <img src="./img/icon-close-16px.png" alt="삭제">
+                                                    </li>
+                                                    <li>
+                                                        <span>김티칭 (010-1234-1234)</span>
+                                                        <img src="./img/icon-close-16px.png" alt="삭제">
+                                                    </li>
+                                                    <li>
+                                                        <span>김티칭 (010-1234-1234)</span>
+                                                        <img src="./img/icon-close-16px.png" alt="삭제">
+                                                    </li>
+                                                    <li>
+                                                        <span>김티칭 (010-1234-1234)</span>
+                                                        <img src="./img/icon-close-16px.png" alt="삭제">
+                                                    </li>
+                                                    <li>
+                                                        <span>김티칭 (010-1234-1234)</span>
+                                                        <img src="./img/icon-close-16px.png" alt="삭제">
+                                                    </li>
+                                                    <li>
+                                                        <span>김티칭 (010-1234-1234)</span>
+                                                        <img src="./img/icon-close-16px.png" alt="삭제">
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="info-right">
+                                <ul>
+                                    <li>
+                                        <span>템플릿 선택</span>
+                                        <div class="select-area">
+                                            <select class="type">
+                                                <option value="default">분류</option>
+                                                <option value="opt01">안내</option>
+                                                <option value="opt02">이벤트</option>
+                                                <option value="opt03">결제</option>
+                                                <option value="opt04">기타</option>
+                                            </select>
+                                            <select class="temp-name">
+                                                <option value="default">선택</option>
+                                                <option value="opt01">템플릿명01</option>
+                                                <option value="opt02">템플릿명02</option>
+                                                <option value="opt03">템플릿명03</option>
+                                                <option value="opt04">템플릿명04</option>
+                                            </select>
+                                            <button class="temp-set"><img src="./img/icon-set-20px-black.png">템플릿 관리</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span>메시지 내용</span>
+                                        <div class="sms-flex-area">
+                                            <div class="left">
+                                                <textarea class="kakao-txt" placeholder="메시지를 작성해 주세요."></textarea>
+                                                <span class="sub">0/90자</span>
+                                            </div>
+                                            <button class="save">문자 발송</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-bottom-area">
+                            <div class="bottom-top">
+                                <h3>문자 템플릿 관리</h3>
+                                <span>* 등록·수정된 모든 문자 템플릿이 목록에 표시됩니다. 템플릿은 언제든지 수정·삭제 및 발송이 가능합니다.</span>
+                            </div>
+                            <div class="search-area">
+                                <div class="search-box">
+                                    <input type="text" placeholder="검색어(템플릿 명)를 입력해 주세요.">
+                                    <img src="./img/icon-search.png">
+                                </div>
+                            </div>
+                            <div class="btn-area">
+                                <button class="new-btn">
+                                    <img src="./img/icon-add.png"><span>템플릿 등록</span>
+                                </button>
+                            </div>
+                            <div class="table-area">
+                                <div class="table-layout">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>분류</td>
+                                                <td>템플릿 명</td>
+                                                <td>메시지 내용</td>
+                                                <td>수정</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                                <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                                <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                                <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                                <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>결제</td>
+                                                <td>고정석 결제 안내 QR</td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="detail-btn">상세</span></td>
+                                                <td><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="page-area">
+                                    <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                                    <span class="on">1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                    <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statis-info-area" style="display: none;">
+                        <div class="top-area">
+                            <h3>전송 및 통계</h3>
+                            <span>카카오 알림톡과 SMS 통합 통계</span>
+                        </div>
+                        <div class="box-area">
+                            <div class="box">
+                                <div class="box-top">
+                                    <span>전체 문자·알림톡 통합 요금(VAT 별도)</span>
+                                    <img src="./img/icon-mail-gray.png">
+                                </div>
+                                <div class="box-num">
+                                    <h3>149,000원</h3>
+                                </div>
+                                <div class="box-bottom">
+                                    <span>2025.01.01 ~ 2025.07.31</span>
+                                    <div class="bottom-desc">
+                                        <p>카카오 알림톡 : 75,000원</p>
+                                        <p>SMS : 75,000원 | LMS : 75,000원 | MMS : 75,000원</p>
+                                        <p class="refund">환불금액 : 75,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box current">
+                                <div class="box-top">
+                                    <span>이번달 문자·알림톡 통합 요금(VAT 별도)</span>
+                                    <img src="./img/icon-mail-current.png">
+                                </div>
+                                <div class="box-num">
+                                    <h3>13,500원</h3>
+                                </div>
+                                <div class="box-bottom">
+                                    <span>2025.07.01 ~ 2025.07.31</span>
+                                    <div class="bottom-desc">
+                                        <p>카카오 알림톡 : 13,000원</p>
+                                        <p>SMS : 1,000원 | LMS : 75,000원 | MMS : 75,000원</p>
+                                        <p class="refund">환불금액 : 500원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-bottom-area">
+                            <div class="bottom-top">
+                                <h3>전송 내역</h3>
+                                <ul class="bottom-tab">
+                                    <li class="on">전체</li>
+                                    <li>카카오</li>
+                                    <li>SMS</li>
+                                </ul>
+                            </div>
+                            <div class="search-area">
+                                <div class="start-date">
+                                    <input type="date"><span>부터</span>
+                                </div>
+                                <div class="finish-date">
+                                    <input type="date"><span>까지</span>
+                                </div>
+                                <div class="search-box">
+                                    <input type="text" placeholder="검색어(수신자 이름, 연락처)를 입력해 주세요.">
+                                    <img src="./img/icon-search.png">
+                                </div>
+                            </div>
+                            <div class="btn-box">
+                                <button class="excel-btn">
+                                    <img src="./img/excel-img.png">
+                                </button>
+                            </div>
+                            <div class="table-area">
+                                <div class="table-layout">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>전송일시</td>
+                                                <td>유형</td>
+                                                <td>수신자</td>
+                                                <td>메시지 내용</td>
+                                                <td>상태</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2025-01-01</td>
+                                                <td><div class="type-kakao"><img src="./img/kakao-img-16px.png">카카오</div></td>
+                                                <td><div class="ellipsis-user">전체 회원(120명)</div></td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="success">성공</span></td>
+                                                <td><div class="retry"><img src="./img/icon-replay-16px.png">재전송</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2025-01-01</td>
+                                                <td><div class="type-sms"><img src="./img/icon-mail-16px.png">SMS</div></td>
+                                                <td><div class="ellipsis-user">김티칭(1234), 김티칭(1234), 김티칭(1234), 김티칭(1234)</div></td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="failed">실패</span></td>
+                                                <td><div class="retry"><img src="./img/icon-replay-16px.png">재전송</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2025-01-01</td>
+                                                <td><div class="type-kakao"><img src="./img/kakao-img-16px.png">카카오</div></td>
+                                                <td><div class="ellipsis-user">전체 회원(120명)</div></td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="success">성공</span></td>
+                                                <td><div class="retry"><img src="./img/icon-replay-16px.png">재전송</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2025-01-01</td>
+                                                <td><div class="type-kakao"><img src="./img/kakao-img-16px.png">카카오</div></td>
+                                                <td><div class="ellipsis-user">전체 회원(120명)</div></td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="success">성공</span></td>
+                                                <td><div class="retry"><img src="./img/icon-replay-16px.png">재전송</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2025-01-01</td>
+                                                <td><div class="type-kakao"><img src="./img/kakao-img-16px.png">카카오</div></td>
+                                                <td><div class="ellipsis-user">전체 회원(120명)</div></td>
+                                                <td><div class="ellipsis">[#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호} [#{지점이름}] 고정석 결제 완료 결제상품 : #{메뉴명} 이용좌석 : #{좌석번호} 고객번호: #{결제한 번호}</div></td>
+                                                <td><span class="success">성공</span></td>
+                                                <td><div class="retry"><img src="./img/icon-replay-16px.png">재전송</div></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="page-area">
+                                    <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                                    <span class="on">1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                    <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal"></div>
+
+        <!-- 카카오 알림톡 템플릿 미리보기 팝업-->
+        <div class="pop-up kakao pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2><img src="./img/kakao-img-32px.png">템플릿 미리보기</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+                <button class="save" style="display: none;">등록</button>
+            </div>
+            <div class="pop-area">
+                <span class="kakao-date">○○○○년 ○월 ○○일</span>
+                <div class="kakao-txtarea">
+                    <span>[성남이마트센터] 이용권 구입<br>이용권을 구입해주셔서 감사합니다.<br><br>이용권 정보<br><br>▶️ 이용권 : 1인 자유석 당일권 2시간 
+                        <br><br>▶️ 기간 : 2025-07-29 17:55 ~ 19:55 <br><br>▶️ 좌석/사물함 : 26G <br><br>▶️ 금액 : KB국민 3000원 
+                        <br><br>▶️ 영수증 : https://api.mooin.kr/kiosk/receipt/7550426
+                        <br><br>▶️ PG사 영수증 : https://npg.nicepay.co.kr/issue/CardIssue.do?TID=dadaleda3m01162507291755392316&svcCd=&sendMail=1&cart_yn=&svc_cl=
+                        <br><br>▶️ QR/바코드 : https://link.mooin.kr/ticket/ccac52e0-6c59-11f0-9f73-81470ca5b39e
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 문자 템플릿 삭제 확인 -->
+        <div class="pop-up seats-confirm-pop tickets pop-outside" style="display: none;">
+            <div class="seats-name">
+                <h3>템플릿 삭제 확인</h3>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">삭제</button>
+            </div>
+            <div class="pop-area">
+                <h3>템플릿 명</h3>
+                <h3 class="small">해당 템플릿을 삭제하시겠습니까?</h3>
+                <span class="red">삭제된 템플릿은 복구할 수 없습니다.</span>
+            </div>           
+        </div>
+
+        <!-- 문자 템플릿 등록 -->
+        <div class="pop-up temp-add pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>템플릿 등록</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">취소</button>
+                <button class="save">등록</button>
+            </div>
+            <div class="pop-area">
+                <div class="pop-box">
+                    <span>분류</span>
+                    <select>
+                        <option value="default">결제</option>
+                        <option value="opt01">입실</option>
+                        <option value="opt02">입실 전</option>
+                        <option value="opt03">퇴실</option>
+                        <option value="opt04">이동</option>
+                        <option value="opt05">만료 전</option>
+                        <option value="opt06">만료</option>
+                        <option value="opt07">예약</option>
+                        <option value="opt08">예약 취소</option>
+                    </select>
+                </div>
+                <div class="pop-box">
+                    <span>템플릿 명</span>
+                    <input type="text" placeholder="예 : 기간권 만료 안내">
+                </div>
+                <div class="pop-box">
+                    <span>템플릿 내용</span>
+                    <textarea placeholder="템플릿 내용을 입력해 주세요."></textarea>
+                    <span class="sub">0/90자</span>
+                </div>
+            </div>           
+        </div>
+
+        <!-- 문자 템플릿 미리보기 팝업-->
+        <div class="pop-up sms pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>템플릿 미리보기</h2>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+                <button class="save" style="display: none;">등록</button>
+            </div>
+            <div class="pop-area">
+                <span class="sms-date">(오늘) 오전 00:00</span>
+                <div class="sms-txtarea">
+                    <span>[성남이마트센터] 이용권 구입<br>이용권을 구입해주셔서 감사합니다.<br><br>이용권 정보<br><br>▶️ 이용권 : 1인 자유석 당일권 2시간 
+                        <br><br>▶️ 기간 : 2025-07-29 17:55 ~ 19:55 <br><br>▶️ 좌석/사물함 : 26G <br><br>▶️ 금액 : KB국민 3000원 
+                        <br><br>▶️ 영수증 : https://api.mooin.kr/kiosk/receipt/7550426
+                        <br><br>▶️ PG사 영수증 : https://npg.nicepay.co.kr/issue/CardIssue.do?TID=dadaleda3m01162507291755392316&svcCd=&sendMail=1&cart_yn=&svc_cl=
+                        <br><br>▶️ QR/바코드 : https://link.mooin.kr/ticket/ccac52e0-6c59-11f0-9f73-81470ca5b39e
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 회원목록찾기 모달창 -->
+        <div class="pop-up select-user pop-outside" style="display: none;">
+            <div class="pop-top">
+                <h2>회원 찾기</h2>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="cancel">닫기</button>
+                <button class="save">선택완료</button>
+            </div>
+            <div class="pop-area search">
+                <h3>회원 검색</h3>
+                <div class="search-area">
+                    <div class="search-box">
+                        <input type="text" placeholder="검색어(템플릿 명)를 입력해 주세요.">
+                        <img src="./img/icon-search.png">
+                    </div>
+                </div>
+                <h3>회원 목록</h3>
+                <div class="table-layout">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="user-sms"></td>
+                                <td>이태민</td>
+                                <td>010-1234-1234</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <span>선택된 회원 : 0명</span>
+            </div>           
+        </div>
+
+        <!-- 알림 상세정보 -->
+        <div class="pop-up notify-detail pop-outside" style="display: none;">
+            <div class="pop-top">
+                <div class="left">
+                    <div class="type-kakao"><img src="./img/kakao-img-20px.png"><span>카카오</span></div>
+                    <div class="type-sms" style="display: none;"><img src="./img/icon-mail-20px-white.png"><span>SMS</span></div>
+                    <h2>카카오 알림톡 상세정보</h2>
+                </div>
+                <div class="right">
+                    <span class="success">발송 완료</span>
+                    <span class="failed" style="display: none;">발송 실패</span>
+                </div>
+                <button class="close-pop" style="display: none;"><img src=""></button>
+            </div>
+            <div class="pop-bottombtn">
+                <button class="retry"><img src="./img/icon-replay-16px.png">재발송</button>
+                <button class="cancel">확인</button>
+            </div>
+            <div class="pop-area">
+                <div class="pop-box">
+                    <div class="date">
+                        <span>전송일시</span>
+                        <input type="text" value="2025.07.15 14:30" disabled>
+                    </div>
+                </div>
+                <div class="pop-box">
+                    <div class="user">
+                        <span>수신자</span>
+                        <ul class="group">
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                            <li>
+                                <span>김티칭 (010-1234-1234)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pop-box">
+                    <div class="type">
+                        <span>분류</span>
+                        <input type="text" value="결제" disabled>
+                    </div>
+                    <div class="name">
+                        <span>템플릿 명</span>
+                        <input type="text" value="기간권 만료 안내" disabled>
+                    </div>
+                </div>
+                <div class="pop-box">
+                    <div class="txtbox">
+                        <span>메시지 내용</span>
+                        <textarea disabled>
+[성남이마트센터] 이용권 구입<br>
+이용권을 구입해주셔서 감사합니다.<br><br>
+
+이용권 정보<br><br>
+▶️ 이용권 : 1인 자유석 당일권 2시간<br><br>
+▶️ 기간 : 2025-07-29 17:55 ~ 19:55<br><br>
+▶️ 좌석/사물함 : 26G <br><br>
+▶️ 금액 : KB국민 3000원 <br><br>
+▶️ 영수증 : https://api.mooin.kr/kiosk/receipt/7550426<br><br>
+▶️ PG사 영수증 : https://npg.nicepay.co.kr/issue/CardIssue.do?TID=dadaleda3m01162507291755392316&svcCd=&sendMail=1&cart_yn=&svc_cl=<br><br>
+▶️ QR/바코드 : https://link.mooin.kr/ticket/ccac52e0-6c59-11f0-9f73-81470ca5b39e
+                        </textarea>
+                        <span class="sub">500/1000자</span>
+                    </div>
+                </div>
+            </div>           
+        </div>
+
+
+    </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gnbItems = document.querySelectorAll('.aside-header > ul > li');
+
+    function clearAllActive() {
+        gnbItems.forEach(item => {
+            item.classList.remove('on');
+            const subLis = item.querySelectorAll('ul li');
+            subLis.forEach(subLi => {
+                subLi.classList.remove('on');
+            });
+        });
+    }
+
+    function initializeGNB() {
+        const first = gnbItems[0];
+        first.classList.add('on');
+
+        const sub = first.querySelector('ul li');
+        if (sub) {
+            sub.classList.add('on');
+        }
+    }
+
+    // GNB 클릭 이벤트
+    gnbItems.forEach(item => {
+        const gnbLink = item.querySelector('a');
+
+        gnbLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 상위 메뉴 초기화
+            clearAllActive();
+
+            // 본인 on 설정
+            item.classList.add('on');
+
+            const subLi = item.querySelector('ul li');
+            if (subLi) {
+                subLi.classList.add('on');
+            }
+        });
+
+        // 하위 메뉴 클릭 이벤트
+        const subItems = item.querySelectorAll('ul li');
+        subItems.forEach(subLi => {
+            const subLink = subLi.querySelector('a');
+
+            subLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 상위 메뉴 활성화 유지
+                gnbItems.forEach(gnb => {
+                    if (gnb.contains(subLi)) {
+                        gnb.classList.add('on');
+                    } else {
+                        gnb.classList.remove('on');
+                        const others = gnb.querySelectorAll('ul li');
+                        others.forEach(li => {
+                            li.classList.remove('on');
+                        });
+                    }
+                });
+
+                // 현재 하위메뉴만 on
+                const siblings = subLi.parentElement.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('on');
+                });
+
+                subLi.classList.add('on');
+            });
+        });
+    });
+
+    initializeGNB();
+});
+
+document.querySelector('.mobile-menu').addEventListener('click', function () {
+    document.querySelector('.modal')?.classList.add('on');
+    document.querySelector('.aside-header')?.classList.add('on');
+});
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelector('.aside-header')?.classList.remove('on');
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const listItems = document.querySelectorAll("li");
+
+  listItems.forEach(li => {
+    const editBtn = li.querySelector(".edit");
+    const saveBtn = li.querySelector(".save");
+    const cancelBtn = li.querySelector(".cancel");
+    const linkBtn = li.querySelector(".link");
+    const input = li.querySelector("input");
+
+    if (!input) return;
+
+    // 최초 상태 저장
+    input.setAttribute("data-original", input.value);
+    input.setAttribute("data-disabled-original", input.hasAttribute("disabled"));
+
+    // edit 버튼 클릭 시
+    if (editBtn) {
+      editBtn.addEventListener("click", () => {
+        li.classList.add("on");
+        input.removeAttribute("disabled");
+      });
+    }
+
+    // save 버튼 클릭 시
+    if (saveBtn) {
+      saveBtn.addEventListener("click", () => {
+        li.classList.remove("on");
+        // 원래 disabled였던 input만 다시 disabled 처리
+        if (input.getAttribute("data-disabled-original") === "true") {
+          input.setAttribute("disabled", true);
+        }
+        // 저장된 값 갱신
+        input.setAttribute("data-original", input.value);
+      });
+    }
+
+    // cancel 버튼 클릭 시
+    if (cancelBtn) {
+      cancelBtn.addEventListener("click", () => {
+        li.classList.remove("on");
+        // 원래 disabled였던 input만 다시 disabled 처리
+        if (input.getAttribute("data-disabled-original") === "true") {
+          input.setAttribute("disabled", true);
+        }
+        // 원래 값 복구
+        input.value = input.getAttribute("data-original");
+      });
+    }
+
+    // link 버튼 클릭 시
+    if (linkBtn) {
+      linkBtn.addEventListener("click", () => {
+        const url = input.value.trim();
+        if (url) {
+          window.open(url.startsWith("http") ? url : "https://" + url, "_blank");
+        }
+      });
+    }
+  });
+});
+
+function openPopup(popup) {
+    if (!popup) return;
+    const scrollTop = window.scrollY || window.pageYOffset;
+    popup.style.position = 'absolute'; // 필요 시 fixed 가능
+    popup.style.top = (scrollTop + 100) + 'px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.display = 'block';
+}
+
+document.querySelectorAll('.kakao-info-area .detail-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.kakao');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelectorAll('.sms-info-area .detail-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.sms');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelectorAll('.statis-info-area .info-bottom-area .table-area tbody tr').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.pop-outside').forEach(popup => {
+            popup.style.display = 'none';
+        });
+
+        const popup = document.querySelector('.pop-up.notify-detail');
+        openPopup(popup);
+
+        const modal = document.querySelector('.modal');
+        if (modal) modal.classList.add('on');
+    });
+});
+
+document.querySelector('button.sms-option').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.temp-add');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+document.querySelector('button.sms-option').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.select-user');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+document.querySelector('button.new-btn').addEventListener('click', () => {
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+
+    const popup = document.querySelector('.pop-up.temp-add');
+    openPopup(popup);
+
+    const modal = document.querySelector('.modal');
+    if (modal) modal.classList.add('on');
+});
+
+
+
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelectorAll('.pop-outside').forEach(popup => {
+        popup.style.display = 'none';
+    });
+});
+
+
+const btn = document.querySelector(".temp-set");
+const target = document.querySelector("#notify .sms-info-area .info-bottom-area");
+
+if (btn && target) {
+btn.addEventListener("click", () => {
+    target.scrollIntoView({
+    behavior: "smooth",
+    block: "start"      
+    });
+});
+}
+
+const tabs = document.querySelectorAll(".tab-btn li");
+const sections = [
+    document.querySelector(".kakao-info-area"),
+    document.querySelector(".sms-info-area"),
+    document.querySelector(".statis-info-area")
+];
+
+tabs.forEach((tab, index) => {
+tab.addEventListener("click", () => {
+    // 모든 li에서 on 제거
+    tabs.forEach(t => t.classList.remove("on"));
+    // 클릭한 li에 on 추가
+    tab.classList.add("on");
+
+    // 모든 영역 숨기기
+    sections.forEach(sec => sec.style.display = "none");
+    // 해당 영역만 보이기
+    if (sections[index]) {
+    sections[index].style.display = "block";
+    }
+});
+});
+
+
+    </script>
+</body>
+</html>
