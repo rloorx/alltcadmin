@@ -1353,6 +1353,20 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 .pop-up.notify-detail .pop-area .pop-box ul.group li span{
     font-size: var(--font14);
 }
+.pop-up.device-add .pop-box{
+    margin-bottom: 20px;
+}
+.pop-up.device-add .pop-box:last-child{
+    margin-bottom: 0;
+}
+.pop-up.device-add .pop-box-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.pop-up.device-add .pop-box-flex .pop-box{
+    width: calc(100% / 2 - 5px)
+}
 
 
 /* 입퇴실관리화면 */
@@ -3401,7 +3415,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     z-index: 10;
     word-break: keep-all;
     width: 75%;
-    display: none;
+    display: block;
 }
 #info .time-info-area .time-flex-area .info-area .top-area{
     display: flex;
@@ -4269,8 +4283,194 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     margin-right: 10px;
 }
 
-
-
+/* 기기관리 */
+#device-setting .main>.in>h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#device-setting .main>.in>h2>span{
+    font-size: var(--font24);
+}
+#device-setting .main>.in>h2>img{
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+#device-setting .area-top h3{
+    display: flex;
+    align-items: center;
+    font-size: var(--font20);
+    padding-left: 20px;
+}
+#device-setting .box-area{
+    margin-bottom: 40px;
+}
+#device-setting .box-area .area-top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#device-setting .box-area .area-top button{
+    width: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: var(--maincolor);
+}
+#device-setting .box-area .box{
+    border: 1px solid var(--borderd9);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+#device-setting .box-area .box .toast-pop{
+    position: absolute;
+    left: 50%; top: 10%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: inherit
+}
+#device-setting .box-area .box .toast-pop .state{
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+#device-setting .box-area .box .toast-pop .state.success{
+    border: 1px solid #2AACB6;
+    background: #d8fcff;
+    color: #2AACB6;
+}
+#device-setting .box-area .box .toast-pop .state.failed{
+    border: 1px solid #F24E4E;
+    background: #ffe4e4;
+    color: #F24E4E;
+    word-break: keep-all;
+}
+#device-setting .box-area .box .box-top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#device-setting .box-area .box .box-top img{
+    margin-right: 5px;
+}
+#device-setting .box-area .box .box-top span{
+    font-size: var(--font20);
+    font-weight: 700;
+}
+#device-setting .box-area .box .box-flex{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+#device-setting .box-area .box .box-flex .left{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#device-setting .box-area .box .box-flex .left p{
+    width: 50%;
+    margin: 5px 0;
+    padding-left: 40px;
+}
+#device-setting .box-area .box .box-flex .right{
+    width: 20%;
+    max-width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+#device-setting .box-area .box .box-flex .right .btn-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+#device-setting .box-area .box .box-flex .right>button{
+    height: 100%;
+    background: #2AACB6;
+    color: #fff;
+}
+#device-setting .box-area .box .box-flex .right .btn-box button{
+    padding: 10px;
+}
+#device-setting .box-area .box .box-flex .right .btn-box button.edit{
+    margin-right: 10px;
+    border: 1px solid var(--txta9);
+}
+#device-setting .box-area .box .box-flex .right .btn-box button.delete{
+    border: 1px solid #F24E4E;
+    background: #F24E4E;
+    color: #fff;
+}
+#device-setting .box-area.wifi .box{
+    margin-bottom: 20px;
+}
+#device-setting .box-area.wifi .box .box-top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#device-setting .box-area.wifi .box .box-top .top-left{
+    display: flex;
+    align-items: center;
+}
+#device-setting .box-area.wifi .box .box-top .top-left .img-wrap{
+    width: 40px;
+    height: 40px;
+    border-radius: 80px;
+    background: #ade5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+#device-setting .box-area.wifi .box .box-top img{
+    margin-right: 0;
+}
+#device-setting .box-area.wifi .box .box-top .top-left .txt-wrap h4{
+    font-size: var(--font20);
+}
+#device-setting .box-area.wifi .box .box-top .top-left .txt-wrap span{
+    color: var(--txt777);
+    font-weight: 400;
+    font-size: var(--font14);
+}
+#device-setting .box-area.wifi .box .box-top .top-right{
+    width: 20%;
+    max-width: 140px;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+#device-setting .box-area.wifi .box .box-top .top-right button{
+    padding: 10px;
+}
+#device-setting .box-area.wifi .box .box-top .top-right button.edit{
+    border: 1px solid var(--txta9);
+}
+#device-setting .box-area.wifi .box .box-top .top-right button.delete{
+    margin-left: 10px;
+    background: #F24E4E;
+    color: #fff;
+}
+#device-setting .box-area.wifi .box .box-flex .wifi-info{
+    width: calc(100% / 2 - 10px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--bordere9);
+    color: var(--txt555);
+}
+#device-setting .box-area.wifi .box .box-flex .wifi-info p{
+    font-size: var(--font14);
+}
+#device-setting .box-area.wifi .box .box-flex .wifi-info p:first-child{
+    margin-bottom: 10px;
+}
 
 @media screen and (max-width:1440px){
     #sales .main>.in>.table-area .search-area.tab2 .search-box{
@@ -4489,6 +4689,18 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         margin-bottom: 10px;
     }
 
+    #device-setting .box-area .box .box-flex .left{
+        width: 70%;
+    }
+    #device-setting .box-area .box .box-flex .left p{
+        padding-left: 0px;
+    }
+    #device-setting .box-area .box .box-flex .right{
+        width: 30%;
+    }
+    #device-setting .box-area.wifi .box .box-top .top-right{
+        width: 30%;
+    }
 
 }
 
@@ -4703,7 +4915,45 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         margin-right: 0;
     }
 
-
+    #device-setting .box-area .box .box-flex{
+        flex-direction: column;
+        width: 100%;
+    }
+    #device-setting .box-area .box .box-flex .left{
+        width: 100%;
+    }
+    #device-setting .box-area .box .box-flex .left p{
+        padding-left: 0px;
+    }
+    #device-setting .box-area .box .box-flex .right{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        max-width: inherit;
+        justify-content: flex-end;
+    }
+    #device-setting .box-area .box .box-flex .right>button{
+        height: 40px;
+        width: 20%;
+        min-width: 100px;
+    }
+    #device-setting .box-area .box .box-flex .right .btn-box{
+        margin-top: 0;
+        margin-left: 10px;
+    }
+    #device-setting .box-area.wifi .box .box-top .top-right{
+        width: auto;
+    }
+    #device-setting .box-area.wifi .box .box-top .top-right button{
+        width: auto;
+    }
+    #device-setting .box-area.wifi .box .box-flex .wifi-info{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #device-setting .box-area.wifi .box .box-flex .wifi-info:last-child{
+        margin-bottom: 0;
+    }
 }
 
 
