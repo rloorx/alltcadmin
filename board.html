@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>공지사항</title>
+</head>
+<body>
+    <div id="board">
+        <div class="wrap">
+            <header class="aside-header">
+                <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./img/icon-dashboard-white.png"><span>홈</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-chart-white.png"><span>매출 관리</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-store-white.png"><span>매장 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-info-white.png"><span>운영정보 설정</span></a></li>
+                            <li><a href="#"><img src="./img/icon-notify-white.png"><span>알림 관리</span></a></li>
+                            <li><a href="#"><img src="./img/icon-setting-white.png"><span>기기 관리</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-group-white.png"><span>회원 관리</span></a>
+                        <ul>
+                            <li><a href="#"><img src="./img/icon-man-white.png">회원 관리</a></li>
+                            <li><a href="#"><img src="./img/icon-enter-white.png">입·퇴실 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-item-white.png"><span>이용상품</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-seat-white.png"><span>실시간 이용현황</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-board-white.png"><span>공지사항</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./img/icon-event-white.png"><span>이벤트 배너 관리</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-notify-white.png" alt="알림"><span>공지사항</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-my-white.png"><span>마이페이지</span></a>
+                    </li>
+                    <li class="mobile">
+                        <a href="#"><img src="./img/icon-logout-white.png"><span>로그아웃</span></a>
+                    </li>
+                </ul>
+            </header>
+            <main class="main">
+                <div class="main-header">
+                    <div class="in">
+                        <span>광명 직영점 (관리자)님, 환영합니다!</span>
+                        <div class="notify">
+                            <a href="#"><img src="./img/icon-notify.png" alt="알림"></a>
+                            <span class="noti-value">99</span>
+                            <!-- 헤더 공지사항 클릭하면 나오는 팝업 추가했습니다!!! -->
+                            <div class="noti-pop">
+                                <div class="close-btn">
+                                    <button><img src="./img/icon-close-20px.png" alt="닫기"></button>
+                                </div>
+                                <div class="noti-area">
+                                    <div class="noti-box new">
+                                        <div class="box-top">
+                                            <div class="left">
+                                                <span class="noti">공지</span>
+                                                <span class="error" style="display: none;">에러</span> <!--에러 관련 공지일때는 이걸로 사용해주세여!!-->
+                                                <img src="./img/icon-file.png" alt="첨부파일">
+                                            </div>
+                                            <div class="right">
+                                                <span class="new-noti"></span>
+                                                <span>2025.08.20 14:37</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-con">
+                                            <h4>[오픈] 올티칭 스터디카페 인천청천센터 OPEN![오픈] 올티칭 스터디카페 인천청천센터 OPEN![오픈] 올티칭 스터디카페 인천청천센터 OPEN!</h4>
+                                            <span>※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠) 안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르+...' 인천청천센터입니다. ...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠) 안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르+...' 인천청천센터입니다. ...</span>
+                                        </div>
+                                    </div>
+                                    <div class="noti-box new">
+                                        <div class="box-top">
+                                            <div class="left">
+                                                <span class="system">시스템</span>
+                                            </div>
+                                            <div class="right">
+                                                <span class="new-noti"></span>
+                                                <span>2025.08.20 14:37</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-con">
+                                            <h4>[오픈] 올티칭 스터디카페 인천청천센터 OPEN![오픈] 올티칭 스터디카페 인천청천센터 OPEN![오픈] 올티칭 스터디카페 인천청천센터 OPEN!</h4>
+                                            <span>※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠) 안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르+...' 인천청천센터입니다. ...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠) 안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르+...' 인천청천센터입니다. ...</span>
+                                        </div>
+                                    </div>
+                                    <div class="noti-box">
+                                        <div class="box-top">
+                                            <div class="left">
+                                                <span class="event">이벤트</span>
+                                            </div>
+                                            <div class="right">
+                                                <span>2025.08.20 14:37</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-con">
+                                            <h4>[오픈] 올티칭 스터디카페 인천청천센터 OPEN![오픈] 올티칭 스터디카페 인천청천센터 OPEN![오픈] 올티칭 스터디카페 인천청천센터 OPEN!</h4>
+                                            <span>※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠) 안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르+...' 인천청천센터입니다. ...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠) 안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르+...' 인천청천센터입니다. ...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-area">
+                                    <button class="view">모두 읽음 표시</button>
+                                    <button class="link">전체 보기 ></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="my">
+                            <a href="#"><img src="./img/icon-my.png"><span>마이페이지</span></a>
+                        </div>
+                        <div class="logout">
+                            <a href="#"><img src="./img/icon-logout.png"><span>로그아웃</span></a>
+                        </div>
+                        <div class="mobile-header">
+                            <h1><img src="./img/logo.png"></h1>
+                            <div class="mobile-menu">
+                                <img src="./img/icon-menu.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="in">
+                    <div class="board-top">
+                        <h2><img src="./img/icon-notify-30px.png"><span>공지사항</span></h2>
+                        <div class="top-btn">
+                            <span>읽지 않은 알림 : 2개</span>
+                            <button>모두 읽음 처리</button>
+                        </div>
+                    </div>
+                    <div class="search-area">
+                        <div class="select-area">
+                            <select name="enter">
+                                <option value="default">전체구분</option>
+                                <option value="opt2">카드</option>
+                                <option value="opt3">현금</option>
+                                <option value="opt3">기타</option>
+                            </select>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" placeholder="검색어를 입력해 주세요.">
+                            <img src="./img/icon-search.png">
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <button class="new-btn">
+                            <img src="./img/icon-add.png"><span>공지사항 등록</span>
+                        </button>
+                    </div>
+                    <div class="table-area">
+                        <div class="table-layout">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>제목</td>
+                                        <td>내용</td>
+                                        <td>게시일</td>
+                                        <td>상세보기</td>
+                                        <td class="allteaching"></td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="new">
+                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete plz"></td>
+                                        <td>안읽음</td>
+                                    </tr>
+                                    <tr class="new">
+                                        <td><span class="error">에러</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>안읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="system">시스템</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="event">이벤트</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
+                                        <td>2025.08.20 14:37</td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
+                                        <td>읽음</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-area">
+                            <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                            <span class="on">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="modal">
+            <!-- 문자 템플릿 삭제 확인 -->
+            <div class="pop-up seats-confirm-pop tickets pop-outside" style="display: none;">
+                <div class="seats-name">
+                    <h3>공지사항 삭제 확인</h3>
+                </div>
+                <div class="pop-bottombtn">
+                    <button class="cancel">취소</button>
+                    <button class="save">삭제</button>
+                </div>
+                <div class="pop-area">
+                    <!-- <h3>템플릿 명</h3> -->
+                    <h3 class="small">해당 공지사항을 삭제하시겠습니까?</h3>
+                    <span class="red">삭제된 공지사항은 복구할 수 없습니다.</span>
+                </div>           
+            </div>
+
+            <!-- 공지사항 상세 -->
+            <div class="pop-up noti-detail viewonly pop-outside" style="display: none;">
+                <div class="noti-tit">
+                    <div class="tit-top">
+                        <div class="type">
+                            <span class="noti">공지</span>
+                            <span class="error" style="display: none;">에러</span>
+                            <span class="system" style="display: none;">시스템</span>
+                            <span class="event" style="display: none;">이벤트</span>
+                        </div>
+                        <span class="date">2025.08.20 14:37</span>
+                    </div>
+                    <h3>[오픈] 올티칭 스터디카페 인천청천센터 OPEN!</h3>
+                </div>
+                <div class="pop-bottombtn">
+                    <button class="save">확인</button>
+                    <!--<button class="save">등록</button>-->
+                </div>
+                <div class="pop-area">
+                    <div class="noti-file">
+                        <h3><img src="./img/icon-file.png">첨부파일</h3>
+                        <div class="file-area">
+                            <div class="file image">
+                                <div class="img-area">
+                                    <img src="./img/file-image-img.png">
+                                </div>
+                                <div class="file-info">
+                                    <span>올티칭 스터디카페 인천청천센터.jpg</span>
+                                    <span>12MB</span>
+                                </div>
+                                <button><img src="./img/icon-download.png" alt="다운로드"></button>
+                            </div>
+                            <div class="file pdf">
+                                <div class="img-area">
+                                    <img src="./img/file-pdf-img.png">
+                                </div>
+                                <div class="file-info">
+                                    <span>올티칭 스터디카페 인천청천센터.pdf</span>
+                                    <span>12MB</span>
+                                </div>
+                                <button><img src="./img/icon-download.png" alt="다운로드"></button>
+                            </div>
+                            <div class="file excel">
+                                <div class="img-area">
+                                    <img src="./img/file-excel-img.png">
+                                </div>
+                                <div class="file-info">
+                                    <span>올티칭 스터디카페 인천청천센터</span>
+                                    <span>12MB</span>
+                                </div>
+                                <button><img src="./img/icon-download.png" alt="다운로드"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noti-con">
+                        <textarea disabled>
+※ 다다르다+ 워크앤스터디 인천청천센터 오픈위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠)
+
+안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르다+ Work&Study' 인천청천센터입니다.
+
+시설다양한 좌석과 1인 전용석, 노트북이 자유롭게 사용 가능한 워크존, 소음 걱정 없는 포커스룸, 커피 및 디저트를 무료로 즐길 수 있는 카페존이 마련되어 있습니다.
+
+무료 대여용품 > 휴대폰 충전기, 미니 쓰레받기, 독서대, 문구류, 담 요 등공용 PC, 프린터기(흑백+컬러) 완비편의시설 : 전좌석 시디지 의자, 백색소음기,경동나비엔 공기 청정기, 초고속 WIFI 완비스터디 환경뿐만 아니라 사무환경도 함께 제공하고 있습니다.
+
+자세한 문의는 연락주세요^^
+☎ 문의 : 010-2386-2163                            
+                        </textarea>
+                    </div>
+                </div>           
+            </div>
+
+            <!-- 공지사항 수정 : 본사 관리자화면에서 상세 눌렀을때 -->
+            <div class="pop-up noti-detail allteaching-edit pop-outside" style="display: none;">
+                <div class="pop-bottombtn">
+                    <button class="cancel">취소</button>
+                    <button class="save">등록</button>
+                </div>
+                <div class="pop-area">
+                    <div class="pop-box">
+                        <span>구분</span>
+                        <select>
+                            <option value="noti">공지</option>
+                            <option value="noti">에러</option>
+                            <option value="noti">시스템</option>
+                            <option value="noti">이벤트</option>
+                        </select>
+                    </div>
+                    <div class="pop-box">
+                        <span>제목</span>
+                        <input type="text" value="[오픈] 올티칭 스터디카페 인천청천센터 OPEN!">
+                    </div>
+                    <div class="noti-file">
+                        <div class="file-top">
+                            <h3><img src="./img/icon-file.png">첨부파일</h3>
+                            <button>파일 변경</button>
+                        </div>
+                        <div class="file-area"><!--파일 있을때-->
+                            <div class="file image">
+                                <div class="img-area">
+                                    <img src="./img/file-image-img.png">
+                                </div>
+                                <div class="file-info">
+                                    <span>올티칭 스터디카페 인천청천센터.jpg</span>
+                                    <span>12MB</span>
+                                </div>
+                                <button><img src="./img/icon-delete-gray.png" alt="파일삭제"></button>
+                            </div>
+                            <div class="file pdf">
+                                <div class="img-area">
+                                    <img src="./img/file-pdf-img.png">
+                                </div>
+                                <div class="file-info">
+                                    <span>올티칭 스터디카페 인천청천센터.pdf</span>
+                                    <span>12MB</span>
+                                </div>
+                                <button><img src="./img/icon-delete-gray.png" alt="파일삭제"></button>
+                            </div>
+                            <div class="file excel">
+                                <div class="img-area">
+                                    <img src="./img/file-excel-img.png">
+                                </div>
+                                <div class="file-info">
+                                    <span>올티칭 스터디카페 인천청천센터</span>
+                                    <span>12MB</span>
+                                </div>
+                                <button><img src="./img/icon-delete-gray.png" alt="파일삭제"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noti-con">
+                        <textarea>
+※ 다다르다+ 워크앤스터디 인천청천센터 오픈위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠)
+
+안녕하세요. 인천 청천2동 행정복지센터 옆 건물에 위치한 업무/스터디 공간 프리미엄 '다다르다+ Work&Study' 인천청천센터입니다.
+
+시설다양한 좌석과 1인 전용석, 노트북이 자유롭게 사용 가능한 워크존, 소음 걱정 없는 포커스룸, 커피 및 디저트를 무료로 즐길 수 있는 카페존이 마련되어 있습니다.
+
+무료 대여용품 > 휴대폰 충전기, 미니 쓰레받기, 독서대, 문구류, 담 요 등공용 PC, 프린터기(흑백+컬러) 완비편의시설 : 전좌석 시디지 의자, 백색소음기,경동나비엔 공기 청정기, 초고속 WIFI 완비스터디 환경뿐만 아니라 사무환경도 함께 제공하고 있습니다.
+
+자세한 문의는 연락주세요^^
+☎ 문의 : 010-2386-2163                            
+                        </textarea>
+                    </div>
+                </div>           
+            </div>
+
+            <!-- 공지사항 등록 : 본사 관리자화면에서 등록버튼 눌렀을때 -->
+            <div class="pop-up noti-detail allteaching pop-outside" style="display: none;">
+                <div class="pop-bottombtn">
+                    <button class="cancel">취소</button>
+                    <button class="save">등록</button>
+                </div>
+                <div class="pop-area">
+                    <div class="pop-box">
+                        <span>구분</span>
+                        <select>
+                            <option value="noti">전체</option>
+                            <option value="noti">공지</option>
+                            <option value="noti">에러</option>
+                            <option value="noti">시스템</option>
+                            <option value="noti">이벤트</option>
+                        </select>
+                    </div>
+                    <div class="pop-box">
+                        <span>제목</span>
+                        <input type="text" placeholder="배너 제목을 입력하세요">
+                    </div>
+                    <div class="noti-file">
+                        <div class="file-top">
+                            <h3><img src="./img/icon-file.png">첨부파일</h3>
+                        </div>
+                        <div class="file-area"><!--파일 없을때-->
+                            <div class="no-file">
+                                <img src="./img/file-upload-img.png">
+                                <h4>파일을 이곳에 드래그하거나 클릭하여 선택해 주세요.</h4>
+                                <span>지원 형식 : jpeg, png / 최대 용량 : 20MB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noti-con">
+                        <span>내용</span>
+                        <textarea></textarea>
+                    </div>
+                </div>           
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const gnbItems = document.querySelectorAll('.aside-header > ul > li');
+
+    function clearAllActive() {
+        gnbItems.forEach(item => {
+            item.classList.remove('on');
+            const subLis = item.querySelectorAll('ul li');
+            subLis.forEach(subLi => {
+                subLi.classList.remove('on');
+            });
+        });
+    }
+
+    function initializeGNB() {
+        const first = gnbItems[0];
+        first.classList.add('on');
+
+        const sub = first.querySelector('ul li');
+        if (sub) {
+            sub.classList.add('on');
+        }
+    }
+
+    // GNB 클릭 이벤트
+    gnbItems.forEach(item => {
+        const gnbLink = item.querySelector('a');
+
+        gnbLink.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 상위 메뉴 초기화
+            clearAllActive();
+
+            // 본인 on 설정
+            item.classList.add('on');
+
+            const subLi = item.querySelector('ul li');
+            if (subLi) {
+                subLi.classList.add('on');
+            }
+        });
+
+        // 하위 메뉴 클릭 이벤트
+        const subItems = item.querySelectorAll('ul li');
+        subItems.forEach(subLi => {
+            const subLink = subLi.querySelector('a');
+
+            subLink.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 상위 메뉴 활성화 유지
+                gnbItems.forEach(gnb => {
+                    if (gnb.contains(subLi)) {
+                        gnb.classList.add('on');
+                    } else {
+                        gnb.classList.remove('on');
+                        const others = gnb.querySelectorAll('ul li');
+                        others.forEach(li => {
+                            li.classList.remove('on');
+                        });
+                    }
+                });
+
+                // 현재 하위메뉴만 on
+                const siblings = subLi.parentElement.querySelectorAll('li');
+                siblings.forEach(sib => {
+                    sib.classList.remove('on');
+                });
+
+                subLi.classList.add('on');
+            });
+        });
+    });
+
+    initializeGNB();
+});
+
+document.querySelector('.mobile-menu').addEventListener('click', function () {
+    document.querySelector('.modal')?.classList.add('on');
+    document.querySelector('.aside-header')?.classList.add('on');
+});
+document.querySelector('.modal').addEventListener('click', function () {
+    this.classList.remove('on');
+    document.querySelector('.aside-header')?.classList.remove('on');
+});
+
+const notifyBtn = document.querySelector('.main-header .notify a');
+const notiPop = document.querySelector('.main-header .notify .noti-pop');
+
+notifyBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  notiPop.classList.add('on');
+});
+
+notiPop.addEventListener('click', (e) => {
+  if (e.target.closest('.close-btn button')) {
+    notiPop.classList.remove('on');
+  }
+});
+
+document.querySelectorAll("img.delete").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    document.querySelector(".modal").style.display = "block";
+    document.querySelector(".pop-up.seats-confirm-pop").style.display = "block";
+  });
+});
+
+document.querySelectorAll(".detail-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    document.querySelector(".modal").style.display = "block";
+    document.querySelector(".pop-up.noti-detail.allteaching-edit").style.display = "block";
+  });
+});
+
+document.querySelector("button.new-btn").addEventListener("click", function () {
+    document.querySelector(".modal").style.display = "block";
+    document.querySelector(".pop-up.allteaching").style.display = "block";
+});
+
+document.querySelectorAll("button.save").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modal = document.querySelector(".modal");
+    const popups = document.querySelectorAll(".pop-outside");
+
+    if (modal) modal.style.display = "none";
+    popups.forEach((popup) => (popup.style.display = "none"));
+  });
+});
+
+    </script>
+</body>
+</html>

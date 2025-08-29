@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/common.css">
-    <title>사물함현황화면</title>
+    <title>팝업 테스트화면</title>
 </head>
 <body>
-    <div id="seats">
+    <div id="seats" class="pop-test">
         <div class="wrap">
             <header class="aside-header">
                 <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
@@ -272,274 +272,341 @@
             </main>
         </div>
 
-        <div class="modal"></div>
+        <div class="modal">
 
-        <!-- 좌석 이용내역 팝업-->
-        <div class="pop-up ticket seats pop-outside" style="display: none;">
-            <div class="pop-top">
-                <h2>매출 등록</h2>
-                <button class="close-pop" style="display: none;"><img src=""></button>
-            </div>
-            <div class="pop-bottombtn">
-                <button class="cancel">닫기</button>
-            </div>
-            
-            <div class="pop-area">
-                <div class="pop-area-seats-date">
-                    <div class="date-input">
-                        <div class="start-date">
-                            <input type="date">
-                            <span>부터</span>
-                        </div>
-                        <div class="finish-date">
-                            <input type="date">
-                            <span>까지</span>
-                        </div>
-                    </div>
-                    <div class="seats-state">
-                        <span>좌석 상태</span>
-                        <span class="state">사용중</span>
-                    </div>
+            <!-- 좌석 이용내역 팝업-->
+            <div class="pop-up ticket seats pop-outside" style="display: none;">
+                <div class="pop-top">
+                    <h2>매출 등록</h2>
+                    <button class="close-pop" style="display: none;"><img src=""></button>
                 </div>
-                <div class="pop-area2">
-                    <h3>입퇴실 기록</h3>
-                    <div class="table-layout">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>구분</td>
-                                    <td>입실 시간</td>
-                                    <td>이름</td>
-                                    <td>연락처</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>입실<span>사용중</span></td>
-                                    <td>2025-07-15 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-15 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                                <tr>
-                                    <td>입실</td>
-                                    <td>2025-07-14 00:00:00</td>
-                                    <td>김샛별</td>
-                                    <td>010-1234-1234</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="pop-bottombtn">
+                    <button class="cancel">닫기</button>
+                </div>
+                
+                <div class="pop-area">
+                    <div class="pop-area-seats-date">
+                        <div class="date-input">
+                            <div class="start-date">
+                                <input type="date">
+                                <span>부터</span>
+                            </div>
+                            <div class="finish-date">
+                                <input type="date">
+                                <span>까지</span>
+                            </div>
+                        </div>
+                        <div class="seats-state">
+                            <span>좌석 상태</span>
+                            <span class="state">사용중</span>
+                        </div>
                     </div>
-                    <div class="page-area">
-                        <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
-                        <span class="on">1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
-                        <span>5</span>
-                        <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                    <div class="pop-area2">
+                        <h3>입퇴실 기록</h3>
+                        <div class="table-layout">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>구분</td>
+                                        <td>입실 시간</td>
+                                        <td>이름</td>
+                                        <td>연락처</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>입실<span>사용중</span></td>
+                                        <td>2025-07-15 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-15 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                    <tr>
+                                        <td>입실</td>
+                                        <td>2025-07-14 00:00:00</td>
+                                        <td>김샛별</td>
+                                        <td>010-1234-1234</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-area">
+                            <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                            <span class="on">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                        </div>
+                    </div>           
+                </div>
+                
+            </div>
+
+            <!-- 입실처리 팝업 -->
+            <div class="pop-up seats-enter pop-outside" style="display: none;">
+                <div class="pop-top">
+                    <h2><span>V08</span> 좌석 입실</h2>
+                </div>
+                <div class="pop-area">
+                    <div class="num">
+                        <span>연락처</span>
+                        <input type="text" placeholder="예 : 010-1234-1234">
                     </div>
+                    <button class="view">조회</button>
+                </div>
+                <div class="view-area" style="display: none;">
+                    <div class="item">
+                        <span>상품</span>
+                        <input type="text" value="자유석 50시간권">
+                    </div>
+                    <div class="item">
+                        <span>남은 시간</span>
+                        <input type="text" value="07시간 30분 02초">
+                    </div>
+                    <div class="item">
+                        <span>만료일</span>
+                        <input type="text" value="2025/02/01 18:00:00">
+                    </div>
+                    <span class="state-bar">
+                        입실 가능한 상태입니다. <strong>등록</strong> 버튼을 눌러 입실처리를 완료하세요.
+                    </span>
+                    <span class="state-bar state02" style="display: none;">
+                        남은 이용 시간이 없어 입실이 불가합니다. 시간 연장 또는 이용권 구매가 필요합니다.
+                    </span>
+                </div>
+                <div class="pop-bottombtn">
+                    <button type="button" class="cancel">취소</button>
+                    <button type="button" class="cancel" style="display: none;">이용권 추가/연장</button>
+                    <button type="button" class="save disabled">등록</button>
+                </div>
+            </div>
+    
+            <!-- 입실처리 완료 팝업 -->
+            <div class="pop-up fin pop-outside" style="display: none;">
+                <div class="pop-bottombtn">
+                    <button class="save">확인</button>
+                </div>
+                
+                <div class="pop-area">
+                    <img src="./img/check-img.png">
+                    <h3>입실 처리되었습니다.</h3>
                 </div>           
             </div>
-            
-        </div>
 
-        <!-- 입실처리 팝업 -->
-        <div class="pop-up seats-enter pop-outside" style="display: none;">
-            <div class="pop-top">
-                <h2><span>V08</span> 좌석 입실</h2>
-            </div>
-            <div class="pop-area">
-                <div class="num">
-                    <span>연락처</span>
-                    <input type="text" placeholder="예 : 010-1234-1234">
+            <!-- 실시간 이용자 확인 팝업-->
+            <div class="pop-up ticket user pop-outside" style="display: none;">
+                <div class="pop-top">
+                    <h2>실시간 이용자 확인</h2>
+                    <button class="close-pop" style="display: none;"><img src=""></button>
                 </div>
-                <button class="view">조회</button>
-            </div>
-            <div class="view-area" style="display: none;">
-                <div class="item">
-                    <span>상품</span>
-                    <input type="text" value="자유석 50시간권">
-                </div>
-                <div class="item">
-                    <span>남은 시간</span>
-                    <input type="text" value="07시간 30분 02초">
-                </div>
-                <div class="item">
-                    <span>만료일</span>
-                    <input type="text" value="2025/02/01 18:00:00">
-                </div>
-                <span class="state-bar">
-                    입실 가능한 상태입니다. <strong>등록</strong> 버튼을 눌러 입실처리를 완료하세요.
-                </span>
-                <span class="state-bar state02" style="display: none;">
-                    남은 이용 시간이 없어 입실이 불가합니다. 시간 연장 또는 이용권 구매가 필요합니다.
-                </span>
-            </div>
-            <div class="pop-bottombtn">
-                <button type="button" class="cancel">취소</button>
-                <button type="button" class="cancel" style="display: none;">이용권 추가/연장</button>
-                <button type="button" class="save disabled">등록</button>
-            </div>
-        </div>
- 
-        <!-- 입실처리 완료 팝업 -->
-        <div class="pop-up fin pop-outside" style="display: none;">
-            <div class="pop-bottombtn">
-                <button class="save">확인</button>
-            </div>
-            
-            <div class="pop-area">
-                <img src="./img/check-img.png">
-                <h3>입실 처리되었습니다.</h3>
-            </div>           
-        </div>
+                <div class="pop-bottombtn">
+                    <button class="cancel">닫기</button>
+                </div>  
+                <div class="pop-area">
+                    <div class="pop-area2">
+                        <div class="table-layout">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>이름</td>
+                                        <td>연락처</td>
+                                        <td>사물함</td>
+                                        <td>남은시간</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
+                                    <tr>
+                                        <td>김지은</td>
+                                        <td>010-1234-1234</td>
+                                        <td>1번</td>
+                                        <td>9시간 30분 2초</td>
+                                    </tr>
 
-        <!-- 실시간 이용자 확인 팝업-->
-        <div class="pop-up ticket user pop-outside" style="display: none;">
-            <div class="pop-top">
-                <h2>실시간 이용자 확인</h2>
-                <button class="close-pop" style="display: none;"><img src=""></button>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="page-area">
+                            <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
+                            <span class="on">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
+                        </div>
+                    </div>           
+                </div>
+                
             </div>
-            <div class="pop-bottombtn">
-                <button class="cancel">닫기</button>
-            </div>  
-            <div class="pop-area">
-                <div class="pop-area2">
-                    <div class="table-layout">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>이름</td>
-                                    <td>연락처</td>
-                                    <td>사물함</td>
-                                    <td>남은시간</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-                                <tr>
-                                    <td>김지은</td>
-                                    <td>010-1234-1234</td>
-                                    <td>1번</td>
-                                    <td>9시간 30분 2초</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="page-area">
-                        <button class="prev-btn"><img src="./img/icon-arrow-prev.png"></button>
-                        <span class="on">1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
-                        <span>5</span>
-                        <button class="next-btn"><img src="./img/icon-arrow-next.png"></button>
-                    </div>
-                </div>           
-            </div>
-            
         </div>
 
     </div>
@@ -625,11 +692,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
         document.querySelector('.mobile-menu').addEventListener('click', function () {
-            document.querySelector('.modal')?.classList.add('on');
+            document.querySelector('.modal').style.display = "block";
             document.querySelector('.aside-header')?.classList.add('on');
         });
         document.querySelector('.modal').addEventListener('click', function () {
-            this.classList.remove('on');
+            this.style.display = "none";
             document.querySelector('.aside-header')?.classList.remove('on');
         });
 
@@ -638,39 +705,22 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.seats-modal')?.classList.remove('on');
         });
 
-        function openPopup(popup) {
-            if (!popup) return;
-            const scrollTop = window.scrollY || window.pageYOffset;
-            popup.style.position = 'absolute'; // 필요 시 fixed 가능
-            popup.style.top = (scrollTop + 100) + 'px';
-            popup.style.left = '50%';
-            popup.style.transform = 'translateX(-50%)';
-            popup.style.display = 'block';
-        }
-
-        document.querySelector('.enter').addEventListener('click', () => {
-            const popup = document.querySelector('.pop-up.seats-enter');
-            openPopup(popup);
-
-            const modal = document.querySelector('.modal');
-            if (modal) modal.classList.add('on');
+        document.querySelector("button.enter").addEventListener("click", function () {
+            document.querySelector(".modal").style.display = "block";
+            document.querySelector(".pop-up.seats-enter").style.display = "block";
         });
 
         document.querySelector('button.user').addEventListener('click', () => {
-            document.querySelectorAll('.pop-outside').forEach(popup => {
-                popup.style.display = 'none';
-            });
 
-            const popup = document.querySelector('.pop-up.ticket.user');
-            openPopup(popup);
+            document.querySelector(".modal").style.display = "block";
+            document.querySelector(".pop-up.ticket.user").style.display = "block";
 
-            const modal = document.querySelector('.modal');
-            if (modal) modal.classList.add('on');
         });
 
 
         document.querySelector('.modal').addEventListener('click', function () {
             this.classList.remove('on');
+            this.style.display = 'none';
             document.querySelectorAll('.pop-outside').forEach(popup => {
                 popup.style.display = 'none';
             });
