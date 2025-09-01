@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/common.css">
-    <title>공지사항</title>
+    <title>이벤트배너관리</title>
 </head>
 <body>
-    <div id="board">
+    <div id="event">
         <div class="wrap">
             <header class="aside-header">
                 <h1><img src="./img/logo-white.png" alt="올티칭 스터디카페"></h1>
@@ -137,30 +137,35 @@
                     </div>
                 </div>
                 <div class="in">
-                    <div class="board-top">
-                        <h2><img src="./img/icon-board-30px.png"><span>공지사항</span></h2>
-                        <div class="top-btn">
-                            <span>읽지 않은 알림 : 2개</span>
-                            <button>모두 읽음 처리</button>
-                        </div>
-                    </div>
+                    <h2><img src="./img/icon-event-30px.png"><span>이벤트 배너 관리</span></h2>
                     <div class="search-area">
                         <div class="select-area">
                             <select name="enter">
                                 <option value="default">전체구분</option>
-                                <option value="opt2">카드</option>
-                                <option value="opt3">현금</option>
-                                <option value="opt3">기타</option>
+                                <option value="opt2">예정</option>
+                                <option value="opt3">진행중</option>
+                                <option value="opt3">만료</option>
+                                <option value="opt4">영구</option>
                             </select>
                         </div>
                         <div class="search-box">
                             <input type="text" placeholder="검색어를 입력해 주세요.">
                             <img src="./img/icon-search.png">
                         </div>
+                        <div class="blacklist-toggle">
+                            <div class="toggle-bg">
+                                <div class="toggle"></div>
+                            </div>
+                            <span>사용중만 보기</span>
+                        </div>
                     </div>
                     <div class="btn-area">
-                        <button class="new-btn">
-                            <img src="./img/icon-add.png"><span>공지사항 등록</span>
+                        <div class="btn-txt">
+                            <h4>* 키오스크 노출 순서</h4>
+                            <span>활성화된 배너들이 최신등록순으로 키오스크에 노출됩니다. (진행중, 영구 상태의 배너만 노출)</span>
+                        </div>
+                        <button class="new-btn"><!--본사 관리자가 아닐때 .new-btn만 display none 해주세요~~-->
+                            <img src="./img/icon-add.png"><span>배너 등록</span>
                         </button>
                     </div>
                     <div class="table-area">
@@ -168,105 +173,176 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <td></td>
+                                        <td>배너 이미지</td>
                                         <td>제목</td>
-                                        <td>내용</td>
-                                        <td>게시일</td>
+                                        <td>시작일</td>
+                                        <td>종료일</td>
+                                        <td>상태</td>
+                                        <td>활성화</td>
                                         <td>상세보기</td>
                                         <td class="allteaching"></td>
-                                        <td></td>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="new">
-                                        <td><span class="noti">공지</span></td>
+                                    <tr>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ing">진행중</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete plz"></td>
-                                        <td>안읽음</td>
-                                    </tr>
-                                    <tr class="new">
-                                        <td><span class="error">에러</span></td>
-                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
-                                        <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>안읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="system">시스템</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="expected">예정</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="event">이벤트</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ever">영구</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="done">만료</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ing">진행중</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ing">진행중</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ing">진행중</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ing">진행중</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                     <tr>
-                                        <td><span class="noti">공지</span></td>
+                                        <td><div class="banner"></div></td>
                                         <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
-                                        <td><div class="ellipsis">※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...※ 다다르다+ 워크앤스터디 인천청천센터 오픈 위치: 인천 부평구 마장로 412 (청천동) 1동 202-...</div></td>
-                                        <td>2025.08.20 14:37</td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ing">진행중</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
                                         <td><span class="detail-btn">상세</span></td>
-                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이용권 삭제" class="delete"></td>
-                                        <td>읽음</td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="banner"></div></td>
+                                        <td><div class="ellipsis-title">[오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN![오픈] 다다르다+ 워크앤스터디 인천청천센터 OPEN!</div></td>
+                                        <td>2025.08.20</td>
+                                        <td>2025.09.20</td>
+                                        <td><span class="ing">진행중</span></td>
+                                        <td>
+                                            <div class="blacklist-toggle">
+                                                <div class="toggle-bg">
+                                                    <div class="toggle"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><span class="detail-btn">상세</span></td>
+                                        <td class="allteaching"><img src="./img/icon-delete-gray.png" alt="이벤트 삭제" class="delete"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -286,10 +362,10 @@
         </div>
 
         <div class="modal">
-            <!-- 공지사항 삭제 확인 -->
+            <!-- 이벤트 삭제 확인 -->
             <div class="pop-up seats-confirm-pop tickets pop-outside" style="display: none;">
                 <div class="seats-name">
-                    <h3>공지사항 삭제 확인</h3>
+                    <h3>이벤트 삭제 확인</h3>
                 </div>
                 <div class="pop-bottombtn">
                     <button class="cancel">취소</button>
@@ -297,8 +373,8 @@
                 </div>
                 <div class="pop-area">
                     <!-- <h3>템플릿 명</h3> -->
-                    <h3 class="small">해당 공지사항을 삭제하시겠습니까?</h3>
-                    <span class="red">삭제된 공지사항은 복구할 수 없습니다.</span>
+                    <h3 class="small">해당 이벤트를 삭제하시겠습니까?</h3>
+                    <span class="red">삭제된 이벤트는 복구할 수 없습니다.</span>
                 </div>           
             </div>
 
@@ -315,18 +391,9 @@
             </div>
 
 
-            <!-- 공지사항 상세 -->
+            <!-- 이벤트 상세 -->
             <div class="pop-up noti-detail viewonly pop-outside" style="display: none;">
                 <div class="noti-tit">
-                    <div class="tit-top">
-                        <div class="type">
-                            <span class="noti">공지</span>
-                            <span class="error" style="display: none;">에러</span>
-                            <span class="system" style="display: none;">시스템</span>
-                            <span class="event" style="display: none;">이벤트</span>
-                        </div>
-                        <span class="date">2025.08.20 14:37</span>
-                    </div>
                     <h3>[오픈] 올티칭 스터디카페 인천청천센터 OPEN!</h3>
                 </div>
                 <div class="pop-bottombtn">
@@ -335,38 +402,9 @@
                 </div>
                 <div class="pop-area">
                     <div class="noti-file">
-                        <h3><img src="./img/icon-file.png">첨부파일</h3>
+                        <h3><img src="./img/icon-event.png">배너 이미지</h3>
                         <div class="file-area">
-                            <div class="file image">
-                                <div class="img-area">
-                                    <img src="./img/file-image-img.png">
-                                </div>
-                                <div class="file-info">
-                                    <span>올티칭 스터디카페 인천청천센터.jpg</span>
-                                    <span>12MB</span>
-                                </div>
-                                <button><img src="./img/icon-download.png" alt="다운로드"></button>
-                            </div>
-                            <div class="file pdf">
-                                <div class="img-area">
-                                    <img src="./img/file-pdf-img.png">
-                                </div>
-                                <div class="file-info">
-                                    <span>올티칭 스터디카페 인천청천센터.pdf</span>
-                                    <span>12MB</span>
-                                </div>
-                                <button><img src="./img/icon-download.png" alt="다운로드"></button>
-                            </div>
-                            <div class="file excel">
-                                <div class="img-area">
-                                    <img src="./img/file-excel-img.png">
-                                </div>
-                                <div class="file-info">
-                                    <span>올티칭 스터디카페 인천청천센터</span>
-                                    <span>12MB</span>
-                                </div>
-                                <button><img src="./img/icon-download.png" alt="다운로드"></button>
-                            </div>
+                            <div class="banner-thumb"></div>
                         </div>
                     </div>
                     <div class="noti-con">
@@ -383,68 +421,62 @@
 ☎ 문의 : 010-2386-2163                            
                         </textarea>
                     </div>
+                    <div class="event-con">
+                        <div class="date">
+                            <span>노출기간</span>
+                            <input type="text" value="2025.08.20 ~ 2025.09.20">
+                        </div>
+                        <div class="state">
+                            <span>상태</span>
+                            <span class="state ing">진행중</span>
+                            <span class="state expected" style="display: none;">예정</span>
+                            <span class="state ever" style="display: none;">영구</span>
+                            <span class="state done" style="display: none;">만료</span>
+                        </div>
+                        <div class="onoff">
+                            <span>활성화</span>
+                            <div class="blacklist-toggle">
+                                <div class="toggle-bg">
+                                    <div class="toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-date">
+                            <span>등록일시</span>
+                            <input type="text" value="2025.02.25 14:37" disabled>
+                        </div>
+                    </div>
                 </div>           
             </div>
 
-            <!-- 공지사항 수정 : 본사 관리자화면에서 상세 눌렀을때 -->
+            <!-- 이벤트 수정 : 본사 이벤트화면에서 상세 눌렀을때 -->
             <div class="pop-up noti-detail allteaching-edit pop-outside" style="display: none;">
                 <div class="pop-bottombtn">
                     <button class="cancel">취소</button>
-                    <button class="save">등록</button>
+                    <button class="save">수정</button>
                 </div>
                 <div class="pop-area">
-                    <div class="pop-box">
-                        <span>구분</span>
-                        <select>
-                            <option value="noti">공지</option>
-                            <option value="noti">에러</option>
-                            <option value="noti">시스템</option>
-                            <option value="noti">이벤트</option>
-                        </select>
-                    </div>
                     <div class="pop-box">
                         <span>제목</span>
                         <input type="text" value="[오픈] 올티칭 스터디카페 인천청천센터 OPEN!">
                     </div>
                     <div class="noti-file">
                         <div class="file-top">
-                            <h3><img src="./img/icon-file.png">첨부파일</h3>
+                            <h3><img src="./img/icon-event.png">첨부파일</h3>
                             <button>파일 변경</button>
                         </div>
                         <div class="file-area"><!--파일 있을때-->
-                            <div class="file image">
-                                <div class="img-area">
-                                    <img src="./img/file-image-img.png">
-                                </div>
-                                <div class="file-info">
-                                    <span>올티칭 스터디카페 인천청천센터.jpg</span>
-                                    <span>12MB</span>
-                                </div>
-                                <button><img src="./img/icon-delete-gray.png" alt="파일삭제"></button>
+                            <div class="banner-thumb">
+                                <button><img src="./img/icon-delete-gray.png" alt="삭제"></button>
                             </div>
-                            <div class="file pdf">
-                                <div class="img-area">
-                                    <img src="./img/file-pdf-img.png">
-                                </div>
-                                <div class="file-info">
-                                    <span>올티칭 스터디카페 인천청천센터.pdf</span>
-                                    <span>12MB</span>
-                                </div>
-                                <button><img src="./img/icon-delete-gray.png" alt="파일삭제"></button>
-                            </div>
-                            <div class="file excel">
-                                <div class="img-area">
-                                    <img src="./img/file-excel-img.png">
-                                </div>
-                                <div class="file-info">
-                                    <span>올티칭 스터디카페 인천청천센터</span>
-                                    <span>12MB</span>
-                                </div>
-                                <button><img src="./img/icon-delete-gray.png" alt="파일삭제"></button>
+                            <div class="file-name">
+                                <h4>업로드된 파일:</h4>
+                                <span>올티칭 스터디카페 여름특별할인이벤트.jpg</span>
                             </div>
                         </div>
                     </div>
                     <div class="noti-con">
+                        <span>내용</span>
                         <textarea>
 ※ 다다르다+ 워크앤스터디 인천청천센터 오픈위치: 인천 부평구 마장로 412 (청천동) 1동 202-1호(청천동,드림아이젠)
 
@@ -458,10 +490,38 @@
 ☎ 문의 : 010-2386-2163                            
                         </textarea>
                     </div>
+                    <div class="event-con">
+                        <div class="date">
+                            <div class="date-top">
+                                <span>노출기간</span>
+                                <label><input type="checkbox"><span>영구사용(시작일/종료일 없이 계속 노출)</span></label>
+                            </div>
+                            <div class="date-select">
+                                <input type="date" class="start-date">
+                                <span>~</span>
+                                <input type="date" class="finish-date">
+                            </div>
+                        </div>
+                        <div class="state">
+                            <span>상태</span>
+                            <span class="state ing">진행중</span>
+                            <span class="state expected" style="display: none;">예정</span>
+                            <span class="state ever" style="display: none;">영구</span>
+                            <span class="state done" style="display: none;">만료</span>
+                        </div>
+                        <div class="onoff">
+                            <span>활성화</span>
+                            <div class="blacklist-toggle">
+                                <div class="toggle-bg">
+                                    <div class="toggle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>           
             </div>
 
-            <!-- 공지사항 등록 : 본사 관리자화면에서 등록버튼 눌렀을때 -->
+            <!-- 이벤트 등록 : 본사 이벤트화면에서 등록버튼 눌렀을때 -->
             <div class="pop-up noti-detail allteaching pop-outside" style="display: none;">
                 <div class="pop-bottombtn">
                     <button class="cancel">취소</button>
@@ -469,22 +529,12 @@
                 </div>
                 <div class="pop-area">
                     <div class="pop-box">
-                        <span>구분</span>
-                        <select>
-                            <option value="noti">전체</option>
-                            <option value="noti">공지</option>
-                            <option value="noti">에러</option>
-                            <option value="noti">시스템</option>
-                            <option value="noti">이벤트</option>
-                        </select>
-                    </div>
-                    <div class="pop-box">
                         <span>제목</span>
                         <input type="text" placeholder="배너 제목을 입력하세요">
                     </div>
                     <div class="noti-file">
                         <div class="file-top">
-                            <h3><img src="./img/icon-file.png">첨부파일</h3>
+                            <h3><img src="./img/icon-event.png">첨부파일</h3>
                         </div>
                         <div class="file-area"><!--파일 없을때-->
                             <div class="no-file">
@@ -497,6 +547,34 @@
                     <div class="noti-con">
                         <span>내용</span>
                         <textarea></textarea>
+                    </div>
+                                        <div class="event-con">
+                        <div class="date">
+                            <div class="date-top">
+                                <span>노출기간</span>
+                                <label><input type="checkbox"><span>영구사용(시작일/종료일 없이 계속 노출)</span></label>
+                            </div>
+                            <div class="date-select">
+                                <input type="date" class="start-date">
+                                <span>~</span>
+                                <input type="date" class="finish-date">
+                            </div>
+                        </div>
+                        <div class="state">
+                            <span>상태</span>
+                            <span class="state ing">진행중</span>
+                            <span class="state expected" style="display: none;">예정</span>
+                            <span class="state ever" style="display: none;">영구</span>
+                            <span class="state done" style="display: none;">만료</span>
+                        </div>
+                        <div class="onoff">
+                            <span>활성화</span>
+                            <div class="blacklist-toggle">
+                                <div class="toggle-bg">
+                                    <div class="toggle"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>           
             </div>
@@ -618,7 +696,7 @@ document.querySelectorAll("img.delete").forEach((btn) => {
 document.querySelectorAll(".detail-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     document.querySelector(".modal").style.display = "block";
-    document.querySelector(".pop-up.noti-detail.allteaching-edit").style.display = "block";
+    document.querySelector(".pop-up.noti-detail.viewonly").style.display = "block";
   });
 });
 

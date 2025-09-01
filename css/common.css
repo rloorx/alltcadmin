@@ -281,22 +281,22 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     font-size: var(--font14);
     color: var(--txt777);
 }
-.main-header .in .notify .noti-pop .btn-area{
+.main-header .in .notify .noti-pop .noti-btn-area{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.main-header .in .notify .noti-pop .btn-area button{
+.main-header .in .notify .noti-pop .noti-btn-area button{
     width: auto;
     height: auto;
     padding: 8px 10px;
     font-size: var(--font14);
 }
-.main-header .in .notify .noti-pop .btn-area button.view{
+.main-header .in .notify .noti-pop .noti-btn-area button.view{
     border: 1px solid var(--bordera9);
     color: var(--txt555);
 }
-.main-header .in .notify .noti-pop .btn-area button.link:hover{
+.main-header .in .notify .noti-pop .noti-btn-area button.link:hover{
     text-decoration: underline;
 }
 
@@ -1621,6 +1621,117 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 .pop-up.noti-detail .pop-area .pop-box{
     margin-bottom: 20px;
+}
+.pop-up.noti-detail .file-area .banner-thumb{
+    width: 100%;
+    height: 160px;
+    background: url(../img/event-ex-img.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.pop-up.noti-detail .pop-area .event-con{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.pop-up.noti-detail .pop-area .event-con>div{
+    margin-bottom: 20px;
+}
+.pop-up.noti-detail .pop-area .event-con .date,
+.pop-up.noti-detail .pop-area .event-con .state{
+    width: calc(100% / 2 - 10px);
+}
+.pop-up.noti-detail .pop-area .event-con .state span:first-child{
+    display: block;
+}
+.pop-up.noti-detail .pop-area .event-con .state span.state{
+    font-size: var(--font14);
+    font-weight: 700;
+    display: inline-block;
+    padding: 2px 10px;
+    text-align: center;
+    border-radius: 90px;
+    width: auto;
+    margin-top: 10px;
+}
+.pop-up.noti-detail .pop-area .event-con .state span.detail-btn{
+    border: 1px solid var(--txta9);
+}
+.pop-up.noti-detail .pop-area .event-con .state span.expected{
+    background: var(--bordere9);
+    border: 1px solid #fff;
+}
+.pop-up.noti-detail .pop-area .event-con .state span.done{
+    background: #F24E4E;
+    color: #fff;
+}
+.pop-up.noti-detail .pop-area .event-con .state span.ing{
+    background: var(--maincolor);
+    color: #fff;
+}
+.pop-up.noti-detail .pop-area .event-con .state span.ever{
+    background: #fff175;
+}
+.pop-up.noti-detail .pop-area .event-con .onoff,
+.pop-up.noti-detail .pop-area .event-con .edit-date{
+    width: 100%;
+}
+.pop-up.noti-detail .pop-area .event-con .onoff{
+    display: flex;
+    align-items: center;
+}
+.pop-up.noti-detail .pop-area .event-con .onoff span{
+    margin-right: 10px;
+}
+.pop-up.noti-detail .file-area .file-name{
+    margin-top: 10px;
+}
+.pop-up.noti-detail .file-area .file-name h4{
+    font-size: var(--font14);
+}
+.pop-up.noti-detail .file-area .file-name span{
+    color: var(--txt777);
+    font-size: var(--font14);
+}
+.pop-up.noti-detail .pop-area .event-con .date .date-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.pop-up.noti-detail .pop-area .event-con .date .date-top label{
+    display: flex;
+    align-items: center;
+}
+.pop-up.noti-detail .pop-area .event-con .date .date-top label input{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.pop-up.noti-detail .pop-area .event-con .date .date-top label span{
+    font-size: var(--font14);
+}
+.pop-up.noti-detail .pop-area .event-con .date .date-select{
+    display: flex;
+    align-items: center;
+}
+.pop-up.noti-detail .pop-area .event-con .date .date-select span{
+    margin: 5px;
+}
+.pop-up.noti-detail .noti-file .file-area .banner-thumb button{
+    position: absolute;
+    right: 10px; top: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid var(--borderd9);
+    background: #fff;
 }
 
 
@@ -4877,6 +4988,151 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
 }
 /*본사관리자화면 아닐때 (가맹점 관리자화면일때) : td.allteaching 안보이게 해주심 됩니당*/
 
+/* 이벤트 배너 관리 */
+#event .main>.in>h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#event .main>.in>h2>span{
+    font-size: var(--font24);
+}
+#event .main>.in>h2>img{
+    height: 30px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+#event .main>.in>.search-area{
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--borderd9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#event .main>.in>.search-area .select-area{
+    width: auto;
+    margin-right: 10px;
+}
+#event .main>.in>.search-area .select-area select{
+    width: auto;
+}
+#event .main>.in>.search-area .search-box{
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--borderd9);
+    display: flex;
+    padding-right: 10px;
+}
+#event .main>.in>.search-area .search-box input{
+    width: 100%;
+    border:none;
+}
+#event .main>.in>.search-area .blacklist-toggle{
+    display: flex;
+    align-items: center;
+}
+#event .main>.in>.search-area .blacklist-toggle span{
+    white-space: nowrap;
+    margin-left: 5px;
+}
+#event .main>.in>.btn-area{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#event .main>.in>.btn-area .btn-txt h4{
+    font-size: var(--font16);
+}
+#event .main>.in>.btn-area .btn-txt span{
+    font-size: var(--font14);
+    color: var(--txt777);
+}
+#event .main>.in>.btn-area button{
+    width: auto;
+    background: var(--maincolor);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+#event .table-area{
+    width: 100%;
+}
+#event .table-area table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+#event .table-area table thead td{
+    border-bottom: 2px solid var(--maincolor);
+}
+#event .table-area table tr.new{
+    background: #a2e7ec41;
+}
+#event .table-area table td{
+    padding: 10px;
+    border-bottom: 1px solid var(--borderd9);
+    white-space: nowrap;
+}
+#event .table-area table td .ellipsis-title{
+    width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#event .table-area table td .blacklist-toggle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#event .table-area table td .banner{
+    width: 300px;
+    height: 65px;
+    background: url(../img/event-ex-img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#event .table-area table td>span{
+    font-size: var(--font14);
+    font-weight: 700;
+    display: inline-block;
+    padding: 2px 10px;
+    text-align: center;
+    border-radius: 90px;
+}
+#event .table-area table td>span.detail-btn{
+    border: 1px solid var(--txta9);
+}
+#event .table-area table td>span.expected{
+    background: var(--bordere9);
+    border: 1px solid #fff;
+}
+#event .table-area table td>span.done{
+    background: #F24E4E;
+    color: #fff;
+}
+#event .table-area table td>span.ing{
+    background: var(--maincolor);
+    color: #fff;
+}
+#event .table-area table td>span.ever{
+    background: #fff175;
+}
+
+#event .table-area table td:nth-child(5),
+#event .table-area table td:nth-child(6),
+#event .table-area table td:nth-child(7),
+#event .table-area table td.allteaching{
+    text-align: center;
+}
+/*본사관리자화면 아닐때 (가맹점 관리자화면일때) : td.allteaching 안보이게 해주심 됩니당*/
 
 
 
