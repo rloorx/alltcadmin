@@ -138,7 +138,7 @@
                 </div>
                 <div class="in">
                     <div class="board-top">
-                        <h2><img src="./img/icon-notify-30px.png"><span>공지사항</span></h2>
+                        <h2><img src="./img/icon-board-30px.png"><span>공지사항</span></h2>
                         <div class="top-btn">
                             <span>읽지 않은 알림 : 2개</span>
                             <button>모두 읽음 처리</button>
@@ -286,7 +286,7 @@
         </div>
 
         <div class="modal">
-            <!-- 문자 템플릿 삭제 확인 -->
+            <!-- 공지사항 삭제 확인 -->
             <div class="pop-up seats-confirm-pop tickets pop-outside" style="display: none;">
                 <div class="seats-name">
                     <h3>공지사항 삭제 확인</h3>
@@ -301,6 +301,19 @@
                     <span class="red">삭제된 공지사항은 복구할 수 없습니다.</span>
                 </div>           
             </div>
+
+            <!-- 삭제 완료 팝업 -->
+            <div class="pop-up fin pop-outside" style="display: none;">
+                <div class="pop-bottombtn">
+                    <button class="save">확인</button>
+                </div>
+                
+                <div class="pop-area">
+                    <img src="./img/check-img.png">
+                    <h3>삭제 처리되었습니다.</h3>
+                </div>           
+            </div>
+
 
             <!-- 공지사항 상세 -->
             <div class="pop-up noti-detail viewonly pop-outside" style="display: none;">
@@ -615,14 +628,29 @@ document.querySelector("button.new-btn").addEventListener("click", function () {
 });
 
 document.querySelectorAll("button.save").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const modal = document.querySelector(".modal");
-    const popups = document.querySelectorAll(".pop-outside");
+    btn.addEventListener("click", () => {
+      const modal = document.querySelector(".modal");
+      const popups = document.querySelectorAll(".pop-outside");
 
-    if (modal) modal.style.display = "none";
-    popups.forEach((popup) => (popup.style.display = "none"));
+      if (btn.closest(".pop-up.seats-confirm-pop")) {
+        popups.forEach((popup) => (popup.style.display = "none"));
+        const finPopup = document.querySelector(".pop-up.fin.pop-outside");
+        if (finPopup) finPopup.style.display = "block";
+      } else {
+        if (modal) modal.style.display = "none";
+        popups.forEach((popup) => (popup.style.display = "none"));
+      }
+    });
   });
-});
+
+  document.querySelectorAll(".pop-bottombtn .cancel").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const modal = document.querySelector(".modal");
+      const popups = document.querySelectorAll(".pop-outside");
+      if (modal) modal.style.display = "none";
+      popups.forEach((popup) => (popup.style.display = "none"));
+    });
+  });
 
     </script>
 </body>
