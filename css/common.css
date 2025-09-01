@@ -5059,6 +5059,7 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     display: flex;
     align-items: center;
     padding: 10px;
+    white-space: nowrap;
 }
 #event .table-area{
     width: 100%;
@@ -5519,6 +5520,11 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     .pop-up.select-user h2{
         margin-bottom: 20px;
     }
+    .pop-up.noti-detail .pop-area .event-con .date,
+    .pop-up.noti-detail .pop-area .event-con .state{
+        width: 100%;
+    }
+
 
 
     #login .txt-area{
@@ -5626,6 +5632,18 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     #device-setting .box-area.wifi .box .box-flex .wifi-info:last-child{
         margin-bottom: 0;
     }
+
+    #event .main>.in>.search-area{
+        flex-wrap: wrap;
+    }
+    #event .main>.in>.search-area .search-box{
+        width: calc(100% - 101px);
+        margin-right: 0;
+    }
+    #event .main>.in>.search-area .blacklist-toggle{
+        margin-top: 10px;
+    }
+
 }
 
 
