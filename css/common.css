@@ -4793,12 +4793,12 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
     width: 100%;
     border:none;
 }
-#board .btn-area{
+#board .main .in>.btn-area{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
 }
-#board .btn-area button{
+#board .main .in>.btn-area button{
     width: auto;
     background: var(--maincolor);
     color: #fff;
