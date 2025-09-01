@@ -5367,6 +5367,21 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         width: 30%;
     }
 
+    #home .main>.in>.box-area{
+        display: flex;
+        flex-direction: column;
+    }
+    #home .main>.in>.box-area>.box{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #home .main>.in>.box-area>.box:last-child{
+        margin-bottom: 0;
+    }
+    #home .main>.in>.box-area.bottom>.box{
+        width: 100%;
+    }
+
 }
 
 
@@ -5644,6 +5659,16 @@ button {all: unset; font-family: 'Pretendard-Regular'; text-align: center; borde
         margin-top: 10px;
     }
 
+    #home .main>.in>.box-area.bottom>.box .box-room{
+        flex-direction: column;
+    }
+    #home .main>.in>.box-area.bottom>.box .box-room .room{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #home .main>.in>.box-area.bottom>.box .box-room .room:last-child{
+        margin-bottom: 0;
+    }
 }
 
 
